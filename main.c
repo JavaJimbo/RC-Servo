@@ -32,7 +32,7 @@
  *          and each servo refreshed every 14 milliseconds
  * 8-10-16  Modified AD initialization so FRC isn't used for AD clock.
  * 8-15-16  Continuous back and forth motion, delay at beginning.
- * 9-12-16  Created GitHub project.
+ * 9-12-16  Created GitHub project. Modified on Laptop.
  * 
  */
 

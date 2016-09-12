@@ -1,0 +1,4058 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"85 ../main.c
+[u S299 `uc -> 2 `i `ui 1 ]
+[n S299 . byte val ]
+"112
+[u S300 `uc -> 2 `i `us 1 ]
+[n S300 tag byte integer ]
+"206 C:\Program Files (x86)\Microchip\xc8\v1.33\include\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+[p mainexit ]
+"70 ../main.c
+[v _initializePorts `(v ~T0 @X0 0 ef ]
+"14 ../DELAY16.H
+[v _DelayMs `(v ~T0 @X0 0 ef1`ui ]
+"73 ../main.c
+[v _ADsetChannel `(v ~T0 @X0 0 ef1`uc ]
+"50 ..\pic18f1330.h
+[s S2 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"60
+[s S3 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S3 . AN0 AN1 TX RX AN2 MCLR OSC2 OSC1 ]
+"70
+[s S4 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S4 . INT0 INT1 CK DT T0CKI . CLKO CLKI ]
+"80
+[s S5 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S5 . KBI0 KBI1 . VREFP . T1OSO T1OSI ]
+"89
+[s S6 :5 `uc 1 :1 `uc 1 ]
+[n S6 . . NOT_MCLR ]
+"93
+[s S7 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S7 . CMP0 . nMCLR AN3 ]
+"99
+[s S8 :6 `uc 1 :1 `uc 1 ]
+[n S8 . . T1CKI ]
+"103
+[s S9 :5 `uc 1 :1 `uc 1 ]
+[n S9 . . LVDIN ]
+"107
+[s S10 :7 `uc 1 :1 `uc 1 ]
+[n S10 . . RJPU ]
+"111
+[s S11 :1 `uc 1 ]
+[n S11 . ULPWUIN ]
+"49
+[u S1 `S2 1 `S3 1 `S4 1 `S5 1 `S6 1 `S7 1 `S8 1 `S9 1 `S10 1 `S11 1 ]
+[n S1 . . . . . . . . . . . ]
+"115
+[v _PORTAbits `VS1 ~T0 @X0 0 e@3968 ]
+"5581
+[v _TMR0IF `Vb ~T0 @X0 0 e@32658 ]
+"69 ../main.c
+[v _convertDutyCycle `(ui ~T0 @X0 0 ef1`uc ]
+"543 ..\pic18f1330.h
+[v _OVDCOND `Vuc ~T0 @X0 0 e@3971 ]
+"1240
+[v _PDC0L `Vuc ~T0 @X0 0 e@3985 ]
+"1221
+[v _PDC0H `Vuc ~T0 @X0 0 e@3984 ]
+"1202
+[v _PDC1L `Vuc ~T0 @X0 0 e@3983 ]
+"1183
+[v _PDC1H `Vuc ~T0 @X0 0 e@3982 ]
+"1164
+[v _PDC2L `Vuc ~T0 @X0 0 e@3981 ]
+"1145
+[v _PDC2H `Vuc ~T0 @X0 0 e@3980 ]
+"5373
+[v _PTEN `Vb ~T0 @X0 0 e@31951 ]
+"4585
+[v _INTCON `Vuc ~T0 @X0 0 e@4082 ]
+"1948
+[v _PIE1 `Vuc ~T0 @X0 0 e@3997 ]
+"3480
+[v _ADCON0 `Vuc ~T0 @X0 0 e@4034 ]
+"3405
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"3335
+[v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
+"3341
+[s S191 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S191 . ADCS ACQT . ADFM ]
+"3347
+[s S192 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S192 . ADCS0 ADCS1 ADCS2 ACQT0 ACQT1 ACQT2 ]
+"3340
+[u S190 `S191 1 `S192 1 ]
+[n S190 . . . ]
+"3356
+[v _ADCON2bits `VS190 ~T0 @X0 0 e@4032 ]
+"1259
+[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
+"1480
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"5449
+[v _RBPU `Vb ~T0 @X0 0 e@32655 ]
+"4053
+[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
+"5547
+[v _T016BIT `Vb ~T0 @X0 0 e@32430 ]
+"5365
+[v _PSA `Vb ~T0 @X0 0 e@32427 ]
+"5559
+[v _T0PS0 `Vb ~T0 @X0 0 e@32424 ]
+"5561
+[v _T0PS1 `Vb ~T0 @X0 0 e@32425 ]
+"5563
+[v _T0PS2 `Vb ~T0 @X0 0 e@32426 ]
+"5553
+[v _T0CS `Vb ~T0 @X0 0 e@32429 ]
+"5565
+[v _T0SE `Vb ~T0 @X0 0 e@32428 ]
+"5585
+[v _TMR0ON `Vb ~T0 @X0 0 e@32431 ]
+"3624
+[v _T1CON `Vuc ~T0 @X0 0 e@4045 ]
+"5573
+[v _T1RD16 `Vb ~T0 @X0 0 e@32367 ]
+"5587
+[v _TMR1CS `Vb ~T0 @X0 0 e@32361 ]
+"5567
+[v _T1CKPS0 `Vb ~T0 @X0 0 e@32364 ]
+"5569
+[v _T1CKPS1 `Vb ~T0 @X0 0 e@32365 ]
+"5595
+[v _TMR1ON `Vb ~T0 @X0 0 e@32360 ]
+"2269
+[v _PIE3 `Vuc ~T0 @X0 0 e@4003 ]
+"1107
+[v _FLTCONFIG `Vuc ~T0 @X0 0 e@3979 ]
+"1803
+[v _PTCON0 `Vuc ~T0 @X0 0 e@3994 ]
+"5367
+[v _PTCKPS0 `Vb ~T0 @X0 0 e@31954 ]
+"5369
+[v _PTCKPS1 `Vb ~T0 @X0 0 e@31955 ]
+"5383
+[v _PTMOD1 `Vb ~T0 @X0 0 e@31953 ]
+"5381
+[v _PTMOD0 `Vb ~T0 @X0 0 e@31952 ]
+"1777
+[v _PTCON1 `Vuc ~T0 @X0 0 e@3993 ]
+"740
+[v _PWMCON0 `Vuc ~T0 @X0 0 e@3974 ]
+"5405
+[v _PWMEN0 `Vb ~T0 @X0 0 e@31796 ]
+"5407
+[v _PWMEN1 `Vb ~T0 @X0 0 e@31797 ]
+"5409
+[v _PWMEN2 `Vb ~T0 @X0 0 e@31798 ]
+"5333
+[v _PMOD0 `Vb ~T0 @X0 0 e@31792 ]
+"5335
+[v _PMOD1 `Vb ~T0 @X0 0 e@31793 ]
+"5337
+[v _PMOD2 `Vb ~T0 @X0 0 e@31794 ]
+"675
+[v _PWMCON1 `Vuc ~T0 @X0 0 e@3973 ]
+"1701
+[v _PTPERH `Vuc ~T0 @X0 0 e@3989 ]
+"1720
+[v _PTPERL `Vuc ~T0 @X0 0 e@3990 ]
+"486
+[v _OVDCONS `Vuc ~T0 @X0 0 e@3970 ]
+"4953
+[v _BRGH `Vb ~T0 @X0 0 e@32098 ]
+"2976
+[v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
+"5543
+[v _SYNC `Vb ~T0 @X0 0 e@32100 ]
+"5527
+[v _SPEN `Vb ~T0 @X0 0 e@32095 ]
+"5019
+[v _CREN `Vb ~T0 @X0 0 e@32092 ]
+"5529
+[v _SREN `Vb ~T0 @X0 0 e@32093 ]
+"5679
+[v _TXIE `Vb ~T0 @X0 0 e@31980 ]
+"5465
+[v _RCIE `Vb ~T0 @X0 0 e@31981 ]
+"5655
+[v _TX9 `Vb ~T0 @X0 0 e@32102 ]
+"5483
+[v _RX9 `Vb ~T0 @X0 0 e@32094 ]
+"5675
+[v _TXEN `Vb ~T0 @X0 0 e@32101 ]
+"5323
+[v _PEIE `Vb ~T0 @X0 0 e@32662 ]
+"5589
+[v _TMR1IE `Vb ~T0 @X0 0 e@31976 ]
+"5579
+[v _TMR0IE `Vb ~T0 @X0 0 e@32661 ]
+"5085
+[v _GIE `Vb ~T0 @X0 0 e@32663 ]
+"5681
+[v _TXIF `Vb ~T0 @X0 0 e@31988 ]
+"2954
+[v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
+"5095
+[v _GODONE `Vb ~T0 @X0 0 e@32273 ]
+"3618
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+"5467
+[v _RCIF `Vb ~T0 @X0 0 e@31989 ]
+"2459
+[s S133 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S133 . RX9D OERR FERR ADEN CREN SREN RX9 SPEN ]
+"2469
+[s S134 :3 `uc 1 :1 `uc 1 ]
+[n S134 . . ADDEN ]
+"2473
+[s S135 :5 `uc 1 :1 `uc 1 ]
+[n S135 . . SRENA ]
+"2477
+[s S136 :6 `uc 1 :1 `uc 1 ]
+[n S136 . . RC8_9 ]
+"2481
+[s S137 :6 `uc 1 :1 `uc 1 ]
+[n S137 . . RC9 ]
+"2485
+[s S138 :1 `uc 1 ]
+[n S138 . RCD8 ]
+"2458
+[u S132 `S133 1 `S134 1 `S135 1 `S136 1 `S137 1 `S138 1 ]
+[n S132 . . . . . . . ]
+"2489
+[v _RCSTAbits `VS132 ~T0 @X0 0 e@4011 ]
+"2965
+[v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
+[; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
+[; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
+[; ;pic18f1330.h: 44: extern volatile unsigned char PORTA @ 0xF80;
+"46 ..\pic18f1330.h
+[; ;pic18f1330.h: 46: asm("PORTA equ 0F80h");
+[; <" PORTA equ 0F80h ;# ">
+[; ;pic18f1330.h: 49: typedef union {
+[; ;pic18f1330.h: 50: struct {
+[; ;pic18f1330.h: 51: unsigned RA0 :1;
+[; ;pic18f1330.h: 52: unsigned RA1 :1;
+[; ;pic18f1330.h: 53: unsigned RA2 :1;
+[; ;pic18f1330.h: 54: unsigned RA3 :1;
+[; ;pic18f1330.h: 55: unsigned RA4 :1;
+[; ;pic18f1330.h: 56: unsigned RA5 :1;
+[; ;pic18f1330.h: 57: unsigned RA6 :1;
+[; ;pic18f1330.h: 58: unsigned RA7 :1;
+[; ;pic18f1330.h: 59: };
+[; ;pic18f1330.h: 60: struct {
+[; ;pic18f1330.h: 61: unsigned AN0 :1;
+[; ;pic18f1330.h: 62: unsigned AN1 :1;
+[; ;pic18f1330.h: 63: unsigned TX :1;
+[; ;pic18f1330.h: 64: unsigned RX :1;
+[; ;pic18f1330.h: 65: unsigned AN2 :1;
+[; ;pic18f1330.h: 66: unsigned MCLR :1;
+[; ;pic18f1330.h: 67: unsigned OSC2 :1;
+[; ;pic18f1330.h: 68: unsigned OSC1 :1;
+[; ;pic18f1330.h: 69: };
+[; ;pic18f1330.h: 70: struct {
+[; ;pic18f1330.h: 71: unsigned INT0 :1;
+[; ;pic18f1330.h: 72: unsigned INT1 :1;
+[; ;pic18f1330.h: 73: unsigned CK :1;
+[; ;pic18f1330.h: 74: unsigned DT :1;
+[; ;pic18f1330.h: 75: unsigned T0CKI :1;
+[; ;pic18f1330.h: 76: unsigned :1;
+[; ;pic18f1330.h: 77: unsigned CLKO :1;
+[; ;pic18f1330.h: 78: unsigned CLKI :1;
+[; ;pic18f1330.h: 79: };
+[; ;pic18f1330.h: 80: struct {
+[; ;pic18f1330.h: 81: unsigned KBI0 :1;
+[; ;pic18f1330.h: 82: unsigned KBI1 :1;
+[; ;pic18f1330.h: 83: unsigned :2;
+[; ;pic18f1330.h: 84: unsigned VREFP :1;
+[; ;pic18f1330.h: 85: unsigned :1;
+[; ;pic18f1330.h: 86: unsigned T1OSO :1;
+[; ;pic18f1330.h: 87: unsigned T1OSI :1;
+[; ;pic18f1330.h: 88: };
+[; ;pic18f1330.h: 89: struct {
+[; ;pic18f1330.h: 90: unsigned :5;
+[; ;pic18f1330.h: 91: unsigned NOT_MCLR :1;
+[; ;pic18f1330.h: 92: };
+[; ;pic18f1330.h: 93: struct {
+[; ;pic18f1330.h: 94: unsigned CMP0 :1;
+[; ;pic18f1330.h: 95: unsigned :4;
+[; ;pic18f1330.h: 96: unsigned nMCLR :1;
+[; ;pic18f1330.h: 97: unsigned AN3 :1;
+[; ;pic18f1330.h: 98: };
+[; ;pic18f1330.h: 99: struct {
+[; ;pic18f1330.h: 100: unsigned :6;
+[; ;pic18f1330.h: 101: unsigned T1CKI :1;
+[; ;pic18f1330.h: 102: };
+[; ;pic18f1330.h: 103: struct {
+[; ;pic18f1330.h: 104: unsigned :5;
+[; ;pic18f1330.h: 105: unsigned LVDIN :1;
+[; ;pic18f1330.h: 106: };
+[; ;pic18f1330.h: 107: struct {
+[; ;pic18f1330.h: 108: unsigned :7;
+[; ;pic18f1330.h: 109: unsigned RJPU :1;
+[; ;pic18f1330.h: 110: };
+[; ;pic18f1330.h: 111: struct {
+[; ;pic18f1330.h: 112: unsigned ULPWUIN :1;
+[; ;pic18f1330.h: 113: };
+[; ;pic18f1330.h: 114: } PORTAbits_t;
+[; ;pic18f1330.h: 115: extern volatile PORTAbits_t PORTAbits @ 0xF80;
+[; ;pic18f1330.h: 299: extern volatile unsigned char PORTB @ 0xF81;
+"301
+[; ;pic18f1330.h: 301: asm("PORTB equ 0F81h");
+[; <" PORTB equ 0F81h ;# ">
+[; ;pic18f1330.h: 304: typedef union {
+[; ;pic18f1330.h: 305: struct {
+[; ;pic18f1330.h: 306: unsigned RB0 :1;
+[; ;pic18f1330.h: 307: unsigned RB1 :1;
+[; ;pic18f1330.h: 308: unsigned RB2 :1;
+[; ;pic18f1330.h: 309: unsigned RB3 :1;
+[; ;pic18f1330.h: 310: unsigned RB4 :1;
+[; ;pic18f1330.h: 311: unsigned RB5 :1;
+[; ;pic18f1330.h: 312: unsigned RB6 :1;
+[; ;pic18f1330.h: 313: unsigned RB7 :1;
+[; ;pic18f1330.h: 314: };
+[; ;pic18f1330.h: 315: struct {
+[; ;pic18f1330.h: 316: unsigned PWM0 :1;
+[; ;pic18f1330.h: 317: unsigned PWM1 :1;
+[; ;pic18f1330.h: 318: unsigned INT2 :1;
+[; ;pic18f1330.h: 319: unsigned INT3 :1;
+[; ;pic18f1330.h: 320: unsigned PWM2 :1;
+[; ;pic18f1330.h: 321: unsigned PWM3 :1;
+[; ;pic18f1330.h: 322: unsigned PWM4 :1;
+[; ;pic18f1330.h: 323: unsigned PWM5 :1;
+[; ;pic18f1330.h: 324: };
+[; ;pic18f1330.h: 325: struct {
+[; ;pic18f1330.h: 326: unsigned :2;
+[; ;pic18f1330.h: 327: unsigned KBI2 :1;
+[; ;pic18f1330.h: 328: unsigned KBI3 :1;
+[; ;pic18f1330.h: 329: unsigned :2;
+[; ;pic18f1330.h: 330: unsigned PGC :1;
+[; ;pic18f1330.h: 331: unsigned PGD :1;
+[; ;pic18f1330.h: 332: };
+[; ;pic18f1330.h: 333: struct {
+[; ;pic18f1330.h: 334: unsigned :2;
+[; ;pic18f1330.h: 335: unsigned CMP2 :1;
+[; ;pic18f1330.h: 336: unsigned CMP1 :1;
+[; ;pic18f1330.h: 337: };
+[; ;pic18f1330.h: 338: struct {
+[; ;pic18f1330.h: 339: unsigned :2;
+[; ;pic18f1330.h: 340: unsigned T1OSO :1;
+[; ;pic18f1330.h: 341: unsigned T1OSI :1;
+[; ;pic18f1330.h: 342: };
+[; ;pic18f1330.h: 343: struct {
+[; ;pic18f1330.h: 344: unsigned :2;
+[; ;pic18f1330.h: 345: unsigned T1CKI :1;
+[; ;pic18f1330.h: 346: };
+[; ;pic18f1330.h: 347: struct {
+[; ;pic18f1330.h: 348: unsigned :3;
+[; ;pic18f1330.h: 349: unsigned CCP2_PA2 :1;
+[; ;pic18f1330.h: 350: };
+[; ;pic18f1330.h: 351: } PORTBbits_t;
+[; ;pic18f1330.h: 352: extern volatile PORTBbits_t PORTBbits @ 0xF81;
+[; ;pic18f1330.h: 486: extern volatile unsigned char OVDCONS @ 0xF82;
+"488
+[; ;pic18f1330.h: 488: asm("OVDCONS equ 0F82h");
+[; <" OVDCONS equ 0F82h ;# ">
+[; ;pic18f1330.h: 491: typedef union {
+[; ;pic18f1330.h: 492: struct {
+[; ;pic18f1330.h: 493: unsigned POUT :6;
+[; ;pic18f1330.h: 494: };
+[; ;pic18f1330.h: 495: struct {
+[; ;pic18f1330.h: 496: unsigned POUT0 :1;
+[; ;pic18f1330.h: 497: unsigned POUT1 :1;
+[; ;pic18f1330.h: 498: unsigned POUT2 :1;
+[; ;pic18f1330.h: 499: unsigned POUT3 :1;
+[; ;pic18f1330.h: 500: unsigned POUT4 :1;
+[; ;pic18f1330.h: 501: unsigned POUT5 :1;
+[; ;pic18f1330.h: 502: };
+[; ;pic18f1330.h: 503: } OVDCONSbits_t;
+[; ;pic18f1330.h: 504: extern volatile OVDCONSbits_t OVDCONSbits @ 0xF82;
+[; ;pic18f1330.h: 543: extern volatile unsigned char OVDCOND @ 0xF83;
+"545
+[; ;pic18f1330.h: 545: asm("OVDCOND equ 0F83h");
+[; <" OVDCOND equ 0F83h ;# ">
+[; ;pic18f1330.h: 548: typedef union {
+[; ;pic18f1330.h: 549: struct {
+[; ;pic18f1330.h: 550: unsigned POVD :6;
+[; ;pic18f1330.h: 551: };
+[; ;pic18f1330.h: 552: struct {
+[; ;pic18f1330.h: 553: unsigned POVD0 :1;
+[; ;pic18f1330.h: 554: unsigned POVD1 :1;
+[; ;pic18f1330.h: 555: unsigned POVD2 :1;
+[; ;pic18f1330.h: 556: unsigned POVD3 :1;
+[; ;pic18f1330.h: 557: unsigned POVD4 :1;
+[; ;pic18f1330.h: 558: unsigned POVD5 :1;
+[; ;pic18f1330.h: 559: };
+[; ;pic18f1330.h: 560: } OVDCONDbits_t;
+[; ;pic18f1330.h: 561: extern volatile OVDCONDbits_t OVDCONDbits @ 0xF83;
+[; ;pic18f1330.h: 600: extern volatile unsigned char DTCON @ 0xF84;
+"602
+[; ;pic18f1330.h: 602: asm("DTCON equ 0F84h");
+[; <" DTCON equ 0F84h ;# ">
+[; ;pic18f1330.h: 605: typedef union {
+[; ;pic18f1330.h: 606: struct {
+[; ;pic18f1330.h: 607: unsigned DTA :6;
+[; ;pic18f1330.h: 608: unsigned DTAPS :2;
+[; ;pic18f1330.h: 609: };
+[; ;pic18f1330.h: 610: struct {
+[; ;pic18f1330.h: 611: unsigned DT0 :1;
+[; ;pic18f1330.h: 612: unsigned DT1 :1;
+[; ;pic18f1330.h: 613: unsigned DT2 :1;
+[; ;pic18f1330.h: 614: unsigned DT3 :1;
+[; ;pic18f1330.h: 615: unsigned DT4 :1;
+[; ;pic18f1330.h: 616: unsigned DT5 :1;
+[; ;pic18f1330.h: 617: unsigned DTPS0 :1;
+[; ;pic18f1330.h: 618: unsigned DTPS1 :1;
+[; ;pic18f1330.h: 619: };
+[; ;pic18f1330.h: 620: } DTCONbits_t;
+[; ;pic18f1330.h: 621: extern volatile DTCONbits_t DTCONbits @ 0xF84;
+[; ;pic18f1330.h: 675: extern volatile unsigned char PWMCON1 @ 0xF85;
+"677
+[; ;pic18f1330.h: 677: asm("PWMCON1 equ 0F85h");
+[; <" PWMCON1 equ 0F85h ;# ">
+[; ;pic18f1330.h: 680: typedef union {
+[; ;pic18f1330.h: 681: struct {
+[; ;pic18f1330.h: 682: unsigned OSYNC :1;
+[; ;pic18f1330.h: 683: unsigned UDIS :1;
+[; ;pic18f1330.h: 684: unsigned :1;
+[; ;pic18f1330.h: 685: unsigned SEVTDIR :1;
+[; ;pic18f1330.h: 686: unsigned SEVOPS :4;
+[; ;pic18f1330.h: 687: };
+[; ;pic18f1330.h: 688: struct {
+[; ;pic18f1330.h: 689: unsigned :4;
+[; ;pic18f1330.h: 690: unsigned SEVOPS0 :1;
+[; ;pic18f1330.h: 691: unsigned SEVOPS1 :1;
+[; ;pic18f1330.h: 692: unsigned SEVOPS2 :1;
+[; ;pic18f1330.h: 693: unsigned SEVOPS3 :1;
+[; ;pic18f1330.h: 694: };
+[; ;pic18f1330.h: 695: } PWMCON1bits_t;
+[; ;pic18f1330.h: 696: extern volatile PWMCON1bits_t PWMCON1bits @ 0xF85;
+[; ;pic18f1330.h: 740: extern volatile unsigned char PWMCON0 @ 0xF86;
+"742
+[; ;pic18f1330.h: 742: asm("PWMCON0 equ 0F86h");
+[; <" PWMCON0 equ 0F86h ;# ">
+[; ;pic18f1330.h: 745: typedef union {
+[; ;pic18f1330.h: 746: struct {
+[; ;pic18f1330.h: 747: unsigned PMOD :3;
+[; ;pic18f1330.h: 748: unsigned :1;
+[; ;pic18f1330.h: 749: unsigned PWMEN :3;
+[; ;pic18f1330.h: 750: };
+[; ;pic18f1330.h: 751: struct {
+[; ;pic18f1330.h: 752: unsigned PMOD0 :1;
+[; ;pic18f1330.h: 753: unsigned PMOD1 :1;
+[; ;pic18f1330.h: 754: unsigned PMOD2 :1;
+[; ;pic18f1330.h: 755: unsigned :1;
+[; ;pic18f1330.h: 756: unsigned PWMEN0 :1;
+[; ;pic18f1330.h: 757: unsigned PWMEN1 :1;
+[; ;pic18f1330.h: 758: unsigned PWMEN2 :1;
+[; ;pic18f1330.h: 759: };
+[; ;pic18f1330.h: 760: } PWMCON0bits_t;
+[; ;pic18f1330.h: 761: extern volatile PWMCON0bits_t PWMCON0bits @ 0xF86;
+[; ;pic18f1330.h: 805: extern volatile unsigned char SEVTCMPH @ 0xF87;
+"807
+[; ;pic18f1330.h: 807: asm("SEVTCMPH equ 0F87h");
+[; <" SEVTCMPH equ 0F87h ;# ">
+[; ;pic18f1330.h: 810: typedef union {
+[; ;pic18f1330.h: 811: struct {
+[; ;pic18f1330.h: 812: unsigned SEVTCMPH :4;
+[; ;pic18f1330.h: 813: };
+[; ;pic18f1330.h: 814: } SEVTCMPHbits_t;
+[; ;pic18f1330.h: 815: extern volatile SEVTCMPHbits_t SEVTCMPHbits @ 0xF87;
+[; ;pic18f1330.h: 824: extern volatile unsigned char SEVTCMPL @ 0xF88;
+"826
+[; ;pic18f1330.h: 826: asm("SEVTCMPL equ 0F88h");
+[; <" SEVTCMPL equ 0F88h ;# ">
+[; ;pic18f1330.h: 829: typedef union {
+[; ;pic18f1330.h: 830: struct {
+[; ;pic18f1330.h: 831: unsigned SEVTCMPL :8;
+[; ;pic18f1330.h: 832: };
+[; ;pic18f1330.h: 833: } SEVTCMPLbits_t;
+[; ;pic18f1330.h: 834: extern volatile SEVTCMPLbits_t SEVTCMPLbits @ 0xF88;
+[; ;pic18f1330.h: 843: extern volatile unsigned char LATA @ 0xF89;
+"845
+[; ;pic18f1330.h: 845: asm("LATA equ 0F89h");
+[; <" LATA equ 0F89h ;# ">
+[; ;pic18f1330.h: 848: typedef union {
+[; ;pic18f1330.h: 849: struct {
+[; ;pic18f1330.h: 850: unsigned LATA0 :1;
+[; ;pic18f1330.h: 851: unsigned LATA1 :1;
+[; ;pic18f1330.h: 852: unsigned LATA2 :1;
+[; ;pic18f1330.h: 853: unsigned LATA3 :1;
+[; ;pic18f1330.h: 854: unsigned LATA4 :1;
+[; ;pic18f1330.h: 855: unsigned LATA5 :1;
+[; ;pic18f1330.h: 856: unsigned LATA6 :1;
+[; ;pic18f1330.h: 857: unsigned LATA7 :1;
+[; ;pic18f1330.h: 858: };
+[; ;pic18f1330.h: 859: struct {
+[; ;pic18f1330.h: 860: unsigned LA0 :1;
+[; ;pic18f1330.h: 861: };
+[; ;pic18f1330.h: 862: struct {
+[; ;pic18f1330.h: 863: unsigned :1;
+[; ;pic18f1330.h: 864: unsigned LA1 :1;
+[; ;pic18f1330.h: 865: };
+[; ;pic18f1330.h: 866: struct {
+[; ;pic18f1330.h: 867: unsigned :2;
+[; ;pic18f1330.h: 868: unsigned LA2 :1;
+[; ;pic18f1330.h: 869: };
+[; ;pic18f1330.h: 870: struct {
+[; ;pic18f1330.h: 871: unsigned :3;
+[; ;pic18f1330.h: 872: unsigned LA3 :1;
+[; ;pic18f1330.h: 873: };
+[; ;pic18f1330.h: 874: struct {
+[; ;pic18f1330.h: 875: unsigned :4;
+[; ;pic18f1330.h: 876: unsigned LA4 :1;
+[; ;pic18f1330.h: 877: };
+[; ;pic18f1330.h: 878: struct {
+[; ;pic18f1330.h: 879: unsigned :5;
+[; ;pic18f1330.h: 880: unsigned LA5 :1;
+[; ;pic18f1330.h: 881: };
+[; ;pic18f1330.h: 882: struct {
+[; ;pic18f1330.h: 883: unsigned :6;
+[; ;pic18f1330.h: 884: unsigned LA6 :1;
+[; ;pic18f1330.h: 885: };
+[; ;pic18f1330.h: 886: struct {
+[; ;pic18f1330.h: 887: unsigned :7;
+[; ;pic18f1330.h: 888: unsigned LA7 :1;
+[; ;pic18f1330.h: 889: };
+[; ;pic18f1330.h: 890: } LATAbits_t;
+[; ;pic18f1330.h: 891: extern volatile LATAbits_t LATAbits @ 0xF89;
+[; ;pic18f1330.h: 975: extern volatile unsigned char LATB @ 0xF8A;
+"977
+[; ;pic18f1330.h: 977: asm("LATB equ 0F8Ah");
+[; <" LATB equ 0F8Ah ;# ">
+[; ;pic18f1330.h: 980: typedef union {
+[; ;pic18f1330.h: 981: struct {
+[; ;pic18f1330.h: 982: unsigned LATB0 :1;
+[; ;pic18f1330.h: 983: unsigned LATB1 :1;
+[; ;pic18f1330.h: 984: unsigned LATB2 :1;
+[; ;pic18f1330.h: 985: unsigned LATB3 :1;
+[; ;pic18f1330.h: 986: unsigned LATB4 :1;
+[; ;pic18f1330.h: 987: unsigned LATB5 :1;
+[; ;pic18f1330.h: 988: unsigned LATB6 :1;
+[; ;pic18f1330.h: 989: unsigned LATB7 :1;
+[; ;pic18f1330.h: 990: };
+[; ;pic18f1330.h: 991: struct {
+[; ;pic18f1330.h: 992: unsigned LB0 :1;
+[; ;pic18f1330.h: 993: };
+[; ;pic18f1330.h: 994: struct {
+[; ;pic18f1330.h: 995: unsigned :1;
+[; ;pic18f1330.h: 996: unsigned LB1 :1;
+[; ;pic18f1330.h: 997: };
+[; ;pic18f1330.h: 998: struct {
+[; ;pic18f1330.h: 999: unsigned :2;
+[; ;pic18f1330.h: 1000: unsigned LB2 :1;
+[; ;pic18f1330.h: 1001: };
+[; ;pic18f1330.h: 1002: struct {
+[; ;pic18f1330.h: 1003: unsigned :3;
+[; ;pic18f1330.h: 1004: unsigned LB3 :1;
+[; ;pic18f1330.h: 1005: };
+[; ;pic18f1330.h: 1006: struct {
+[; ;pic18f1330.h: 1007: unsigned :4;
+[; ;pic18f1330.h: 1008: unsigned LB4 :1;
+[; ;pic18f1330.h: 1009: };
+[; ;pic18f1330.h: 1010: struct {
+[; ;pic18f1330.h: 1011: unsigned :5;
+[; ;pic18f1330.h: 1012: unsigned LB5 :1;
+[; ;pic18f1330.h: 1013: };
+[; ;pic18f1330.h: 1014: struct {
+[; ;pic18f1330.h: 1015: unsigned :6;
+[; ;pic18f1330.h: 1016: unsigned LB6 :1;
+[; ;pic18f1330.h: 1017: };
+[; ;pic18f1330.h: 1018: struct {
+[; ;pic18f1330.h: 1019: unsigned :7;
+[; ;pic18f1330.h: 1020: unsigned LB7 :1;
+[; ;pic18f1330.h: 1021: };
+[; ;pic18f1330.h: 1022: } LATBbits_t;
+[; ;pic18f1330.h: 1023: extern volatile LATBbits_t LATBbits @ 0xF8A;
+[; ;pic18f1330.h: 1107: extern volatile unsigned char FLTCONFIG @ 0xF8B;
+"1109
+[; ;pic18f1330.h: 1109: asm("FLTCONFIG equ 0F8Bh");
+[; <" FLTCONFIG equ 0F8Bh ;# ">
+[; ;pic18f1330.h: 1112: typedef union {
+[; ;pic18f1330.h: 1113: struct {
+[; ;pic18f1330.h: 1114: unsigned FLTAEN :1;
+[; ;pic18f1330.h: 1115: unsigned FLTAMOD :1;
+[; ;pic18f1330.h: 1116: unsigned FLTAS :1;
+[; ;pic18f1330.h: 1117: unsigned :4;
+[; ;pic18f1330.h: 1118: unsigned BRFEN :1;
+[; ;pic18f1330.h: 1119: };
+[; ;pic18f1330.h: 1120: } FLTCONFIGbits_t;
+[; ;pic18f1330.h: 1121: extern volatile FLTCONFIGbits_t FLTCONFIGbits @ 0xF8B;
+[; ;pic18f1330.h: 1145: extern volatile unsigned char PDC2H @ 0xF8C;
+"1147
+[; ;pic18f1330.h: 1147: asm("PDC2H equ 0F8Ch");
+[; <" PDC2H equ 0F8Ch ;# ">
+[; ;pic18f1330.h: 1150: typedef union {
+[; ;pic18f1330.h: 1151: struct {
+[; ;pic18f1330.h: 1152: unsigned PDC2H :6;
+[; ;pic18f1330.h: 1153: };
+[; ;pic18f1330.h: 1154: } PDC2Hbits_t;
+[; ;pic18f1330.h: 1155: extern volatile PDC2Hbits_t PDC2Hbits @ 0xF8C;
+[; ;pic18f1330.h: 1164: extern volatile unsigned char PDC2L @ 0xF8D;
+"1166
+[; ;pic18f1330.h: 1166: asm("PDC2L equ 0F8Dh");
+[; <" PDC2L equ 0F8Dh ;# ">
+[; ;pic18f1330.h: 1169: typedef union {
+[; ;pic18f1330.h: 1170: struct {
+[; ;pic18f1330.h: 1171: unsigned PDC2L :8;
+[; ;pic18f1330.h: 1172: };
+[; ;pic18f1330.h: 1173: } PDC2Lbits_t;
+[; ;pic18f1330.h: 1174: extern volatile PDC2Lbits_t PDC2Lbits @ 0xF8D;
+[; ;pic18f1330.h: 1183: extern volatile unsigned char PDC1H @ 0xF8E;
+"1185
+[; ;pic18f1330.h: 1185: asm("PDC1H equ 0F8Eh");
+[; <" PDC1H equ 0F8Eh ;# ">
+[; ;pic18f1330.h: 1188: typedef union {
+[; ;pic18f1330.h: 1189: struct {
+[; ;pic18f1330.h: 1190: unsigned PDC1H :6;
+[; ;pic18f1330.h: 1191: };
+[; ;pic18f1330.h: 1192: } PDC1Hbits_t;
+[; ;pic18f1330.h: 1193: extern volatile PDC1Hbits_t PDC1Hbits @ 0xF8E;
+[; ;pic18f1330.h: 1202: extern volatile unsigned char PDC1L @ 0xF8F;
+"1204
+[; ;pic18f1330.h: 1204: asm("PDC1L equ 0F8Fh");
+[; <" PDC1L equ 0F8Fh ;# ">
+[; ;pic18f1330.h: 1207: typedef union {
+[; ;pic18f1330.h: 1208: struct {
+[; ;pic18f1330.h: 1209: unsigned PDC1L :8;
+[; ;pic18f1330.h: 1210: };
+[; ;pic18f1330.h: 1211: } PDC1Lbits_t;
+[; ;pic18f1330.h: 1212: extern volatile PDC1Lbits_t PDC1Lbits @ 0xF8F;
+[; ;pic18f1330.h: 1221: extern volatile unsigned char PDC0H @ 0xF90;
+"1223
+[; ;pic18f1330.h: 1223: asm("PDC0H equ 0F90h");
+[; <" PDC0H equ 0F90h ;# ">
+[; ;pic18f1330.h: 1226: typedef union {
+[; ;pic18f1330.h: 1227: struct {
+[; ;pic18f1330.h: 1228: unsigned PDC0H :6;
+[; ;pic18f1330.h: 1229: };
+[; ;pic18f1330.h: 1230: } PDC0Hbits_t;
+[; ;pic18f1330.h: 1231: extern volatile PDC0Hbits_t PDC0Hbits @ 0xF90;
+[; ;pic18f1330.h: 1240: extern volatile unsigned char PDC0L @ 0xF91;
+"1242
+[; ;pic18f1330.h: 1242: asm("PDC0L equ 0F91h");
+[; <" PDC0L equ 0F91h ;# ">
+[; ;pic18f1330.h: 1245: typedef union {
+[; ;pic18f1330.h: 1246: struct {
+[; ;pic18f1330.h: 1247: unsigned PDC0L :8;
+[; ;pic18f1330.h: 1248: };
+[; ;pic18f1330.h: 1249: } PDC0Lbits_t;
+[; ;pic18f1330.h: 1250: extern volatile PDC0Lbits_t PDC0Lbits @ 0xF91;
+[; ;pic18f1330.h: 1259: extern volatile unsigned char TRISA @ 0xF92;
+"1261
+[; ;pic18f1330.h: 1261: asm("TRISA equ 0F92h");
+[; <" TRISA equ 0F92h ;# ">
+[; ;pic18f1330.h: 1264: extern volatile unsigned char DDRA @ 0xF92;
+"1266
+[; ;pic18f1330.h: 1266: asm("DDRA equ 0F92h");
+[; <" DDRA equ 0F92h ;# ">
+[; ;pic18f1330.h: 1269: typedef union {
+[; ;pic18f1330.h: 1270: struct {
+[; ;pic18f1330.h: 1271: unsigned TRISA0 :1;
+[; ;pic18f1330.h: 1272: unsigned TRISA1 :1;
+[; ;pic18f1330.h: 1273: unsigned TRISA2 :1;
+[; ;pic18f1330.h: 1274: unsigned TRISA3 :1;
+[; ;pic18f1330.h: 1275: unsigned TRISA4 :1;
+[; ;pic18f1330.h: 1276: unsigned TRISA5 :1;
+[; ;pic18f1330.h: 1277: unsigned TRISA6 :1;
+[; ;pic18f1330.h: 1278: unsigned TRISA7 :1;
+[; ;pic18f1330.h: 1279: };
+[; ;pic18f1330.h: 1280: struct {
+[; ;pic18f1330.h: 1281: unsigned RA0 :1;
+[; ;pic18f1330.h: 1282: unsigned RA1 :1;
+[; ;pic18f1330.h: 1283: unsigned RA2 :1;
+[; ;pic18f1330.h: 1284: unsigned RA3 :1;
+[; ;pic18f1330.h: 1285: unsigned RA4 :1;
+[; ;pic18f1330.h: 1286: unsigned RA5 :1;
+[; ;pic18f1330.h: 1287: unsigned RA6 :1;
+[; ;pic18f1330.h: 1288: unsigned RA7 :1;
+[; ;pic18f1330.h: 1289: };
+[; ;pic18f1330.h: 1290: } TRISAbits_t;
+[; ;pic18f1330.h: 1291: extern volatile TRISAbits_t TRISAbits @ 0xF92;
+[; ;pic18f1330.h: 1374: typedef union {
+[; ;pic18f1330.h: 1375: struct {
+[; ;pic18f1330.h: 1376: unsigned TRISA0 :1;
+[; ;pic18f1330.h: 1377: unsigned TRISA1 :1;
+[; ;pic18f1330.h: 1378: unsigned TRISA2 :1;
+[; ;pic18f1330.h: 1379: unsigned TRISA3 :1;
+[; ;pic18f1330.h: 1380: unsigned TRISA4 :1;
+[; ;pic18f1330.h: 1381: unsigned TRISA5 :1;
+[; ;pic18f1330.h: 1382: unsigned TRISA6 :1;
+[; ;pic18f1330.h: 1383: unsigned TRISA7 :1;
+[; ;pic18f1330.h: 1384: };
+[; ;pic18f1330.h: 1385: struct {
+[; ;pic18f1330.h: 1386: unsigned RA0 :1;
+[; ;pic18f1330.h: 1387: unsigned RA1 :1;
+[; ;pic18f1330.h: 1388: unsigned RA2 :1;
+[; ;pic18f1330.h: 1389: unsigned RA3 :1;
+[; ;pic18f1330.h: 1390: unsigned RA4 :1;
+[; ;pic18f1330.h: 1391: unsigned RA5 :1;
+[; ;pic18f1330.h: 1392: unsigned RA6 :1;
+[; ;pic18f1330.h: 1393: unsigned RA7 :1;
+[; ;pic18f1330.h: 1394: };
+[; ;pic18f1330.h: 1395: } DDRAbits_t;
+[; ;pic18f1330.h: 1396: extern volatile DDRAbits_t DDRAbits @ 0xF92;
+[; ;pic18f1330.h: 1480: extern volatile unsigned char TRISB @ 0xF93;
+"1482
+[; ;pic18f1330.h: 1482: asm("TRISB equ 0F93h");
+[; <" TRISB equ 0F93h ;# ">
+[; ;pic18f1330.h: 1485: extern volatile unsigned char DDRB @ 0xF93;
+"1487
+[; ;pic18f1330.h: 1487: asm("DDRB equ 0F93h");
+[; <" DDRB equ 0F93h ;# ">
+[; ;pic18f1330.h: 1490: typedef union {
+[; ;pic18f1330.h: 1491: struct {
+[; ;pic18f1330.h: 1492: unsigned TRISB0 :1;
+[; ;pic18f1330.h: 1493: unsigned TRISB1 :1;
+[; ;pic18f1330.h: 1494: unsigned TRISB2 :1;
+[; ;pic18f1330.h: 1495: unsigned TRISB3 :1;
+[; ;pic18f1330.h: 1496: unsigned TRISB4 :1;
+[; ;pic18f1330.h: 1497: unsigned TRISB5 :1;
+[; ;pic18f1330.h: 1498: unsigned TRISB6 :1;
+[; ;pic18f1330.h: 1499: unsigned TRISB7 :1;
+[; ;pic18f1330.h: 1500: };
+[; ;pic18f1330.h: 1501: struct {
+[; ;pic18f1330.h: 1502: unsigned RB0 :1;
+[; ;pic18f1330.h: 1503: unsigned RB1 :1;
+[; ;pic18f1330.h: 1504: unsigned RB2 :1;
+[; ;pic18f1330.h: 1505: unsigned RB3 :1;
+[; ;pic18f1330.h: 1506: unsigned RB4 :1;
+[; ;pic18f1330.h: 1507: unsigned RB5 :1;
+[; ;pic18f1330.h: 1508: unsigned RB6 :1;
+[; ;pic18f1330.h: 1509: unsigned RB7 :1;
+[; ;pic18f1330.h: 1510: };
+[; ;pic18f1330.h: 1511: } TRISBbits_t;
+[; ;pic18f1330.h: 1512: extern volatile TRISBbits_t TRISBbits @ 0xF93;
+[; ;pic18f1330.h: 1595: typedef union {
+[; ;pic18f1330.h: 1596: struct {
+[; ;pic18f1330.h: 1597: unsigned TRISB0 :1;
+[; ;pic18f1330.h: 1598: unsigned TRISB1 :1;
+[; ;pic18f1330.h: 1599: unsigned TRISB2 :1;
+[; ;pic18f1330.h: 1600: unsigned TRISB3 :1;
+[; ;pic18f1330.h: 1601: unsigned TRISB4 :1;
+[; ;pic18f1330.h: 1602: unsigned TRISB5 :1;
+[; ;pic18f1330.h: 1603: unsigned TRISB6 :1;
+[; ;pic18f1330.h: 1604: unsigned TRISB7 :1;
+[; ;pic18f1330.h: 1605: };
+[; ;pic18f1330.h: 1606: struct {
+[; ;pic18f1330.h: 1607: unsigned RB0 :1;
+[; ;pic18f1330.h: 1608: unsigned RB1 :1;
+[; ;pic18f1330.h: 1609: unsigned RB2 :1;
+[; ;pic18f1330.h: 1610: unsigned RB3 :1;
+[; ;pic18f1330.h: 1611: unsigned RB4 :1;
+[; ;pic18f1330.h: 1612: unsigned RB5 :1;
+[; ;pic18f1330.h: 1613: unsigned RB6 :1;
+[; ;pic18f1330.h: 1614: unsigned RB7 :1;
+[; ;pic18f1330.h: 1615: };
+[; ;pic18f1330.h: 1616: } DDRBbits_t;
+[; ;pic18f1330.h: 1617: extern volatile DDRBbits_t DDRBbits @ 0xF93;
+[; ;pic18f1330.h: 1701: extern volatile unsigned char PTPERH @ 0xF95;
+"1703
+[; ;pic18f1330.h: 1703: asm("PTPERH equ 0F95h");
+[; <" PTPERH equ 0F95h ;# ">
+[; ;pic18f1330.h: 1706: typedef union {
+[; ;pic18f1330.h: 1707: struct {
+[; ;pic18f1330.h: 1708: unsigned PTPERH :4;
+[; ;pic18f1330.h: 1709: };
+[; ;pic18f1330.h: 1710: } PTPERHbits_t;
+[; ;pic18f1330.h: 1711: extern volatile PTPERHbits_t PTPERHbits @ 0xF95;
+[; ;pic18f1330.h: 1720: extern volatile unsigned char PTPERL @ 0xF96;
+"1722
+[; ;pic18f1330.h: 1722: asm("PTPERL equ 0F96h");
+[; <" PTPERL equ 0F96h ;# ">
+[; ;pic18f1330.h: 1725: typedef union {
+[; ;pic18f1330.h: 1726: struct {
+[; ;pic18f1330.h: 1727: unsigned PTPERL :8;
+[; ;pic18f1330.h: 1728: };
+[; ;pic18f1330.h: 1729: } PTPERLbits_t;
+[; ;pic18f1330.h: 1730: extern volatile PTPERLbits_t PTPERLbits @ 0xF96;
+[; ;pic18f1330.h: 1739: extern volatile unsigned char PTMRH @ 0xF97;
+"1741
+[; ;pic18f1330.h: 1741: asm("PTMRH equ 0F97h");
+[; <" PTMRH equ 0F97h ;# ">
+[; ;pic18f1330.h: 1744: typedef union {
+[; ;pic18f1330.h: 1745: struct {
+[; ;pic18f1330.h: 1746: unsigned PTMRH :4;
+[; ;pic18f1330.h: 1747: };
+[; ;pic18f1330.h: 1748: } PTMRHbits_t;
+[; ;pic18f1330.h: 1749: extern volatile PTMRHbits_t PTMRHbits @ 0xF97;
+[; ;pic18f1330.h: 1758: extern volatile unsigned char PTMRL @ 0xF98;
+"1760
+[; ;pic18f1330.h: 1760: asm("PTMRL equ 0F98h");
+[; <" PTMRL equ 0F98h ;# ">
+[; ;pic18f1330.h: 1763: typedef union {
+[; ;pic18f1330.h: 1764: struct {
+[; ;pic18f1330.h: 1765: unsigned PTMRL :8;
+[; ;pic18f1330.h: 1766: };
+[; ;pic18f1330.h: 1767: } PTMRLbits_t;
+[; ;pic18f1330.h: 1768: extern volatile PTMRLbits_t PTMRLbits @ 0xF98;
+[; ;pic18f1330.h: 1777: extern volatile unsigned char PTCON1 @ 0xF99;
+"1779
+[; ;pic18f1330.h: 1779: asm("PTCON1 equ 0F99h");
+[; <" PTCON1 equ 0F99h ;# ">
+[; ;pic18f1330.h: 1782: typedef union {
+[; ;pic18f1330.h: 1783: struct {
+[; ;pic18f1330.h: 1784: unsigned :6;
+[; ;pic18f1330.h: 1785: unsigned PTDIR :1;
+[; ;pic18f1330.h: 1786: unsigned PTEN :1;
+[; ;pic18f1330.h: 1787: };
+[; ;pic18f1330.h: 1788: } PTCON1bits_t;
+[; ;pic18f1330.h: 1789: extern volatile PTCON1bits_t PTCON1bits @ 0xF99;
+[; ;pic18f1330.h: 1803: extern volatile unsigned char PTCON0 @ 0xF9A;
+"1805
+[; ;pic18f1330.h: 1805: asm("PTCON0 equ 0F9Ah");
+[; <" PTCON0 equ 0F9Ah ;# ">
+[; ;pic18f1330.h: 1808: typedef union {
+[; ;pic18f1330.h: 1809: struct {
+[; ;pic18f1330.h: 1810: unsigned PTMOD :2;
+[; ;pic18f1330.h: 1811: unsigned PTCKPS :2;
+[; ;pic18f1330.h: 1812: unsigned PTOPS :4;
+[; ;pic18f1330.h: 1813: };
+[; ;pic18f1330.h: 1814: struct {
+[; ;pic18f1330.h: 1815: unsigned PTMOD0 :1;
+[; ;pic18f1330.h: 1816: unsigned PTMOD1 :1;
+[; ;pic18f1330.h: 1817: unsigned PTCKPS0 :1;
+[; ;pic18f1330.h: 1818: unsigned PTCKPS1 :1;
+[; ;pic18f1330.h: 1819: unsigned PTOPS0 :1;
+[; ;pic18f1330.h: 1820: unsigned PTOPS1 :1;
+[; ;pic18f1330.h: 1821: unsigned PTOPS2 :1;
+[; ;pic18f1330.h: 1822: unsigned PTOPS3 :1;
+[; ;pic18f1330.h: 1823: };
+[; ;pic18f1330.h: 1824: } PTCON0bits_t;
+[; ;pic18f1330.h: 1825: extern volatile PTCON0bits_t PTCON0bits @ 0xF9A;
+[; ;pic18f1330.h: 1884: extern volatile unsigned char OSCTUNE @ 0xF9B;
+"1886
+[; ;pic18f1330.h: 1886: asm("OSCTUNE equ 0F9Bh");
+[; <" OSCTUNE equ 0F9Bh ;# ">
+[; ;pic18f1330.h: 1889: typedef union {
+[; ;pic18f1330.h: 1890: struct {
+[; ;pic18f1330.h: 1891: unsigned TUN :5;
+[; ;pic18f1330.h: 1892: unsigned :1;
+[; ;pic18f1330.h: 1893: unsigned PLLEN :1;
+[; ;pic18f1330.h: 1894: unsigned INTSRC :1;
+[; ;pic18f1330.h: 1895: };
+[; ;pic18f1330.h: 1896: struct {
+[; ;pic18f1330.h: 1897: unsigned TUN0 :1;
+[; ;pic18f1330.h: 1898: unsigned TUN1 :1;
+[; ;pic18f1330.h: 1899: unsigned TUN2 :1;
+[; ;pic18f1330.h: 1900: unsigned TUN3 :1;
+[; ;pic18f1330.h: 1901: unsigned TUN4 :1;
+[; ;pic18f1330.h: 1902: };
+[; ;pic18f1330.h: 1903: } OSCTUNEbits_t;
+[; ;pic18f1330.h: 1904: extern volatile OSCTUNEbits_t OSCTUNEbits @ 0xF9B;
+[; ;pic18f1330.h: 1948: extern volatile unsigned char PIE1 @ 0xF9D;
+"1950
+[; ;pic18f1330.h: 1950: asm("PIE1 equ 0F9Dh");
+[; <" PIE1 equ 0F9Dh ;# ">
+[; ;pic18f1330.h: 1953: typedef union {
+[; ;pic18f1330.h: 1954: struct {
+[; ;pic18f1330.h: 1955: unsigned TMR1IE :1;
+[; ;pic18f1330.h: 1956: unsigned CMP0IE :1;
+[; ;pic18f1330.h: 1957: unsigned CMP1IE :1;
+[; ;pic18f1330.h: 1958: unsigned CMP2IE :1;
+[; ;pic18f1330.h: 1959: unsigned TXIE :1;
+[; ;pic18f1330.h: 1960: unsigned RCIE :1;
+[; ;pic18f1330.h: 1961: unsigned ADIE :1;
+[; ;pic18f1330.h: 1962: };
+[; ;pic18f1330.h: 1963: struct {
+[; ;pic18f1330.h: 1964: unsigned :5;
+[; ;pic18f1330.h: 1965: unsigned RC1IE :1;
+[; ;pic18f1330.h: 1966: };
+[; ;pic18f1330.h: 1967: struct {
+[; ;pic18f1330.h: 1968: unsigned :4;
+[; ;pic18f1330.h: 1969: unsigned TX1IE :1;
+[; ;pic18f1330.h: 1970: };
+[; ;pic18f1330.h: 1971: } PIE1bits_t;
+[; ;pic18f1330.h: 1972: extern volatile PIE1bits_t PIE1bits @ 0xF9D;
+[; ;pic18f1330.h: 2021: extern volatile unsigned char PIR1 @ 0xF9E;
+"2023
+[; ;pic18f1330.h: 2023: asm("PIR1 equ 0F9Eh");
+[; <" PIR1 equ 0F9Eh ;# ">
+[; ;pic18f1330.h: 2026: typedef union {
+[; ;pic18f1330.h: 2027: struct {
+[; ;pic18f1330.h: 2028: unsigned TMR1IF :1;
+[; ;pic18f1330.h: 2029: unsigned CMP0IF :1;
+[; ;pic18f1330.h: 2030: unsigned CMP1IF :1;
+[; ;pic18f1330.h: 2031: unsigned CMP2IF :1;
+[; ;pic18f1330.h: 2032: unsigned TXIF :1;
+[; ;pic18f1330.h: 2033: unsigned RCIF :1;
+[; ;pic18f1330.h: 2034: unsigned ADIF :1;
+[; ;pic18f1330.h: 2035: };
+[; ;pic18f1330.h: 2036: struct {
+[; ;pic18f1330.h: 2037: unsigned :5;
+[; ;pic18f1330.h: 2038: unsigned RC1IF :1;
+[; ;pic18f1330.h: 2039: };
+[; ;pic18f1330.h: 2040: struct {
+[; ;pic18f1330.h: 2041: unsigned :4;
+[; ;pic18f1330.h: 2042: unsigned TX1IF :1;
+[; ;pic18f1330.h: 2043: };
+[; ;pic18f1330.h: 2044: } PIR1bits_t;
+[; ;pic18f1330.h: 2045: extern volatile PIR1bits_t PIR1bits @ 0xF9E;
+[; ;pic18f1330.h: 2094: extern volatile unsigned char IPR1 @ 0xF9F;
+"2096
+[; ;pic18f1330.h: 2096: asm("IPR1 equ 0F9Fh");
+[; <" IPR1 equ 0F9Fh ;# ">
+[; ;pic18f1330.h: 2099: typedef union {
+[; ;pic18f1330.h: 2100: struct {
+[; ;pic18f1330.h: 2101: unsigned TMR1IP :1;
+[; ;pic18f1330.h: 2102: unsigned CMP0IP :1;
+[; ;pic18f1330.h: 2103: unsigned CMP1IP :1;
+[; ;pic18f1330.h: 2104: unsigned CMP2IP :1;
+[; ;pic18f1330.h: 2105: unsigned TXIP :1;
+[; ;pic18f1330.h: 2106: unsigned RCIP :1;
+[; ;pic18f1330.h: 2107: unsigned ADIP :1;
+[; ;pic18f1330.h: 2108: };
+[; ;pic18f1330.h: 2109: struct {
+[; ;pic18f1330.h: 2110: unsigned :5;
+[; ;pic18f1330.h: 2111: unsigned RC1IP :1;
+[; ;pic18f1330.h: 2112: };
+[; ;pic18f1330.h: 2113: struct {
+[; ;pic18f1330.h: 2114: unsigned :4;
+[; ;pic18f1330.h: 2115: unsigned TX1IP :1;
+[; ;pic18f1330.h: 2116: };
+[; ;pic18f1330.h: 2117: } IPR1bits_t;
+[; ;pic18f1330.h: 2118: extern volatile IPR1bits_t IPR1bits @ 0xF9F;
+[; ;pic18f1330.h: 2167: extern volatile unsigned char PIE2 @ 0xFA0;
+"2169
+[; ;pic18f1330.h: 2169: asm("PIE2 equ 0FA0h");
+[; <" PIE2 equ 0FA0h ;# ">
+[; ;pic18f1330.h: 2172: typedef union {
+[; ;pic18f1330.h: 2173: struct {
+[; ;pic18f1330.h: 2174: unsigned :2;
+[; ;pic18f1330.h: 2175: unsigned LVDIE :1;
+[; ;pic18f1330.h: 2176: unsigned :1;
+[; ;pic18f1330.h: 2177: unsigned EEIE :1;
+[; ;pic18f1330.h: 2178: unsigned :2;
+[; ;pic18f1330.h: 2179: unsigned OSCFIE :1;
+[; ;pic18f1330.h: 2180: };
+[; ;pic18f1330.h: 2181: } PIE2bits_t;
+[; ;pic18f1330.h: 2182: extern volatile PIE2bits_t PIE2bits @ 0xFA0;
+[; ;pic18f1330.h: 2201: extern volatile unsigned char PIR2 @ 0xFA1;
+"2203
+[; ;pic18f1330.h: 2203: asm("PIR2 equ 0FA1h");
+[; <" PIR2 equ 0FA1h ;# ">
+[; ;pic18f1330.h: 2206: typedef union {
+[; ;pic18f1330.h: 2207: struct {
+[; ;pic18f1330.h: 2208: unsigned :2;
+[; ;pic18f1330.h: 2209: unsigned LVDIF :1;
+[; ;pic18f1330.h: 2210: unsigned :1;
+[; ;pic18f1330.h: 2211: unsigned EEIF :1;
+[; ;pic18f1330.h: 2212: unsigned :2;
+[; ;pic18f1330.h: 2213: unsigned OSCFIF :1;
+[; ;pic18f1330.h: 2214: };
+[; ;pic18f1330.h: 2215: } PIR2bits_t;
+[; ;pic18f1330.h: 2216: extern volatile PIR2bits_t PIR2bits @ 0xFA1;
+[; ;pic18f1330.h: 2235: extern volatile unsigned char IPR2 @ 0xFA2;
+"2237
+[; ;pic18f1330.h: 2237: asm("IPR2 equ 0FA2h");
+[; <" IPR2 equ 0FA2h ;# ">
+[; ;pic18f1330.h: 2240: typedef union {
+[; ;pic18f1330.h: 2241: struct {
+[; ;pic18f1330.h: 2242: unsigned :2;
+[; ;pic18f1330.h: 2243: unsigned LVDIP :1;
+[; ;pic18f1330.h: 2244: unsigned :1;
+[; ;pic18f1330.h: 2245: unsigned EEIP :1;
+[; ;pic18f1330.h: 2246: unsigned :2;
+[; ;pic18f1330.h: 2247: unsigned OSCFIP :1;
+[; ;pic18f1330.h: 2248: };
+[; ;pic18f1330.h: 2249: } IPR2bits_t;
+[; ;pic18f1330.h: 2250: extern volatile IPR2bits_t IPR2bits @ 0xFA2;
+[; ;pic18f1330.h: 2269: extern volatile unsigned char PIE3 @ 0xFA3;
+"2271
+[; ;pic18f1330.h: 2271: asm("PIE3 equ 0FA3h");
+[; <" PIE3 equ 0FA3h ;# ">
+[; ;pic18f1330.h: 2274: typedef union {
+[; ;pic18f1330.h: 2275: struct {
+[; ;pic18f1330.h: 2276: unsigned :4;
+[; ;pic18f1330.h: 2277: unsigned PTIE :1;
+[; ;pic18f1330.h: 2278: };
+[; ;pic18f1330.h: 2279: struct {
+[; ;pic18f1330.h: 2280: unsigned :4;
+[; ;pic18f1330.h: 2281: unsigned TXB2IE :1;
+[; ;pic18f1330.h: 2282: };
+[; ;pic18f1330.h: 2283: struct {
+[; ;pic18f1330.h: 2284: unsigned :4;
+[; ;pic18f1330.h: 2285: unsigned TXBNIE :1;
+[; ;pic18f1330.h: 2286: };
+[; ;pic18f1330.h: 2287: } PIE3bits_t;
+[; ;pic18f1330.h: 2288: extern volatile PIE3bits_t PIE3bits @ 0xFA3;
+[; ;pic18f1330.h: 2307: extern volatile unsigned char PIR3 @ 0xFA4;
+"2309
+[; ;pic18f1330.h: 2309: asm("PIR3 equ 0FA4h");
+[; <" PIR3 equ 0FA4h ;# ">
+[; ;pic18f1330.h: 2312: typedef union {
+[; ;pic18f1330.h: 2313: struct {
+[; ;pic18f1330.h: 2314: unsigned :4;
+[; ;pic18f1330.h: 2315: unsigned PTIF :1;
+[; ;pic18f1330.h: 2316: };
+[; ;pic18f1330.h: 2317: struct {
+[; ;pic18f1330.h: 2318: unsigned :4;
+[; ;pic18f1330.h: 2319: unsigned TXBNIF :1;
+[; ;pic18f1330.h: 2320: };
+[; ;pic18f1330.h: 2321: } PIR3bits_t;
+[; ;pic18f1330.h: 2322: extern volatile PIR3bits_t PIR3bits @ 0xFA4;
+[; ;pic18f1330.h: 2336: extern volatile unsigned char IPR3 @ 0xFA5;
+"2338
+[; ;pic18f1330.h: 2338: asm("IPR3 equ 0FA5h");
+[; <" IPR3 equ 0FA5h ;# ">
+[; ;pic18f1330.h: 2341: typedef union {
+[; ;pic18f1330.h: 2342: struct {
+[; ;pic18f1330.h: 2343: unsigned :4;
+[; ;pic18f1330.h: 2344: unsigned PTIP :1;
+[; ;pic18f1330.h: 2345: };
+[; ;pic18f1330.h: 2346: struct {
+[; ;pic18f1330.h: 2347: unsigned :4;
+[; ;pic18f1330.h: 2348: unsigned TXBNIP :1;
+[; ;pic18f1330.h: 2349: };
+[; ;pic18f1330.h: 2350: } IPR3bits_t;
+[; ;pic18f1330.h: 2351: extern volatile IPR3bits_t IPR3bits @ 0xFA5;
+[; ;pic18f1330.h: 2365: extern volatile unsigned char EECON1 @ 0xFA6;
+"2367
+[; ;pic18f1330.h: 2367: asm("EECON1 equ 0FA6h");
+[; <" EECON1 equ 0FA6h ;# ">
+[; ;pic18f1330.h: 2370: typedef union {
+[; ;pic18f1330.h: 2371: struct {
+[; ;pic18f1330.h: 2372: unsigned RD :1;
+[; ;pic18f1330.h: 2373: unsigned WR :1;
+[; ;pic18f1330.h: 2374: unsigned WREN :1;
+[; ;pic18f1330.h: 2375: unsigned WRERR :1;
+[; ;pic18f1330.h: 2376: unsigned FREE :1;
+[; ;pic18f1330.h: 2377: unsigned :1;
+[; ;pic18f1330.h: 2378: unsigned CFGS :1;
+[; ;pic18f1330.h: 2379: unsigned EEPGD :1;
+[; ;pic18f1330.h: 2380: };
+[; ;pic18f1330.h: 2381: struct {
+[; ;pic18f1330.h: 2382: unsigned :6;
+[; ;pic18f1330.h: 2383: unsigned EEFS :1;
+[; ;pic18f1330.h: 2384: };
+[; ;pic18f1330.h: 2385: } EECON1bits_t;
+[; ;pic18f1330.h: 2386: extern volatile EECON1bits_t EECON1bits @ 0xFA6;
+[; ;pic18f1330.h: 2430: extern volatile unsigned char EECON2 @ 0xFA7;
+"2432
+[; ;pic18f1330.h: 2432: asm("EECON2 equ 0FA7h");
+[; <" EECON2 equ 0FA7h ;# ">
+[; ;pic18f1330.h: 2436: extern volatile unsigned char EEDATA @ 0xFA8;
+"2438
+[; ;pic18f1330.h: 2438: asm("EEDATA equ 0FA8h");
+[; <" EEDATA equ 0FA8h ;# ">
+[; ;pic18f1330.h: 2442: extern volatile unsigned char EEADR @ 0xFA9;
+"2444
+[; ;pic18f1330.h: 2444: asm("EEADR equ 0FA9h");
+[; <" EEADR equ 0FA9h ;# ">
+[; ;pic18f1330.h: 2448: extern volatile unsigned char RCSTA @ 0xFAB;
+"2450
+[; ;pic18f1330.h: 2450: asm("RCSTA equ 0FABh");
+[; <" RCSTA equ 0FABh ;# ">
+[; ;pic18f1330.h: 2453: extern volatile unsigned char RCSTA1 @ 0xFAB;
+"2455
+[; ;pic18f1330.h: 2455: asm("RCSTA1 equ 0FABh");
+[; <" RCSTA1 equ 0FABh ;# ">
+[; ;pic18f1330.h: 2458: typedef union {
+[; ;pic18f1330.h: 2459: struct {
+[; ;pic18f1330.h: 2460: unsigned RX9D :1;
+[; ;pic18f1330.h: 2461: unsigned OERR :1;
+[; ;pic18f1330.h: 2462: unsigned FERR :1;
+[; ;pic18f1330.h: 2463: unsigned ADEN :1;
+[; ;pic18f1330.h: 2464: unsigned CREN :1;
+[; ;pic18f1330.h: 2465: unsigned SREN :1;
+[; ;pic18f1330.h: 2466: unsigned RX9 :1;
+[; ;pic18f1330.h: 2467: unsigned SPEN :1;
+[; ;pic18f1330.h: 2468: };
+[; ;pic18f1330.h: 2469: struct {
+[; ;pic18f1330.h: 2470: unsigned :3;
+[; ;pic18f1330.h: 2471: unsigned ADDEN :1;
+[; ;pic18f1330.h: 2472: };
+[; ;pic18f1330.h: 2473: struct {
+[; ;pic18f1330.h: 2474: unsigned :5;
+[; ;pic18f1330.h: 2475: unsigned SRENA :1;
+[; ;pic18f1330.h: 2476: };
+[; ;pic18f1330.h: 2477: struct {
+[; ;pic18f1330.h: 2478: unsigned :6;
+[; ;pic18f1330.h: 2479: unsigned RC8_9 :1;
+[; ;pic18f1330.h: 2480: };
+[; ;pic18f1330.h: 2481: struct {
+[; ;pic18f1330.h: 2482: unsigned :6;
+[; ;pic18f1330.h: 2483: unsigned RC9 :1;
+[; ;pic18f1330.h: 2484: };
+[; ;pic18f1330.h: 2485: struct {
+[; ;pic18f1330.h: 2486: unsigned RCD8 :1;
+[; ;pic18f1330.h: 2487: };
+[; ;pic18f1330.h: 2488: } RCSTAbits_t;
+[; ;pic18f1330.h: 2489: extern volatile RCSTAbits_t RCSTAbits @ 0xFAB;
+[; ;pic18f1330.h: 2557: typedef union {
+[; ;pic18f1330.h: 2558: struct {
+[; ;pic18f1330.h: 2559: unsigned RX9D :1;
+[; ;pic18f1330.h: 2560: unsigned OERR :1;
+[; ;pic18f1330.h: 2561: unsigned FERR :1;
+[; ;pic18f1330.h: 2562: unsigned ADEN :1;
+[; ;pic18f1330.h: 2563: unsigned CREN :1;
+[; ;pic18f1330.h: 2564: unsigned SREN :1;
+[; ;pic18f1330.h: 2565: unsigned RX9 :1;
+[; ;pic18f1330.h: 2566: unsigned SPEN :1;
+[; ;pic18f1330.h: 2567: };
+[; ;pic18f1330.h: 2568: struct {
+[; ;pic18f1330.h: 2569: unsigned :3;
+[; ;pic18f1330.h: 2570: unsigned ADDEN :1;
+[; ;pic18f1330.h: 2571: };
+[; ;pic18f1330.h: 2572: struct {
+[; ;pic18f1330.h: 2573: unsigned :5;
+[; ;pic18f1330.h: 2574: unsigned SRENA :1;
+[; ;pic18f1330.h: 2575: };
+[; ;pic18f1330.h: 2576: struct {
+[; ;pic18f1330.h: 2577: unsigned :6;
+[; ;pic18f1330.h: 2578: unsigned RC8_9 :1;
+[; ;pic18f1330.h: 2579: };
+[; ;pic18f1330.h: 2580: struct {
+[; ;pic18f1330.h: 2581: unsigned :6;
+[; ;pic18f1330.h: 2582: unsigned RC9 :1;
+[; ;pic18f1330.h: 2583: };
+[; ;pic18f1330.h: 2584: struct {
+[; ;pic18f1330.h: 2585: unsigned RCD8 :1;
+[; ;pic18f1330.h: 2586: };
+[; ;pic18f1330.h: 2587: } RCSTA1bits_t;
+[; ;pic18f1330.h: 2588: extern volatile RCSTA1bits_t RCSTA1bits @ 0xFAB;
+[; ;pic18f1330.h: 2657: extern volatile unsigned char TXSTA @ 0xFAC;
+"2659
+[; ;pic18f1330.h: 2659: asm("TXSTA equ 0FACh");
+[; <" TXSTA equ 0FACh ;# ">
+[; ;pic18f1330.h: 2662: extern volatile unsigned char TXSTA1 @ 0xFAC;
+"2664
+[; ;pic18f1330.h: 2664: asm("TXSTA1 equ 0FACh");
+[; <" TXSTA1 equ 0FACh ;# ">
+[; ;pic18f1330.h: 2667: typedef union {
+[; ;pic18f1330.h: 2668: struct {
+[; ;pic18f1330.h: 2669: unsigned TX9D :1;
+[; ;pic18f1330.h: 2670: unsigned TRMT :1;
+[; ;pic18f1330.h: 2671: unsigned BRGH :1;
+[; ;pic18f1330.h: 2672: unsigned SENDB :1;
+[; ;pic18f1330.h: 2673: unsigned SYNC :1;
+[; ;pic18f1330.h: 2674: unsigned TXEN :1;
+[; ;pic18f1330.h: 2675: unsigned TX9 :1;
+[; ;pic18f1330.h: 2676: unsigned CSRC :1;
+[; ;pic18f1330.h: 2677: };
+[; ;pic18f1330.h: 2678: struct {
+[; ;pic18f1330.h: 2679: unsigned :2;
+[; ;pic18f1330.h: 2680: unsigned BRGH1 :1;
+[; ;pic18f1330.h: 2681: };
+[; ;pic18f1330.h: 2682: struct {
+[; ;pic18f1330.h: 2683: unsigned :7;
+[; ;pic18f1330.h: 2684: unsigned CSRC1 :1;
+[; ;pic18f1330.h: 2685: };
+[; ;pic18f1330.h: 2686: struct {
+[; ;pic18f1330.h: 2687: unsigned :3;
+[; ;pic18f1330.h: 2688: unsigned SENDB1 :1;
+[; ;pic18f1330.h: 2689: };
+[; ;pic18f1330.h: 2690: struct {
+[; ;pic18f1330.h: 2691: unsigned :4;
+[; ;pic18f1330.h: 2692: unsigned SYNC1 :1;
+[; ;pic18f1330.h: 2693: };
+[; ;pic18f1330.h: 2694: struct {
+[; ;pic18f1330.h: 2695: unsigned :1;
+[; ;pic18f1330.h: 2696: unsigned TRMT1 :1;
+[; ;pic18f1330.h: 2697: };
+[; ;pic18f1330.h: 2698: struct {
+[; ;pic18f1330.h: 2699: unsigned :6;
+[; ;pic18f1330.h: 2700: unsigned TX91 :1;
+[; ;pic18f1330.h: 2701: };
+[; ;pic18f1330.h: 2702: struct {
+[; ;pic18f1330.h: 2703: unsigned TX9D1 :1;
+[; ;pic18f1330.h: 2704: };
+[; ;pic18f1330.h: 2705: struct {
+[; ;pic18f1330.h: 2706: unsigned :5;
+[; ;pic18f1330.h: 2707: unsigned TXEN1 :1;
+[; ;pic18f1330.h: 2708: };
+[; ;pic18f1330.h: 2709: struct {
+[; ;pic18f1330.h: 2710: unsigned :6;
+[; ;pic18f1330.h: 2711: unsigned TX8_9 :1;
+[; ;pic18f1330.h: 2712: };
+[; ;pic18f1330.h: 2713: struct {
+[; ;pic18f1330.h: 2714: unsigned TXD8 :1;
+[; ;pic18f1330.h: 2715: };
+[; ;pic18f1330.h: 2716: } TXSTAbits_t;
+[; ;pic18f1330.h: 2717: extern volatile TXSTAbits_t TXSTAbits @ 0xFAC;
+[; ;pic18f1330.h: 2810: typedef union {
+[; ;pic18f1330.h: 2811: struct {
+[; ;pic18f1330.h: 2812: unsigned TX9D :1;
+[; ;pic18f1330.h: 2813: unsigned TRMT :1;
+[; ;pic18f1330.h: 2814: unsigned BRGH :1;
+[; ;pic18f1330.h: 2815: unsigned SENDB :1;
+[; ;pic18f1330.h: 2816: unsigned SYNC :1;
+[; ;pic18f1330.h: 2817: unsigned TXEN :1;
+[; ;pic18f1330.h: 2818: unsigned TX9 :1;
+[; ;pic18f1330.h: 2819: unsigned CSRC :1;
+[; ;pic18f1330.h: 2820: };
+[; ;pic18f1330.h: 2821: struct {
+[; ;pic18f1330.h: 2822: unsigned :2;
+[; ;pic18f1330.h: 2823: unsigned BRGH1 :1;
+[; ;pic18f1330.h: 2824: };
+[; ;pic18f1330.h: 2825: struct {
+[; ;pic18f1330.h: 2826: unsigned :7;
+[; ;pic18f1330.h: 2827: unsigned CSRC1 :1;
+[; ;pic18f1330.h: 2828: };
+[; ;pic18f1330.h: 2829: struct {
+[; ;pic18f1330.h: 2830: unsigned :3;
+[; ;pic18f1330.h: 2831: unsigned SENDB1 :1;
+[; ;pic18f1330.h: 2832: };
+[; ;pic18f1330.h: 2833: struct {
+[; ;pic18f1330.h: 2834: unsigned :4;
+[; ;pic18f1330.h: 2835: unsigned SYNC1 :1;
+[; ;pic18f1330.h: 2836: };
+[; ;pic18f1330.h: 2837: struct {
+[; ;pic18f1330.h: 2838: unsigned :1;
+[; ;pic18f1330.h: 2839: unsigned TRMT1 :1;
+[; ;pic18f1330.h: 2840: };
+[; ;pic18f1330.h: 2841: struct {
+[; ;pic18f1330.h: 2842: unsigned :6;
+[; ;pic18f1330.h: 2843: unsigned TX91 :1;
+[; ;pic18f1330.h: 2844: };
+[; ;pic18f1330.h: 2845: struct {
+[; ;pic18f1330.h: 2846: unsigned TX9D1 :1;
+[; ;pic18f1330.h: 2847: };
+[; ;pic18f1330.h: 2848: struct {
+[; ;pic18f1330.h: 2849: unsigned :5;
+[; ;pic18f1330.h: 2850: unsigned TXEN1 :1;
+[; ;pic18f1330.h: 2851: };
+[; ;pic18f1330.h: 2852: struct {
+[; ;pic18f1330.h: 2853: unsigned :6;
+[; ;pic18f1330.h: 2854: unsigned TX8_9 :1;
+[; ;pic18f1330.h: 2855: };
+[; ;pic18f1330.h: 2856: struct {
+[; ;pic18f1330.h: 2857: unsigned TXD8 :1;
+[; ;pic18f1330.h: 2858: };
+[; ;pic18f1330.h: 2859: } TXSTA1bits_t;
+[; ;pic18f1330.h: 2860: extern volatile TXSTA1bits_t TXSTA1bits @ 0xFAC;
+[; ;pic18f1330.h: 2954: extern volatile unsigned char TXREG @ 0xFAD;
+"2956
+[; ;pic18f1330.h: 2956: asm("TXREG equ 0FADh");
+[; <" TXREG equ 0FADh ;# ">
+[; ;pic18f1330.h: 2959: extern volatile unsigned char TXREG1 @ 0xFAD;
+"2961
+[; ;pic18f1330.h: 2961: asm("TXREG1 equ 0FADh");
+[; <" TXREG1 equ 0FADh ;# ">
+[; ;pic18f1330.h: 2965: extern volatile unsigned char RCREG @ 0xFAE;
+"2967
+[; ;pic18f1330.h: 2967: asm("RCREG equ 0FAEh");
+[; <" RCREG equ 0FAEh ;# ">
+[; ;pic18f1330.h: 2970: extern volatile unsigned char RCREG1 @ 0xFAE;
+"2972
+[; ;pic18f1330.h: 2972: asm("RCREG1 equ 0FAEh");
+[; <" RCREG1 equ 0FAEh ;# ">
+[; ;pic18f1330.h: 2976: extern volatile unsigned char SPBRG @ 0xFAF;
+"2978
+[; ;pic18f1330.h: 2978: asm("SPBRG equ 0FAFh");
+[; <" SPBRG equ 0FAFh ;# ">
+[; ;pic18f1330.h: 2981: extern volatile unsigned char SPBRG1 @ 0xFAF;
+"2983
+[; ;pic18f1330.h: 2983: asm("SPBRG1 equ 0FAFh");
+[; <" SPBRG1 equ 0FAFh ;# ">
+[; ;pic18f1330.h: 2987: extern volatile unsigned char SPBRGH @ 0xFB0;
+"2989
+[; ;pic18f1330.h: 2989: asm("SPBRGH equ 0FB0h");
+[; <" SPBRGH equ 0FB0h ;# ">
+[; ;pic18f1330.h: 2993: extern volatile unsigned char CMCON @ 0xFB4;
+"2995
+[; ;pic18f1330.h: 2995: asm("CMCON equ 0FB4h");
+[; <" CMCON equ 0FB4h ;# ">
+[; ;pic18f1330.h: 2998: typedef union {
+[; ;pic18f1330.h: 2999: struct {
+[; ;pic18f1330.h: 3000: unsigned CMEN :3;
+[; ;pic18f1330.h: 3001: unsigned :2;
+[; ;pic18f1330.h: 3002: unsigned C0OUT :1;
+[; ;pic18f1330.h: 3003: unsigned C1OUT :1;
+[; ;pic18f1330.h: 3004: unsigned C2OUT :1;
+[; ;pic18f1330.h: 3005: };
+[; ;pic18f1330.h: 3006: struct {
+[; ;pic18f1330.h: 3007: unsigned CMEN0 :1;
+[; ;pic18f1330.h: 3008: unsigned CMEN1 :1;
+[; ;pic18f1330.h: 3009: unsigned CMEN2 :1;
+[; ;pic18f1330.h: 3010: };
+[; ;pic18f1330.h: 3011: struct {
+[; ;pic18f1330.h: 3012: unsigned :5;
+[; ;pic18f1330.h: 3013: unsigned C2INV :1;
+[; ;pic18f1330.h: 3014: };
+[; ;pic18f1330.h: 3015: struct {
+[; ;pic18f1330.h: 3016: unsigned CM0 :1;
+[; ;pic18f1330.h: 3017: };
+[; ;pic18f1330.h: 3018: struct {
+[; ;pic18f1330.h: 3019: unsigned :1;
+[; ;pic18f1330.h: 3020: unsigned CM1 :1;
+[; ;pic18f1330.h: 3021: };
+[; ;pic18f1330.h: 3022: struct {
+[; ;pic18f1330.h: 3023: unsigned :2;
+[; ;pic18f1330.h: 3024: unsigned CM2 :1;
+[; ;pic18f1330.h: 3025: };
+[; ;pic18f1330.h: 3026: } CMCONbits_t;
+[; ;pic18f1330.h: 3027: extern volatile CMCONbits_t CMCONbits @ 0xFB4;
+[; ;pic18f1330.h: 3086: extern volatile unsigned char CVRCON @ 0xFB5;
+"3088
+[; ;pic18f1330.h: 3088: asm("CVRCON equ 0FB5h");
+[; <" CVRCON equ 0FB5h ;# ">
+[; ;pic18f1330.h: 3091: typedef union {
+[; ;pic18f1330.h: 3092: struct {
+[; ;pic18f1330.h: 3093: unsigned CVR :4;
+[; ;pic18f1330.h: 3094: unsigned CVRSS :1;
+[; ;pic18f1330.h: 3095: unsigned CVRR :1;
+[; ;pic18f1330.h: 3096: unsigned :1;
+[; ;pic18f1330.h: 3097: unsigned CVREN :1;
+[; ;pic18f1330.h: 3098: };
+[; ;pic18f1330.h: 3099: struct {
+[; ;pic18f1330.h: 3100: unsigned CVR0 :1;
+[; ;pic18f1330.h: 3101: unsigned CVR1 :1;
+[; ;pic18f1330.h: 3102: unsigned CVR2 :1;
+[; ;pic18f1330.h: 3103: unsigned CVR3 :1;
+[; ;pic18f1330.h: 3104: unsigned CVREF :1;
+[; ;pic18f1330.h: 3105: };
+[; ;pic18f1330.h: 3106: } CVRCONbits_t;
+[; ;pic18f1330.h: 3107: extern volatile CVRCONbits_t CVRCONbits @ 0xFB5;
+[; ;pic18f1330.h: 3156: extern volatile unsigned char BAUDCON @ 0xFB8;
+"3158
+[; ;pic18f1330.h: 3158: asm("BAUDCON equ 0FB8h");
+[; <" BAUDCON equ 0FB8h ;# ">
+[; ;pic18f1330.h: 3161: extern volatile unsigned char BAUDCTL @ 0xFB8;
+"3163
+[; ;pic18f1330.h: 3163: asm("BAUDCTL equ 0FB8h");
+[; <" BAUDCTL equ 0FB8h ;# ">
+[; ;pic18f1330.h: 3166: typedef union {
+[; ;pic18f1330.h: 3167: struct {
+[; ;pic18f1330.h: 3168: unsigned ABDEN :1;
+[; ;pic18f1330.h: 3169: unsigned WUE :1;
+[; ;pic18f1330.h: 3170: unsigned :1;
+[; ;pic18f1330.h: 3171: unsigned BRG16 :1;
+[; ;pic18f1330.h: 3172: unsigned TXCKP :1;
+[; ;pic18f1330.h: 3173: unsigned RXDTP :1;
+[; ;pic18f1330.h: 3174: unsigned RCIDL :1;
+[; ;pic18f1330.h: 3175: unsigned ABDOVF :1;
+[; ;pic18f1330.h: 3176: };
+[; ;pic18f1330.h: 3177: struct {
+[; ;pic18f1330.h: 3178: unsigned :4;
+[; ;pic18f1330.h: 3179: unsigned SCKP :1;
+[; ;pic18f1330.h: 3180: unsigned :1;
+[; ;pic18f1330.h: 3181: unsigned RCMT :1;
+[; ;pic18f1330.h: 3182: };
+[; ;pic18f1330.h: 3183: struct {
+[; ;pic18f1330.h: 3184: unsigned :5;
+[; ;pic18f1330.h: 3185: unsigned RXCKP :1;
+[; ;pic18f1330.h: 3186: };
+[; ;pic18f1330.h: 3187: struct {
+[; ;pic18f1330.h: 3188: unsigned :1;
+[; ;pic18f1330.h: 3189: unsigned W4E :1;
+[; ;pic18f1330.h: 3190: };
+[; ;pic18f1330.h: 3191: } BAUDCONbits_t;
+[; ;pic18f1330.h: 3192: extern volatile BAUDCONbits_t BAUDCONbits @ 0xFB8;
+[; ;pic18f1330.h: 3250: typedef union {
+[; ;pic18f1330.h: 3251: struct {
+[; ;pic18f1330.h: 3252: unsigned ABDEN :1;
+[; ;pic18f1330.h: 3253: unsigned WUE :1;
+[; ;pic18f1330.h: 3254: unsigned :1;
+[; ;pic18f1330.h: 3255: unsigned BRG16 :1;
+[; ;pic18f1330.h: 3256: unsigned TXCKP :1;
+[; ;pic18f1330.h: 3257: unsigned RXDTP :1;
+[; ;pic18f1330.h: 3258: unsigned RCIDL :1;
+[; ;pic18f1330.h: 3259: unsigned ABDOVF :1;
+[; ;pic18f1330.h: 3260: };
+[; ;pic18f1330.h: 3261: struct {
+[; ;pic18f1330.h: 3262: unsigned :4;
+[; ;pic18f1330.h: 3263: unsigned SCKP :1;
+[; ;pic18f1330.h: 3264: unsigned :1;
+[; ;pic18f1330.h: 3265: unsigned RCMT :1;
+[; ;pic18f1330.h: 3266: };
+[; ;pic18f1330.h: 3267: struct {
+[; ;pic18f1330.h: 3268: unsigned :5;
+[; ;pic18f1330.h: 3269: unsigned RXCKP :1;
+[; ;pic18f1330.h: 3270: };
+[; ;pic18f1330.h: 3271: struct {
+[; ;pic18f1330.h: 3272: unsigned :1;
+[; ;pic18f1330.h: 3273: unsigned W4E :1;
+[; ;pic18f1330.h: 3274: };
+[; ;pic18f1330.h: 3275: } BAUDCTLbits_t;
+[; ;pic18f1330.h: 3276: extern volatile BAUDCTLbits_t BAUDCTLbits @ 0xFB8;
+[; ;pic18f1330.h: 3335: extern volatile unsigned char ADCON2 @ 0xFC0;
+"3337
+[; ;pic18f1330.h: 3337: asm("ADCON2 equ 0FC0h");
+[; <" ADCON2 equ 0FC0h ;# ">
+[; ;pic18f1330.h: 3340: typedef union {
+[; ;pic18f1330.h: 3341: struct {
+[; ;pic18f1330.h: 3342: unsigned ADCS :3;
+[; ;pic18f1330.h: 3343: unsigned ACQT :3;
+[; ;pic18f1330.h: 3344: unsigned :1;
+[; ;pic18f1330.h: 3345: unsigned ADFM :1;
+[; ;pic18f1330.h: 3346: };
+[; ;pic18f1330.h: 3347: struct {
+[; ;pic18f1330.h: 3348: unsigned ADCS0 :1;
+[; ;pic18f1330.h: 3349: unsigned ADCS1 :1;
+[; ;pic18f1330.h: 3350: unsigned ADCS2 :1;
+[; ;pic18f1330.h: 3351: unsigned ACQT0 :1;
+[; ;pic18f1330.h: 3352: unsigned ACQT1 :1;
+[; ;pic18f1330.h: 3353: unsigned ACQT2 :1;
+[; ;pic18f1330.h: 3354: };
+[; ;pic18f1330.h: 3355: } ADCON2bits_t;
+[; ;pic18f1330.h: 3356: extern volatile ADCON2bits_t ADCON2bits @ 0xFC0;
+[; ;pic18f1330.h: 3405: extern volatile unsigned char ADCON1 @ 0xFC1;
+"3407
+[; ;pic18f1330.h: 3407: asm("ADCON1 equ 0FC1h");
+[; <" ADCON1 equ 0FC1h ;# ">
+[; ;pic18f1330.h: 3410: typedef union {
+[; ;pic18f1330.h: 3411: struct {
+[; ;pic18f1330.h: 3412: unsigned PCFG :4;
+[; ;pic18f1330.h: 3413: unsigned VCFG :1;
+[; ;pic18f1330.h: 3414: };
+[; ;pic18f1330.h: 3415: struct {
+[; ;pic18f1330.h: 3416: unsigned PCFG0 :1;
+[; ;pic18f1330.h: 3417: unsigned PCFG1 :1;
+[; ;pic18f1330.h: 3418: unsigned PCFG2 :1;
+[; ;pic18f1330.h: 3419: unsigned PCFG3 :1;
+[; ;pic18f1330.h: 3420: unsigned VCFG0 :1;
+[; ;pic18f1330.h: 3421: };
+[; ;pic18f1330.h: 3422: struct {
+[; ;pic18f1330.h: 3423: unsigned :3;
+[; ;pic18f1330.h: 3424: unsigned CHSN3 :1;
+[; ;pic18f1330.h: 3425: };
+[; ;pic18f1330.h: 3426: struct {
+[; ;pic18f1330.h: 3427: unsigned :4;
+[; ;pic18f1330.h: 3428: unsigned VCFG01 :1;
+[; ;pic18f1330.h: 3429: };
+[; ;pic18f1330.h: 3430: } ADCON1bits_t;
+[; ;pic18f1330.h: 3431: extern volatile ADCON1bits_t ADCON1bits @ 0xFC1;
+[; ;pic18f1330.h: 3480: extern volatile unsigned char ADCON0 @ 0xFC2;
+"3482
+[; ;pic18f1330.h: 3482: asm("ADCON0 equ 0FC2h");
+[; <" ADCON0 equ 0FC2h ;# ">
+[; ;pic18f1330.h: 3485: typedef union {
+[; ;pic18f1330.h: 3486: struct {
+[; ;pic18f1330.h: 3487: unsigned :1;
+[; ;pic18f1330.h: 3488: unsigned GO_NOT_DONE :1;
+[; ;pic18f1330.h: 3489: };
+[; ;pic18f1330.h: 3490: struct {
+[; ;pic18f1330.h: 3491: unsigned ADON :1;
+[; ;pic18f1330.h: 3492: unsigned GO_nDONE :1;
+[; ;pic18f1330.h: 3493: unsigned CHS :2;
+[; ;pic18f1330.h: 3494: unsigned :3;
+[; ;pic18f1330.h: 3495: unsigned SEVTEN :1;
+[; ;pic18f1330.h: 3496: };
+[; ;pic18f1330.h: 3497: struct {
+[; ;pic18f1330.h: 3498: unsigned :1;
+[; ;pic18f1330.h: 3499: unsigned GO_NOT_DONE :1;
+[; ;pic18f1330.h: 3500: };
+[; ;pic18f1330.h: 3501: struct {
+[; ;pic18f1330.h: 3502: unsigned :1;
+[; ;pic18f1330.h: 3503: unsigned GO :1;
+[; ;pic18f1330.h: 3504: unsigned CHS0 :1;
+[; ;pic18f1330.h: 3505: unsigned CHS1 :1;
+[; ;pic18f1330.h: 3506: };
+[; ;pic18f1330.h: 3507: struct {
+[; ;pic18f1330.h: 3508: unsigned :1;
+[; ;pic18f1330.h: 3509: unsigned DONE :1;
+[; ;pic18f1330.h: 3510: };
+[; ;pic18f1330.h: 3511: struct {
+[; ;pic18f1330.h: 3512: unsigned :1;
+[; ;pic18f1330.h: 3513: unsigned NOT_DONE :1;
+[; ;pic18f1330.h: 3514: };
+[; ;pic18f1330.h: 3515: struct {
+[; ;pic18f1330.h: 3516: unsigned :1;
+[; ;pic18f1330.h: 3517: unsigned nDONE :1;
+[; ;pic18f1330.h: 3518: };
+[; ;pic18f1330.h: 3519: struct {
+[; ;pic18f1330.h: 3520: unsigned :1;
+[; ;pic18f1330.h: 3521: unsigned GO_DONE :1;
+[; ;pic18f1330.h: 3522: };
+[; ;pic18f1330.h: 3523: struct {
+[; ;pic18f1330.h: 3524: unsigned :7;
+[; ;pic18f1330.h: 3525: unsigned ADCAL :1;
+[; ;pic18f1330.h: 3526: };
+[; ;pic18f1330.h: 3527: struct {
+[; ;pic18f1330.h: 3528: unsigned :1;
+[; ;pic18f1330.h: 3529: unsigned GODONE :1;
+[; ;pic18f1330.h: 3530: };
+[; ;pic18f1330.h: 3531: } ADCON0bits_t;
+[; ;pic18f1330.h: 3532: extern volatile ADCON0bits_t ADCON0bits @ 0xFC2;
+[; ;pic18f1330.h: 3606: extern volatile unsigned short ADRES @ 0xFC3;
+"3608
+[; ;pic18f1330.h: 3608: asm("ADRES equ 0FC3h");
+[; <" ADRES equ 0FC3h ;# ">
+[; ;pic18f1330.h: 3612: extern volatile unsigned char ADRESL @ 0xFC3;
+"3614
+[; ;pic18f1330.h: 3614: asm("ADRESL equ 0FC3h");
+[; <" ADRESL equ 0FC3h ;# ">
+[; ;pic18f1330.h: 3618: extern volatile unsigned char ADRESH @ 0xFC4;
+"3620
+[; ;pic18f1330.h: 3620: asm("ADRESH equ 0FC4h");
+[; <" ADRESH equ 0FC4h ;# ">
+[; ;pic18f1330.h: 3624: extern volatile unsigned char T1CON @ 0xFCD;
+"3626
+[; ;pic18f1330.h: 3626: asm("T1CON equ 0FCDh");
+[; <" T1CON equ 0FCDh ;# ">
+[; ;pic18f1330.h: 3629: typedef union {
+[; ;pic18f1330.h: 3630: struct {
+[; ;pic18f1330.h: 3631: unsigned :2;
+[; ;pic18f1330.h: 3632: unsigned NOT_T1SYNC :1;
+[; ;pic18f1330.h: 3633: };
+[; ;pic18f1330.h: 3634: struct {
+[; ;pic18f1330.h: 3635: unsigned TMR1ON :1;
+[; ;pic18f1330.h: 3636: unsigned TMR1CS :1;
+[; ;pic18f1330.h: 3637: unsigned nT1SYNC :1;
+[; ;pic18f1330.h: 3638: unsigned T1OSCEN :1;
+[; ;pic18f1330.h: 3639: unsigned T1CKPS :2;
+[; ;pic18f1330.h: 3640: unsigned T1RUN :1;
+[; ;pic18f1330.h: 3641: unsigned RD16 :1;
+[; ;pic18f1330.h: 3642: };
+[; ;pic18f1330.h: 3643: struct {
+[; ;pic18f1330.h: 3644: unsigned :4;
+[; ;pic18f1330.h: 3645: unsigned T1CKPS0 :1;
+[; ;pic18f1330.h: 3646: unsigned T1CKPS1 :1;
+[; ;pic18f1330.h: 3647: };
+[; ;pic18f1330.h: 3648: struct {
+[; ;pic18f1330.h: 3649: unsigned :2;
+[; ;pic18f1330.h: 3650: unsigned T1SYNC :1;
+[; ;pic18f1330.h: 3651: };
+[; ;pic18f1330.h: 3652: struct {
+[; ;pic18f1330.h: 3653: unsigned :3;
+[; ;pic18f1330.h: 3654: unsigned SOSCEN :1;
+[; ;pic18f1330.h: 3655: };
+[; ;pic18f1330.h: 3656: struct {
+[; ;pic18f1330.h: 3657: unsigned :7;
+[; ;pic18f1330.h: 3658: unsigned T1RD16 :1;
+[; ;pic18f1330.h: 3659: };
+[; ;pic18f1330.h: 3660: } T1CONbits_t;
+[; ;pic18f1330.h: 3661: extern volatile T1CONbits_t T1CONbits @ 0xFCD;
+[; ;pic18f1330.h: 3730: extern volatile unsigned short TMR1 @ 0xFCE;
+"3732
+[; ;pic18f1330.h: 3732: asm("TMR1 equ 0FCEh");
+[; <" TMR1 equ 0FCEh ;# ">
+[; ;pic18f1330.h: 3736: extern volatile unsigned char TMR1L @ 0xFCE;
+"3738
+[; ;pic18f1330.h: 3738: asm("TMR1L equ 0FCEh");
+[; <" TMR1L equ 0FCEh ;# ">
+[; ;pic18f1330.h: 3742: extern volatile unsigned char TMR1H @ 0xFCF;
+"3744
+[; ;pic18f1330.h: 3744: asm("TMR1H equ 0FCFh");
+[; <" TMR1H equ 0FCFh ;# ">
+[; ;pic18f1330.h: 3748: extern volatile unsigned char RCON @ 0xFD0;
+"3750
+[; ;pic18f1330.h: 3750: asm("RCON equ 0FD0h");
+[; <" RCON equ 0FD0h ;# ">
+[; ;pic18f1330.h: 3753: typedef union {
+[; ;pic18f1330.h: 3754: struct {
+[; ;pic18f1330.h: 3755: unsigned NOT_BOR :1;
+[; ;pic18f1330.h: 3756: };
+[; ;pic18f1330.h: 3757: struct {
+[; ;pic18f1330.h: 3758: unsigned :1;
+[; ;pic18f1330.h: 3759: unsigned NOT_POR :1;
+[; ;pic18f1330.h: 3760: };
+[; ;pic18f1330.h: 3761: struct {
+[; ;pic18f1330.h: 3762: unsigned :2;
+[; ;pic18f1330.h: 3763: unsigned NOT_PD :1;
+[; ;pic18f1330.h: 3764: };
+[; ;pic18f1330.h: 3765: struct {
+[; ;pic18f1330.h: 3766: unsigned :3;
+[; ;pic18f1330.h: 3767: unsigned NOT_TO :1;
+[; ;pic18f1330.h: 3768: };
+[; ;pic18f1330.h: 3769: struct {
+[; ;pic18f1330.h: 3770: unsigned :4;
+[; ;pic18f1330.h: 3771: unsigned NOT_RI :1;
+[; ;pic18f1330.h: 3772: };
+[; ;pic18f1330.h: 3773: struct {
+[; ;pic18f1330.h: 3774: unsigned nBOR :1;
+[; ;pic18f1330.h: 3775: unsigned nPOR :1;
+[; ;pic18f1330.h: 3776: unsigned nPD :1;
+[; ;pic18f1330.h: 3777: unsigned nTO :1;
+[; ;pic18f1330.h: 3778: unsigned nRI :1;
+[; ;pic18f1330.h: 3779: unsigned :1;
+[; ;pic18f1330.h: 3780: unsigned SBOREN :1;
+[; ;pic18f1330.h: 3781: unsigned IPEN :1;
+[; ;pic18f1330.h: 3782: };
+[; ;pic18f1330.h: 3783: struct {
+[; ;pic18f1330.h: 3784: unsigned BOR :1;
+[; ;pic18f1330.h: 3785: unsigned POR :1;
+[; ;pic18f1330.h: 3786: unsigned PD :1;
+[; ;pic18f1330.h: 3787: unsigned TO :1;
+[; ;pic18f1330.h: 3788: unsigned RI :1;
+[; ;pic18f1330.h: 3789: };
+[; ;pic18f1330.h: 3790: } RCONbits_t;
+[; ;pic18f1330.h: 3791: extern volatile RCONbits_t RCONbits @ 0xFD0;
+[; ;pic18f1330.h: 3880: extern volatile unsigned char WDTCON @ 0xFD1;
+"3882
+[; ;pic18f1330.h: 3882: asm("WDTCON equ 0FD1h");
+[; <" WDTCON equ 0FD1h ;# ">
+[; ;pic18f1330.h: 3885: typedef union {
+[; ;pic18f1330.h: 3886: struct {
+[; ;pic18f1330.h: 3887: unsigned SWDTEN :1;
+[; ;pic18f1330.h: 3888: };
+[; ;pic18f1330.h: 3889: struct {
+[; ;pic18f1330.h: 3890: unsigned SWDTE :1;
+[; ;pic18f1330.h: 3891: };
+[; ;pic18f1330.h: 3892: } WDTCONbits_t;
+[; ;pic18f1330.h: 3893: extern volatile WDTCONbits_t WDTCONbits @ 0xFD1;
+[; ;pic18f1330.h: 3907: extern volatile unsigned char LVDCON @ 0xFD2;
+"3909
+[; ;pic18f1330.h: 3909: asm("LVDCON equ 0FD2h");
+[; <" LVDCON equ 0FD2h ;# ">
+[; ;pic18f1330.h: 3912: typedef union {
+[; ;pic18f1330.h: 3913: struct {
+[; ;pic18f1330.h: 3914: unsigned LVDL :4;
+[; ;pic18f1330.h: 3915: unsigned LVDEN :1;
+[; ;pic18f1330.h: 3916: unsigned IRVST :1;
+[; ;pic18f1330.h: 3917: };
+[; ;pic18f1330.h: 3918: struct {
+[; ;pic18f1330.h: 3919: unsigned LVDL0 :1;
+[; ;pic18f1330.h: 3920: unsigned LVDL1 :1;
+[; ;pic18f1330.h: 3921: unsigned LVDL2 :1;
+[; ;pic18f1330.h: 3922: unsigned LVDL3 :1;
+[; ;pic18f1330.h: 3923: unsigned :1;
+[; ;pic18f1330.h: 3924: unsigned IVRST :1;
+[; ;pic18f1330.h: 3925: };
+[; ;pic18f1330.h: 3926: } LVDCONbits_t;
+[; ;pic18f1330.h: 3927: extern volatile LVDCONbits_t LVDCONbits @ 0xFD2;
+[; ;pic18f1330.h: 3971: extern volatile unsigned char OSCCON @ 0xFD3;
+"3973
+[; ;pic18f1330.h: 3973: asm("OSCCON equ 0FD3h");
+[; <" OSCCON equ 0FD3h ;# ">
+[; ;pic18f1330.h: 3976: typedef union {
+[; ;pic18f1330.h: 3977: struct {
+[; ;pic18f1330.h: 3978: unsigned SCS :2;
+[; ;pic18f1330.h: 3979: unsigned IOFS :1;
+[; ;pic18f1330.h: 3980: unsigned OSTS :1;
+[; ;pic18f1330.h: 3981: unsigned IRCF :3;
+[; ;pic18f1330.h: 3982: unsigned IDLEN :1;
+[; ;pic18f1330.h: 3983: };
+[; ;pic18f1330.h: 3984: struct {
+[; ;pic18f1330.h: 3985: unsigned SCS0 :1;
+[; ;pic18f1330.h: 3986: unsigned SCS1 :1;
+[; ;pic18f1330.h: 3987: unsigned FLTS :1;
+[; ;pic18f1330.h: 3988: unsigned :1;
+[; ;pic18f1330.h: 3989: unsigned IRCF0 :1;
+[; ;pic18f1330.h: 3990: unsigned IRCF1 :1;
+[; ;pic18f1330.h: 3991: unsigned IRCF2 :1;
+[; ;pic18f1330.h: 3992: };
+[; ;pic18f1330.h: 3993: } OSCCONbits_t;
+[; ;pic18f1330.h: 3994: extern volatile OSCCONbits_t OSCCONbits @ 0xFD3;
+[; ;pic18f1330.h: 4053: extern volatile unsigned char T0CON @ 0xFD5;
+"4055
+[; ;pic18f1330.h: 4055: asm("T0CON equ 0FD5h");
+[; <" T0CON equ 0FD5h ;# ">
+[; ;pic18f1330.h: 4058: typedef union {
+[; ;pic18f1330.h: 4059: struct {
+[; ;pic18f1330.h: 4060: unsigned T0PS :3;
+[; ;pic18f1330.h: 4061: unsigned PSA :1;
+[; ;pic18f1330.h: 4062: unsigned T0SE :1;
+[; ;pic18f1330.h: 4063: unsigned T0CS :1;
+[; ;pic18f1330.h: 4064: unsigned T016BIT :1;
+[; ;pic18f1330.h: 4065: unsigned TMR0ON :1;
+[; ;pic18f1330.h: 4066: };
+[; ;pic18f1330.h: 4067: struct {
+[; ;pic18f1330.h: 4068: unsigned T0PS0 :1;
+[; ;pic18f1330.h: 4069: unsigned T0PS1 :1;
+[; ;pic18f1330.h: 4070: unsigned T0PS2 :1;
+[; ;pic18f1330.h: 4071: };
+[; ;pic18f1330.h: 4072: struct {
+[; ;pic18f1330.h: 4073: unsigned :6;
+[; ;pic18f1330.h: 4074: unsigned T08BIT :1;
+[; ;pic18f1330.h: 4075: };
+[; ;pic18f1330.h: 4076: } T0CONbits_t;
+[; ;pic18f1330.h: 4077: extern volatile T0CONbits_t T0CONbits @ 0xFD5;
+[; ;pic18f1330.h: 4131: extern volatile unsigned short TMR0 @ 0xFD6;
+"4133
+[; ;pic18f1330.h: 4133: asm("TMR0 equ 0FD6h");
+[; <" TMR0 equ 0FD6h ;# ">
+[; ;pic18f1330.h: 4137: extern volatile unsigned char TMR0L @ 0xFD6;
+"4139
+[; ;pic18f1330.h: 4139: asm("TMR0L equ 0FD6h");
+[; <" TMR0L equ 0FD6h ;# ">
+[; ;pic18f1330.h: 4143: extern volatile unsigned char TMR0H @ 0xFD7;
+"4145
+[; ;pic18f1330.h: 4145: asm("TMR0H equ 0FD7h");
+[; <" TMR0H equ 0FD7h ;# ">
+[; ;pic18f1330.h: 4149: extern volatile unsigned char STATUS @ 0xFD8;
+"4151
+[; ;pic18f1330.h: 4151: asm("STATUS equ 0FD8h");
+[; <" STATUS equ 0FD8h ;# ">
+[; ;pic18f1330.h: 4154: typedef union {
+[; ;pic18f1330.h: 4155: struct {
+[; ;pic18f1330.h: 4156: unsigned C :1;
+[; ;pic18f1330.h: 4157: unsigned DC :1;
+[; ;pic18f1330.h: 4158: unsigned Z :1;
+[; ;pic18f1330.h: 4159: unsigned OV :1;
+[; ;pic18f1330.h: 4160: unsigned N :1;
+[; ;pic18f1330.h: 4161: };
+[; ;pic18f1330.h: 4162: struct {
+[; ;pic18f1330.h: 4163: unsigned CARRY :1;
+[; ;pic18f1330.h: 4164: };
+[; ;pic18f1330.h: 4165: struct {
+[; ;pic18f1330.h: 4166: unsigned :4;
+[; ;pic18f1330.h: 4167: unsigned NEGATIVE :1;
+[; ;pic18f1330.h: 4168: };
+[; ;pic18f1330.h: 4169: struct {
+[; ;pic18f1330.h: 4170: unsigned :3;
+[; ;pic18f1330.h: 4171: unsigned OVERFLOW :1;
+[; ;pic18f1330.h: 4172: };
+[; ;pic18f1330.h: 4173: struct {
+[; ;pic18f1330.h: 4174: unsigned :2;
+[; ;pic18f1330.h: 4175: unsigned ZERO :1;
+[; ;pic18f1330.h: 4176: };
+[; ;pic18f1330.h: 4177: } STATUSbits_t;
+[; ;pic18f1330.h: 4178: extern volatile STATUSbits_t STATUSbits @ 0xFD8;
+[; ;pic18f1330.h: 4227: extern volatile unsigned short FSR2 @ 0xFD9;
+"4229
+[; ;pic18f1330.h: 4229: asm("FSR2 equ 0FD9h");
+[; <" FSR2 equ 0FD9h ;# ">
+[; ;pic18f1330.h: 4233: extern volatile unsigned char FSR2L @ 0xFD9;
+"4235
+[; ;pic18f1330.h: 4235: asm("FSR2L equ 0FD9h");
+[; <" FSR2L equ 0FD9h ;# ">
+[; ;pic18f1330.h: 4239: extern volatile unsigned char FSR2H @ 0xFDA;
+"4241
+[; ;pic18f1330.h: 4241: asm("FSR2H equ 0FDAh");
+[; <" FSR2H equ 0FDAh ;# ">
+[; ;pic18f1330.h: 4245: extern volatile unsigned char PLUSW2 @ 0xFDB;
+"4247
+[; ;pic18f1330.h: 4247: asm("PLUSW2 equ 0FDBh");
+[; <" PLUSW2 equ 0FDBh ;# ">
+[; ;pic18f1330.h: 4251: extern volatile unsigned char PREINC2 @ 0xFDC;
+"4253
+[; ;pic18f1330.h: 4253: asm("PREINC2 equ 0FDCh");
+[; <" PREINC2 equ 0FDCh ;# ">
+[; ;pic18f1330.h: 4257: extern volatile unsigned char POSTDEC2 @ 0xFDD;
+"4259
+[; ;pic18f1330.h: 4259: asm("POSTDEC2 equ 0FDDh");
+[; <" POSTDEC2 equ 0FDDh ;# ">
+[; ;pic18f1330.h: 4263: extern volatile unsigned char POSTINC2 @ 0xFDE;
+"4265
+[; ;pic18f1330.h: 4265: asm("POSTINC2 equ 0FDEh");
+[; <" POSTINC2 equ 0FDEh ;# ">
+[; ;pic18f1330.h: 4269: extern volatile unsigned char INDF2 @ 0xFDF;
+"4271
+[; ;pic18f1330.h: 4271: asm("INDF2 equ 0FDFh");
+[; <" INDF2 equ 0FDFh ;# ">
+[; ;pic18f1330.h: 4275: extern volatile unsigned char BSR @ 0xFE0;
+"4277
+[; ;pic18f1330.h: 4277: asm("BSR equ 0FE0h");
+[; <" BSR equ 0FE0h ;# ">
+[; ;pic18f1330.h: 4281: extern volatile unsigned short FSR1 @ 0xFE1;
+"4283
+[; ;pic18f1330.h: 4283: asm("FSR1 equ 0FE1h");
+[; <" FSR1 equ 0FE1h ;# ">
+[; ;pic18f1330.h: 4287: extern volatile unsigned char FSR1L @ 0xFE1;
+"4289
+[; ;pic18f1330.h: 4289: asm("FSR1L equ 0FE1h");
+[; <" FSR1L equ 0FE1h ;# ">
+[; ;pic18f1330.h: 4293: extern volatile unsigned char FSR1H @ 0xFE2;
+"4295
+[; ;pic18f1330.h: 4295: asm("FSR1H equ 0FE2h");
+[; <" FSR1H equ 0FE2h ;# ">
+[; ;pic18f1330.h: 4299: extern volatile unsigned char PLUSW1 @ 0xFE3;
+"4301
+[; ;pic18f1330.h: 4301: asm("PLUSW1 equ 0FE3h");
+[; <" PLUSW1 equ 0FE3h ;# ">
+[; ;pic18f1330.h: 4305: extern volatile unsigned char PREINC1 @ 0xFE4;
+"4307
+[; ;pic18f1330.h: 4307: asm("PREINC1 equ 0FE4h");
+[; <" PREINC1 equ 0FE4h ;# ">
+[; ;pic18f1330.h: 4311: extern volatile unsigned char POSTDEC1 @ 0xFE5;
+"4313
+[; ;pic18f1330.h: 4313: asm("POSTDEC1 equ 0FE5h");
+[; <" POSTDEC1 equ 0FE5h ;# ">
+[; ;pic18f1330.h: 4317: extern volatile unsigned char POSTINC1 @ 0xFE6;
+"4319
+[; ;pic18f1330.h: 4319: asm("POSTINC1 equ 0FE6h");
+[; <" POSTINC1 equ 0FE6h ;# ">
+[; ;pic18f1330.h: 4323: extern volatile unsigned char INDF1 @ 0xFE7;
+"4325
+[; ;pic18f1330.h: 4325: asm("INDF1 equ 0FE7h");
+[; <" INDF1 equ 0FE7h ;# ">
+[; ;pic18f1330.h: 4329: extern volatile unsigned char WREG @ 0xFE8;
+"4331
+[; ;pic18f1330.h: 4331: asm("WREG equ 0FE8h");
+[; <" WREG equ 0FE8h ;# ">
+[; ;pic18f1330.h: 4340: extern volatile unsigned short FSR0 @ 0xFE9;
+"4342
+[; ;pic18f1330.h: 4342: asm("FSR0 equ 0FE9h");
+[; <" FSR0 equ 0FE9h ;# ">
+[; ;pic18f1330.h: 4346: extern volatile unsigned char FSR0L @ 0xFE9;
+"4348
+[; ;pic18f1330.h: 4348: asm("FSR0L equ 0FE9h");
+[; <" FSR0L equ 0FE9h ;# ">
+[; ;pic18f1330.h: 4352: extern volatile unsigned char FSR0H @ 0xFEA;
+"4354
+[; ;pic18f1330.h: 4354: asm("FSR0H equ 0FEAh");
+[; <" FSR0H equ 0FEAh ;# ">
+[; ;pic18f1330.h: 4358: extern volatile unsigned char PLUSW0 @ 0xFEB;
+"4360
+[; ;pic18f1330.h: 4360: asm("PLUSW0 equ 0FEBh");
+[; <" PLUSW0 equ 0FEBh ;# ">
+[; ;pic18f1330.h: 4364: extern volatile unsigned char PREINC0 @ 0xFEC;
+"4366
+[; ;pic18f1330.h: 4366: asm("PREINC0 equ 0FECh");
+[; <" PREINC0 equ 0FECh ;# ">
+[; ;pic18f1330.h: 4370: extern volatile unsigned char POSTDEC0 @ 0xFED;
+"4372
+[; ;pic18f1330.h: 4372: asm("POSTDEC0 equ 0FEDh");
+[; <" POSTDEC0 equ 0FEDh ;# ">
+[; ;pic18f1330.h: 4376: extern volatile unsigned char POSTINC0 @ 0xFEE;
+"4378
+[; ;pic18f1330.h: 4378: asm("POSTINC0 equ 0FEEh");
+[; <" POSTINC0 equ 0FEEh ;# ">
+[; ;pic18f1330.h: 4382: extern volatile unsigned char INDF0 @ 0xFEF;
+"4384
+[; ;pic18f1330.h: 4384: asm("INDF0 equ 0FEFh");
+[; <" INDF0 equ 0FEFh ;# ">
+[; ;pic18f1330.h: 4388: extern volatile unsigned char INTCON3 @ 0xFF0;
+"4390
+[; ;pic18f1330.h: 4390: asm("INTCON3 equ 0FF0h");
+[; <" INTCON3 equ 0FF0h ;# ">
+[; ;pic18f1330.h: 4393: typedef union {
+[; ;pic18f1330.h: 4394: struct {
+[; ;pic18f1330.h: 4395: unsigned INT1IF :1;
+[; ;pic18f1330.h: 4396: unsigned INT2IF :1;
+[; ;pic18f1330.h: 4397: unsigned INT3IF :1;
+[; ;pic18f1330.h: 4398: unsigned INT1IE :1;
+[; ;pic18f1330.h: 4399: unsigned INT2IE :1;
+[; ;pic18f1330.h: 4400: unsigned INT3IE :1;
+[; ;pic18f1330.h: 4401: unsigned INT1IP :1;
+[; ;pic18f1330.h: 4402: unsigned INT2IP :1;
+[; ;pic18f1330.h: 4403: };
+[; ;pic18f1330.h: 4404: struct {
+[; ;pic18f1330.h: 4405: unsigned INT1F :1;
+[; ;pic18f1330.h: 4406: unsigned INT2F :1;
+[; ;pic18f1330.h: 4407: unsigned INT3F :1;
+[; ;pic18f1330.h: 4408: unsigned INT1E :1;
+[; ;pic18f1330.h: 4409: unsigned INT2E :1;
+[; ;pic18f1330.h: 4410: unsigned INT3E :1;
+[; ;pic18f1330.h: 4411: unsigned INT1P :1;
+[; ;pic18f1330.h: 4412: unsigned INT2P :1;
+[; ;pic18f1330.h: 4413: };
+[; ;pic18f1330.h: 4414: } INTCON3bits_t;
+[; ;pic18f1330.h: 4415: extern volatile INTCON3bits_t INTCON3bits @ 0xFF0;
+[; ;pic18f1330.h: 4499: extern volatile unsigned char INTCON2 @ 0xFF1;
+"4501
+[; ;pic18f1330.h: 4501: asm("INTCON2 equ 0FF1h");
+[; <" INTCON2 equ 0FF1h ;# ">
+[; ;pic18f1330.h: 4504: typedef union {
+[; ;pic18f1330.h: 4505: struct {
+[; ;pic18f1330.h: 4506: unsigned :7;
+[; ;pic18f1330.h: 4507: unsigned NOT_RBPU :1;
+[; ;pic18f1330.h: 4508: };
+[; ;pic18f1330.h: 4509: struct {
+[; ;pic18f1330.h: 4510: unsigned RBIP :1;
+[; ;pic18f1330.h: 4511: unsigned INT3IP :1;
+[; ;pic18f1330.h: 4512: unsigned TMR0IP :1;
+[; ;pic18f1330.h: 4513: unsigned INTEDG3 :1;
+[; ;pic18f1330.h: 4514: unsigned INTEDG2 :1;
+[; ;pic18f1330.h: 4515: unsigned INTEDG1 :1;
+[; ;pic18f1330.h: 4516: unsigned INTEDG0 :1;
+[; ;pic18f1330.h: 4517: unsigned nRBPU :1;
+[; ;pic18f1330.h: 4518: };
+[; ;pic18f1330.h: 4519: struct {
+[; ;pic18f1330.h: 4520: unsigned :1;
+[; ;pic18f1330.h: 4521: unsigned INT3P :1;
+[; ;pic18f1330.h: 4522: unsigned :5;
+[; ;pic18f1330.h: 4523: unsigned RBPU :1;
+[; ;pic18f1330.h: 4524: };
+[; ;pic18f1330.h: 4525: } INTCON2bits_t;
+[; ;pic18f1330.h: 4526: extern volatile INTCON2bits_t INTCON2bits @ 0xFF1;
+[; ;pic18f1330.h: 4585: extern volatile unsigned char INTCON @ 0xFF2;
+"4587
+[; ;pic18f1330.h: 4587: asm("INTCON equ 0FF2h");
+[; <" INTCON equ 0FF2h ;# ">
+[; ;pic18f1330.h: 4590: typedef union {
+[; ;pic18f1330.h: 4591: struct {
+[; ;pic18f1330.h: 4592: unsigned RBIF :1;
+[; ;pic18f1330.h: 4593: unsigned INT0IF :1;
+[; ;pic18f1330.h: 4594: unsigned TMR0IF :1;
+[; ;pic18f1330.h: 4595: unsigned RBIE :1;
+[; ;pic18f1330.h: 4596: unsigned INT0IE :1;
+[; ;pic18f1330.h: 4597: unsigned TMR0IE :1;
+[; ;pic18f1330.h: 4598: unsigned PEIE_GIEL :1;
+[; ;pic18f1330.h: 4599: unsigned GIE_GIEH :1;
+[; ;pic18f1330.h: 4600: };
+[; ;pic18f1330.h: 4601: struct {
+[; ;pic18f1330.h: 4602: unsigned RBIF :1;
+[; ;pic18f1330.h: 4603: unsigned INT0IF :1;
+[; ;pic18f1330.h: 4604: unsigned TMR0IF :1;
+[; ;pic18f1330.h: 4605: unsigned RBIE :1;
+[; ;pic18f1330.h: 4606: unsigned INT0IE :1;
+[; ;pic18f1330.h: 4607: unsigned TMR0IE :1;
+[; ;pic18f1330.h: 4608: unsigned PEIE :1;
+[; ;pic18f1330.h: 4609: unsigned GIE :1;
+[; ;pic18f1330.h: 4610: };
+[; ;pic18f1330.h: 4611: struct {
+[; ;pic18f1330.h: 4612: unsigned RBIF :1;
+[; ;pic18f1330.h: 4613: unsigned INT0IF :1;
+[; ;pic18f1330.h: 4614: unsigned TMR0IF :1;
+[; ;pic18f1330.h: 4615: unsigned RBIE :1;
+[; ;pic18f1330.h: 4616: unsigned INT0IE :1;
+[; ;pic18f1330.h: 4617: unsigned TMR0IE :1;
+[; ;pic18f1330.h: 4618: unsigned GIEL :1;
+[; ;pic18f1330.h: 4619: unsigned GIEH :1;
+[; ;pic18f1330.h: 4620: };
+[; ;pic18f1330.h: 4621: struct {
+[; ;pic18f1330.h: 4622: unsigned :1;
+[; ;pic18f1330.h: 4623: unsigned INT0F :1;
+[; ;pic18f1330.h: 4624: unsigned T0IF :1;
+[; ;pic18f1330.h: 4625: unsigned :1;
+[; ;pic18f1330.h: 4626: unsigned INT0E :1;
+[; ;pic18f1330.h: 4627: unsigned T0IE :1;
+[; ;pic18f1330.h: 4628: unsigned PEIE :1;
+[; ;pic18f1330.h: 4629: unsigned GIE :1;
+[; ;pic18f1330.h: 4630: };
+[; ;pic18f1330.h: 4631: struct {
+[; ;pic18f1330.h: 4632: unsigned :6;
+[; ;pic18f1330.h: 4633: unsigned GIEL :1;
+[; ;pic18f1330.h: 4634: unsigned GIEH :1;
+[; ;pic18f1330.h: 4635: };
+[; ;pic18f1330.h: 4636: } INTCONbits_t;
+[; ;pic18f1330.h: 4637: extern volatile INTCONbits_t INTCONbits @ 0xFF2;
+[; ;pic18f1330.h: 4721: extern volatile unsigned short PROD @ 0xFF3;
+"4723
+[; ;pic18f1330.h: 4723: asm("PROD equ 0FF3h");
+[; <" PROD equ 0FF3h ;# ">
+[; ;pic18f1330.h: 4727: extern volatile unsigned char PRODL @ 0xFF3;
+"4729
+[; ;pic18f1330.h: 4729: asm("PRODL equ 0FF3h");
+[; <" PRODL equ 0FF3h ;# ">
+[; ;pic18f1330.h: 4733: extern volatile unsigned char PRODH @ 0xFF4;
+"4735
+[; ;pic18f1330.h: 4735: asm("PRODH equ 0FF4h");
+[; <" PRODH equ 0FF4h ;# ">
+[; ;pic18f1330.h: 4739: extern volatile unsigned char TABLAT @ 0xFF5;
+"4741
+[; ;pic18f1330.h: 4741: asm("TABLAT equ 0FF5h");
+[; <" TABLAT equ 0FF5h ;# ">
+[; ;pic18f1330.h: 4746: extern volatile unsigned short long TBLPTR @ 0xFF6;
+"4749
+[; ;pic18f1330.h: 4749: asm("TBLPTR equ 0FF6h");
+[; <" TBLPTR equ 0FF6h ;# ">
+[; ;pic18f1330.h: 4753: extern volatile unsigned char TBLPTRL @ 0xFF6;
+"4755
+[; ;pic18f1330.h: 4755: asm("TBLPTRL equ 0FF6h");
+[; <" TBLPTRL equ 0FF6h ;# ">
+[; ;pic18f1330.h: 4759: extern volatile unsigned char TBLPTRH @ 0xFF7;
+"4761
+[; ;pic18f1330.h: 4761: asm("TBLPTRH equ 0FF7h");
+[; <" TBLPTRH equ 0FF7h ;# ">
+[; ;pic18f1330.h: 4765: extern volatile unsigned char TBLPTRU @ 0xFF8;
+"4767
+[; ;pic18f1330.h: 4767: asm("TBLPTRU equ 0FF8h");
+[; <" TBLPTRU equ 0FF8h ;# ">
+[; ;pic18f1330.h: 4772: extern volatile unsigned short long PCLAT @ 0xFF9;
+"4775
+[; ;pic18f1330.h: 4775: asm("PCLAT equ 0FF9h");
+[; <" PCLAT equ 0FF9h ;# ">
+[; ;pic18f1330.h: 4779: extern volatile unsigned short long PC @ 0xFF9;
+"4782
+[; ;pic18f1330.h: 4782: asm("PC equ 0FF9h");
+[; <" PC equ 0FF9h ;# ">
+[; ;pic18f1330.h: 4786: extern volatile unsigned char PCL @ 0xFF9;
+"4788
+[; ;pic18f1330.h: 4788: asm("PCL equ 0FF9h");
+[; <" PCL equ 0FF9h ;# ">
+[; ;pic18f1330.h: 4792: extern volatile unsigned char PCLATH @ 0xFFA;
+"4794
+[; ;pic18f1330.h: 4794: asm("PCLATH equ 0FFAh");
+[; <" PCLATH equ 0FFAh ;# ">
+[; ;pic18f1330.h: 4798: extern volatile unsigned char PCLATU @ 0xFFB;
+"4800
+[; ;pic18f1330.h: 4800: asm("PCLATU equ 0FFBh");
+[; <" PCLATU equ 0FFBh ;# ">
+[; ;pic18f1330.h: 4804: extern volatile unsigned char STKPTR @ 0xFFC;
+"4806
+[; ;pic18f1330.h: 4806: asm("STKPTR equ 0FFCh");
+[; <" STKPTR equ 0FFCh ;# ">
+[; ;pic18f1330.h: 4809: typedef union {
+[; ;pic18f1330.h: 4810: struct {
+[; ;pic18f1330.h: 4811: unsigned STKPTR :5;
+[; ;pic18f1330.h: 4812: unsigned :1;
+[; ;pic18f1330.h: 4813: unsigned STKUNF :1;
+[; ;pic18f1330.h: 4814: unsigned STKFUL :1;
+[; ;pic18f1330.h: 4815: };
+[; ;pic18f1330.h: 4816: struct {
+[; ;pic18f1330.h: 4817: unsigned SP0 :1;
+[; ;pic18f1330.h: 4818: unsigned SP1 :1;
+[; ;pic18f1330.h: 4819: unsigned SP2 :1;
+[; ;pic18f1330.h: 4820: unsigned SP3 :1;
+[; ;pic18f1330.h: 4821: unsigned SP4 :1;
+[; ;pic18f1330.h: 4822: unsigned :2;
+[; ;pic18f1330.h: 4823: unsigned STKOVF :1;
+[; ;pic18f1330.h: 4824: };
+[; ;pic18f1330.h: 4825: } STKPTRbits_t;
+[; ;pic18f1330.h: 4826: extern volatile STKPTRbits_t STKPTRbits @ 0xFFC;
+[; ;pic18f1330.h: 4876: extern volatile unsigned short long TOS @ 0xFFD;
+"4879
+[; ;pic18f1330.h: 4879: asm("TOS equ 0FFDh");
+[; <" TOS equ 0FFDh ;# ">
+[; ;pic18f1330.h: 4883: extern volatile unsigned char TOSL @ 0xFFD;
+"4885
+[; ;pic18f1330.h: 4885: asm("TOSL equ 0FFDh");
+[; <" TOSL equ 0FFDh ;# ">
+[; ;pic18f1330.h: 4889: extern volatile unsigned char TOSH @ 0xFFE;
+"4891
+[; ;pic18f1330.h: 4891: asm("TOSH equ 0FFEh");
+[; <" TOSH equ 0FFEh ;# ">
+[; ;pic18f1330.h: 4895: extern volatile unsigned char TOSU @ 0xFFF;
+"4897
+[; ;pic18f1330.h: 4897: asm("TOSU equ 0FFFh");
+[; <" TOSU equ 0FFFh ;# ">
+[; ;pic18f1330.h: 4907: extern volatile __bit ABDEN @ (((unsigned) &BAUDCON)*8) + 0;
+[; ;pic18f1330.h: 4909: extern volatile __bit ABDOVF @ (((unsigned) &BAUDCON)*8) + 7;
+[; ;pic18f1330.h: 4911: extern volatile __bit ACQT0 @ (((unsigned) &ADCON2)*8) + 3;
+[; ;pic18f1330.h: 4913: extern volatile __bit ACQT1 @ (((unsigned) &ADCON2)*8) + 4;
+[; ;pic18f1330.h: 4915: extern volatile __bit ACQT2 @ (((unsigned) &ADCON2)*8) + 5;
+[; ;pic18f1330.h: 4917: extern volatile __bit ADCAL @ (((unsigned) &ADCON0)*8) + 7;
+[; ;pic18f1330.h: 4919: extern volatile __bit ADCS0 @ (((unsigned) &ADCON2)*8) + 0;
+[; ;pic18f1330.h: 4921: extern volatile __bit ADCS1 @ (((unsigned) &ADCON2)*8) + 1;
+[; ;pic18f1330.h: 4923: extern volatile __bit ADCS2 @ (((unsigned) &ADCON2)*8) + 2;
+[; ;pic18f1330.h: 4925: extern volatile __bit ADDEN @ (((unsigned) &RCSTA)*8) + 3;
+[; ;pic18f1330.h: 4927: extern volatile __bit ADEN @ (((unsigned) &RCSTA)*8) + 3;
+[; ;pic18f1330.h: 4929: extern volatile __bit ADFM @ (((unsigned) &ADCON2)*8) + 7;
+[; ;pic18f1330.h: 4931: extern volatile __bit ADIE @ (((unsigned) &PIE1)*8) + 6;
+[; ;pic18f1330.h: 4933: extern volatile __bit ADIF @ (((unsigned) &PIR1)*8) + 6;
+[; ;pic18f1330.h: 4935: extern volatile __bit ADIP @ (((unsigned) &IPR1)*8) + 6;
+[; ;pic18f1330.h: 4937: extern volatile __bit ADON @ (((unsigned) &ADCON0)*8) + 0;
+[; ;pic18f1330.h: 4939: extern volatile __bit AN0 @ (((unsigned) &PORTA)*8) + 0;
+[; ;pic18f1330.h: 4941: extern volatile __bit AN1 @ (((unsigned) &PORTA)*8) + 1;
+[; ;pic18f1330.h: 4943: extern volatile __bit AN2 @ (((unsigned) &PORTA)*8) + 4;
+[; ;pic18f1330.h: 4945: extern volatile __bit AN3 @ (((unsigned) &PORTA)*8) + 6;
+[; ;pic18f1330.h: 4947: extern volatile __bit BOR @ (((unsigned) &RCON)*8) + 0;
+[; ;pic18f1330.h: 4949: extern volatile __bit BRFEN @ (((unsigned) &FLTCONFIG)*8) + 7;
+[; ;pic18f1330.h: 4951: extern volatile __bit BRG16 @ (((unsigned) &BAUDCON)*8) + 3;
+[; ;pic18f1330.h: 4953: extern volatile __bit BRGH @ (((unsigned) &TXSTA)*8) + 2;
+[; ;pic18f1330.h: 4955: extern volatile __bit BRGH1 @ (((unsigned) &TXSTA)*8) + 2;
+[; ;pic18f1330.h: 4957: extern volatile __bit C0OUT @ (((unsigned) &CMCON)*8) + 5;
+[; ;pic18f1330.h: 4959: extern volatile __bit C1OUT @ (((unsigned) &CMCON)*8) + 6;
+[; ;pic18f1330.h: 4961: extern volatile __bit C2INV @ (((unsigned) &CMCON)*8) + 5;
+[; ;pic18f1330.h: 4963: extern volatile __bit C2OUT @ (((unsigned) &CMCON)*8) + 7;
+[; ;pic18f1330.h: 4965: extern volatile __bit CARRY @ (((unsigned) &STATUS)*8) + 0;
+[; ;pic18f1330.h: 4967: extern volatile __bit CCP2_PA2 @ (((unsigned) &PORTB)*8) + 3;
+[; ;pic18f1330.h: 4969: extern volatile __bit CFGS @ (((unsigned) &EECON1)*8) + 6;
+[; ;pic18f1330.h: 4971: extern volatile __bit CHS0 @ (((unsigned) &ADCON0)*8) + 2;
+[; ;pic18f1330.h: 4973: extern volatile __bit CHS1 @ (((unsigned) &ADCON0)*8) + 3;
+[; ;pic18f1330.h: 4975: extern volatile __bit CHSN3 @ (((unsigned) &ADCON1)*8) + 3;
+[; ;pic18f1330.h: 4977: extern volatile __bit CK @ (((unsigned) &PORTA)*8) + 2;
+[; ;pic18f1330.h: 4979: extern volatile __bit CLKI @ (((unsigned) &PORTA)*8) + 7;
+[; ;pic18f1330.h: 4981: extern volatile __bit CLKO @ (((unsigned) &PORTA)*8) + 6;
+[; ;pic18f1330.h: 4983: extern volatile __bit CM0 @ (((unsigned) &CMCON)*8) + 0;
+[; ;pic18f1330.h: 4985: extern volatile __bit CM1 @ (((unsigned) &CMCON)*8) + 1;
+[; ;pic18f1330.h: 4987: extern volatile __bit CM2 @ (((unsigned) &CMCON)*8) + 2;
+[; ;pic18f1330.h: 4989: extern volatile __bit CMEN0 @ (((unsigned) &CMCON)*8) + 0;
+[; ;pic18f1330.h: 4991: extern volatile __bit CMEN1 @ (((unsigned) &CMCON)*8) + 1;
+[; ;pic18f1330.h: 4993: extern volatile __bit CMEN2 @ (((unsigned) &CMCON)*8) + 2;
+[; ;pic18f1330.h: 4995: extern volatile __bit CMP0 @ (((unsigned) &PORTA)*8) + 0;
+[; ;pic18f1330.h: 4997: extern volatile __bit CMP0IE @ (((unsigned) &PIE1)*8) + 1;
+[; ;pic18f1330.h: 4999: extern volatile __bit CMP0IF @ (((unsigned) &PIR1)*8) + 1;
+[; ;pic18f1330.h: 5001: extern volatile __bit CMP0IP @ (((unsigned) &IPR1)*8) + 1;
+[; ;pic18f1330.h: 5003: extern volatile __bit CMP1 @ (((unsigned) &PORTB)*8) + 3;
+[; ;pic18f1330.h: 5005: extern volatile __bit CMP1IE @ (((unsigned) &PIE1)*8) + 2;
+[; ;pic18f1330.h: 5007: extern volatile __bit CMP1IF @ (((unsigned) &PIR1)*8) + 2;
+[; ;pic18f1330.h: 5009: extern volatile __bit CMP1IP @ (((unsigned) &IPR1)*8) + 2;
+[; ;pic18f1330.h: 5011: extern volatile __bit CMP2 @ (((unsigned) &PORTB)*8) + 2;
+[; ;pic18f1330.h: 5013: extern volatile __bit CMP2IE @ (((unsigned) &PIE1)*8) + 3;
+[; ;pic18f1330.h: 5015: extern volatile __bit CMP2IF @ (((unsigned) &PIR1)*8) + 3;
+[; ;pic18f1330.h: 5017: extern volatile __bit CMP2IP @ (((unsigned) &IPR1)*8) + 3;
+[; ;pic18f1330.h: 5019: extern volatile __bit CREN @ (((unsigned) &RCSTA)*8) + 4;
+[; ;pic18f1330.h: 5021: extern volatile __bit CSRC @ (((unsigned) &TXSTA)*8) + 7;
+[; ;pic18f1330.h: 5023: extern volatile __bit CSRC1 @ (((unsigned) &TXSTA)*8) + 7;
+[; ;pic18f1330.h: 5025: extern volatile __bit CVR0 @ (((unsigned) &CVRCON)*8) + 0;
+[; ;pic18f1330.h: 5027: extern volatile __bit CVR1 @ (((unsigned) &CVRCON)*8) + 1;
+[; ;pic18f1330.h: 5029: extern volatile __bit CVR2 @ (((unsigned) &CVRCON)*8) + 2;
+[; ;pic18f1330.h: 5031: extern volatile __bit CVR3 @ (((unsigned) &CVRCON)*8) + 3;
+[; ;pic18f1330.h: 5033: extern volatile __bit CVREF @ (((unsigned) &CVRCON)*8) + 4;
+[; ;pic18f1330.h: 5035: extern volatile __bit CVREN @ (((unsigned) &CVRCON)*8) + 7;
+[; ;pic18f1330.h: 5037: extern volatile __bit CVRR @ (((unsigned) &CVRCON)*8) + 5;
+[; ;pic18f1330.h: 5039: extern volatile __bit CVRSS @ (((unsigned) &CVRCON)*8) + 4;
+[; ;pic18f1330.h: 5041: extern volatile __bit DC @ (((unsigned) &STATUS)*8) + 1;
+[; ;pic18f1330.h: 5043: extern volatile __bit DONE @ (((unsigned) &ADCON0)*8) + 1;
+[; ;pic18f1330.h: 5045: extern volatile __bit DT @ (((unsigned) &PORTA)*8) + 3;
+[; ;pic18f1330.h: 5047: extern volatile __bit DT0 @ (((unsigned) &DTCON)*8) + 0;
+[; ;pic18f1330.h: 5049: extern volatile __bit DT1 @ (((unsigned) &DTCON)*8) + 1;
+[; ;pic18f1330.h: 5051: extern volatile __bit DT2 @ (((unsigned) &DTCON)*8) + 2;
+[; ;pic18f1330.h: 5053: extern volatile __bit DT3 @ (((unsigned) &DTCON)*8) + 3;
+[; ;pic18f1330.h: 5055: extern volatile __bit DT4 @ (((unsigned) &DTCON)*8) + 4;
+[; ;pic18f1330.h: 5057: extern volatile __bit DT5 @ (((unsigned) &DTCON)*8) + 5;
+[; ;pic18f1330.h: 5059: extern volatile __bit DTPS0 @ (((unsigned) &DTCON)*8) + 6;
+[; ;pic18f1330.h: 5061: extern volatile __bit DTPS1 @ (((unsigned) &DTCON)*8) + 7;
+[; ;pic18f1330.h: 5063: extern volatile __bit EEFS @ (((unsigned) &EECON1)*8) + 6;
+[; ;pic18f1330.h: 5065: extern volatile __bit EEIE @ (((unsigned) &PIE2)*8) + 4;
+[; ;pic18f1330.h: 5067: extern volatile __bit EEIF @ (((unsigned) &PIR2)*8) + 4;
+[; ;pic18f1330.h: 5069: extern volatile __bit EEIP @ (((unsigned) &IPR2)*8) + 4;
+[; ;pic18f1330.h: 5071: extern volatile __bit EEPGD @ (((unsigned) &EECON1)*8) + 7;
+[; ;pic18f1330.h: 5073: extern volatile __bit FERR @ (((unsigned) &RCSTA)*8) + 2;
+[; ;pic18f1330.h: 5075: extern volatile __bit FLTAEN @ (((unsigned) &FLTCONFIG)*8) + 0;
+[; ;pic18f1330.h: 5077: extern volatile __bit FLTAMOD @ (((unsigned) &FLTCONFIG)*8) + 1;
+[; ;pic18f1330.h: 5079: extern volatile __bit FLTAS @ (((unsigned) &FLTCONFIG)*8) + 2;
+[; ;pic18f1330.h: 5081: extern volatile __bit FLTS @ (((unsigned) &OSCCON)*8) + 2;
+[; ;pic18f1330.h: 5083: extern volatile __bit FREE @ (((unsigned) &EECON1)*8) + 4;
+[; ;pic18f1330.h: 5085: extern volatile __bit GIE @ (((unsigned) &INTCON)*8) + 7;
+[; ;pic18f1330.h: 5087: extern volatile __bit GIEH @ (((unsigned) &INTCON)*8) + 7;
+[; ;pic18f1330.h: 5089: extern volatile __bit GIEL @ (((unsigned) &INTCON)*8) + 6;
+[; ;pic18f1330.h: 5091: extern volatile __bit GIE_GIEH @ (((unsigned) &INTCON)*8) + 7;
+[; ;pic18f1330.h: 5093: extern volatile __bit GO @ (((unsigned) &ADCON0)*8) + 1;
+[; ;pic18f1330.h: 5095: extern volatile __bit GODONE @ (((unsigned) &ADCON0)*8) + 1;
+[; ;pic18f1330.h: 5097: extern volatile __bit GO_DONE @ (((unsigned) &ADCON0)*8) + 1;
+[; ;pic18f1330.h: 5099: extern volatile __bit GO_NOT_DONE @ (((unsigned) &ADCON0)*8) + 1;
+[; ;pic18f1330.h: 5101: extern volatile __bit GO_nDONE @ (((unsigned) &ADCON0)*8) + 1;
+[; ;pic18f1330.h: 5103: extern volatile __bit IDLEN @ (((unsigned) &OSCCON)*8) + 7;
+[; ;pic18f1330.h: 5105: extern volatile __bit INT0 @ (((unsigned) &PORTA)*8) + 0;
+[; ;pic18f1330.h: 5107: extern volatile __bit INT0E @ (((unsigned) &INTCON)*8) + 4;
+[; ;pic18f1330.h: 5109: extern volatile __bit INT0F @ (((unsigned) &INTCON)*8) + 1;
+[; ;pic18f1330.h: 5111: extern volatile __bit INT0IE @ (((unsigned) &INTCON)*8) + 4;
+[; ;pic18f1330.h: 5113: extern volatile __bit INT0IF @ (((unsigned) &INTCON)*8) + 1;
+[; ;pic18f1330.h: 5115: extern volatile __bit INT1 @ (((unsigned) &PORTA)*8) + 1;
+[; ;pic18f1330.h: 5117: extern volatile __bit INT1E @ (((unsigned) &INTCON3)*8) + 3;
+[; ;pic18f1330.h: 5119: extern volatile __bit INT1F @ (((unsigned) &INTCON3)*8) + 0;
+[; ;pic18f1330.h: 5121: extern volatile __bit INT1IE @ (((unsigned) &INTCON3)*8) + 3;
+[; ;pic18f1330.h: 5123: extern volatile __bit INT1IF @ (((unsigned) &INTCON3)*8) + 0;
+[; ;pic18f1330.h: 5125: extern volatile __bit INT1IP @ (((unsigned) &INTCON3)*8) + 6;
+[; ;pic18f1330.h: 5127: extern volatile __bit INT1P @ (((unsigned) &INTCON3)*8) + 6;
+[; ;pic18f1330.h: 5129: extern volatile __bit INT2 @ (((unsigned) &PORTB)*8) + 2;
+[; ;pic18f1330.h: 5131: extern volatile __bit INT2E @ (((unsigned) &INTCON3)*8) + 4;
+[; ;pic18f1330.h: 5133: extern volatile __bit INT2F @ (((unsigned) &INTCON3)*8) + 1;
+[; ;pic18f1330.h: 5135: extern volatile __bit INT2IE @ (((unsigned) &INTCON3)*8) + 4;
+[; ;pic18f1330.h: 5137: extern volatile __bit INT2IF @ (((unsigned) &INTCON3)*8) + 1;
+[; ;pic18f1330.h: 5139: extern volatile __bit INT2IP @ (((unsigned) &INTCON3)*8) + 7;
+[; ;pic18f1330.h: 5141: extern volatile __bit INT2P @ (((unsigned) &INTCON3)*8) + 7;
+[; ;pic18f1330.h: 5143: extern volatile __bit INT3 @ (((unsigned) &PORTB)*8) + 3;
+[; ;pic18f1330.h: 5145: extern volatile __bit INT3E @ (((unsigned) &INTCON3)*8) + 5;
+[; ;pic18f1330.h: 5147: extern volatile __bit INT3F @ (((unsigned) &INTCON3)*8) + 2;
+[; ;pic18f1330.h: 5149: extern volatile __bit INT3IE @ (((unsigned) &INTCON3)*8) + 5;
+[; ;pic18f1330.h: 5151: extern volatile __bit INT3IF @ (((unsigned) &INTCON3)*8) + 2;
+[; ;pic18f1330.h: 5153: extern volatile __bit INT3IP @ (((unsigned) &INTCON2)*8) + 1;
+[; ;pic18f1330.h: 5155: extern volatile __bit INT3P @ (((unsigned) &INTCON2)*8) + 1;
+[; ;pic18f1330.h: 5157: extern volatile __bit INTEDG0 @ (((unsigned) &INTCON2)*8) + 6;
+[; ;pic18f1330.h: 5159: extern volatile __bit INTEDG1 @ (((unsigned) &INTCON2)*8) + 5;
+[; ;pic18f1330.h: 5161: extern volatile __bit INTEDG2 @ (((unsigned) &INTCON2)*8) + 4;
+[; ;pic18f1330.h: 5163: extern volatile __bit INTEDG3 @ (((unsigned) &INTCON2)*8) + 3;
+[; ;pic18f1330.h: 5165: extern volatile __bit INTSRC @ (((unsigned) &OSCTUNE)*8) + 7;
+[; ;pic18f1330.h: 5167: extern volatile __bit IOFS @ (((unsigned) &OSCCON)*8) + 2;
+[; ;pic18f1330.h: 5169: extern volatile __bit IPEN @ (((unsigned) &RCON)*8) + 7;
+[; ;pic18f1330.h: 5171: extern volatile __bit IRCF0 @ (((unsigned) &OSCCON)*8) + 4;
+[; ;pic18f1330.h: 5173: extern volatile __bit IRCF1 @ (((unsigned) &OSCCON)*8) + 5;
+[; ;pic18f1330.h: 5175: extern volatile __bit IRCF2 @ (((unsigned) &OSCCON)*8) + 6;
+[; ;pic18f1330.h: 5177: extern volatile __bit IRVST @ (((unsigned) &LVDCON)*8) + 5;
+[; ;pic18f1330.h: 5179: extern volatile __bit IVRST @ (((unsigned) &LVDCON)*8) + 5;
+[; ;pic18f1330.h: 5181: extern volatile __bit KBI0 @ (((unsigned) &PORTA)*8) + 0;
+[; ;pic18f1330.h: 5183: extern volatile __bit KBI1 @ (((unsigned) &PORTA)*8) + 1;
+[; ;pic18f1330.h: 5185: extern volatile __bit KBI2 @ (((unsigned) &PORTB)*8) + 2;
+[; ;pic18f1330.h: 5187: extern volatile __bit KBI3 @ (((unsigned) &PORTB)*8) + 3;
+[; ;pic18f1330.h: 5189: extern volatile __bit LA0 @ (((unsigned) &LATA)*8) + 0;
+[; ;pic18f1330.h: 5191: extern volatile __bit LA1 @ (((unsigned) &LATA)*8) + 1;
+[; ;pic18f1330.h: 5193: extern volatile __bit LA2 @ (((unsigned) &LATA)*8) + 2;
+[; ;pic18f1330.h: 5195: extern volatile __bit LA3 @ (((unsigned) &LATA)*8) + 3;
+[; ;pic18f1330.h: 5197: extern volatile __bit LA4 @ (((unsigned) &LATA)*8) + 4;
+[; ;pic18f1330.h: 5199: extern volatile __bit LA5 @ (((unsigned) &LATA)*8) + 5;
+[; ;pic18f1330.h: 5201: extern volatile __bit LA6 @ (((unsigned) &LATA)*8) + 6;
+[; ;pic18f1330.h: 5203: extern volatile __bit LA7 @ (((unsigned) &LATA)*8) + 7;
+[; ;pic18f1330.h: 5205: extern volatile __bit LATA0 @ (((unsigned) &LATA)*8) + 0;
+[; ;pic18f1330.h: 5207: extern volatile __bit LATA1 @ (((unsigned) &LATA)*8) + 1;
+[; ;pic18f1330.h: 5209: extern volatile __bit LATA2 @ (((unsigned) &LATA)*8) + 2;
+[; ;pic18f1330.h: 5211: extern volatile __bit LATA3 @ (((unsigned) &LATA)*8) + 3;
+[; ;pic18f1330.h: 5213: extern volatile __bit LATA4 @ (((unsigned) &LATA)*8) + 4;
+[; ;pic18f1330.h: 5215: extern volatile __bit LATA5 @ (((unsigned) &LATA)*8) + 5;
+[; ;pic18f1330.h: 5217: extern volatile __bit LATA6 @ (((unsigned) &LATA)*8) + 6;
+[; ;pic18f1330.h: 5219: extern volatile __bit LATA7 @ (((unsigned) &LATA)*8) + 7;
+[; ;pic18f1330.h: 5221: extern volatile __bit LATB0 @ (((unsigned) &LATB)*8) + 0;
+[; ;pic18f1330.h: 5223: extern volatile __bit LATB1 @ (((unsigned) &LATB)*8) + 1;
+[; ;pic18f1330.h: 5225: extern volatile __bit LATB2 @ (((unsigned) &LATB)*8) + 2;
+[; ;pic18f1330.h: 5227: extern volatile __bit LATB3 @ (((unsigned) &LATB)*8) + 3;
+[; ;pic18f1330.h: 5229: extern volatile __bit LATB4 @ (((unsigned) &LATB)*8) + 4;
+[; ;pic18f1330.h: 5231: extern volatile __bit LATB5 @ (((unsigned) &LATB)*8) + 5;
+[; ;pic18f1330.h: 5233: extern volatile __bit LATB6 @ (((unsigned) &LATB)*8) + 6;
+[; ;pic18f1330.h: 5235: extern volatile __bit LATB7 @ (((unsigned) &LATB)*8) + 7;
+[; ;pic18f1330.h: 5237: extern volatile __bit LB0 @ (((unsigned) &LATB)*8) + 0;
+[; ;pic18f1330.h: 5239: extern volatile __bit LB1 @ (((unsigned) &LATB)*8) + 1;
+[; ;pic18f1330.h: 5241: extern volatile __bit LB2 @ (((unsigned) &LATB)*8) + 2;
+[; ;pic18f1330.h: 5243: extern volatile __bit LB3 @ (((unsigned) &LATB)*8) + 3;
+[; ;pic18f1330.h: 5245: extern volatile __bit LB4 @ (((unsigned) &LATB)*8) + 4;
+[; ;pic18f1330.h: 5247: extern volatile __bit LB5 @ (((unsigned) &LATB)*8) + 5;
+[; ;pic18f1330.h: 5249: extern volatile __bit LB6 @ (((unsigned) &LATB)*8) + 6;
+[; ;pic18f1330.h: 5251: extern volatile __bit LB7 @ (((unsigned) &LATB)*8) + 7;
+[; ;pic18f1330.h: 5253: extern volatile __bit LVDEN @ (((unsigned) &LVDCON)*8) + 4;
+[; ;pic18f1330.h: 5255: extern volatile __bit LVDIE @ (((unsigned) &PIE2)*8) + 2;
+[; ;pic18f1330.h: 5257: extern volatile __bit LVDIF @ (((unsigned) &PIR2)*8) + 2;
+[; ;pic18f1330.h: 5259: extern volatile __bit LVDIN @ (((unsigned) &PORTA)*8) + 5;
+[; ;pic18f1330.h: 5261: extern volatile __bit LVDIP @ (((unsigned) &IPR2)*8) + 2;
+[; ;pic18f1330.h: 5263: extern volatile __bit LVDL0 @ (((unsigned) &LVDCON)*8) + 0;
+[; ;pic18f1330.h: 5265: extern volatile __bit LVDL1 @ (((unsigned) &LVDCON)*8) + 1;
+[; ;pic18f1330.h: 5267: extern volatile __bit LVDL2 @ (((unsigned) &LVDCON)*8) + 2;
+[; ;pic18f1330.h: 5269: extern volatile __bit LVDL3 @ (((unsigned) &LVDCON)*8) + 3;
+[; ;pic18f1330.h: 5271: extern volatile __bit MCLR @ (((unsigned) &PORTA)*8) + 5;
+[; ;pic18f1330.h: 5273: extern volatile __bit NEGATIVE @ (((unsigned) &STATUS)*8) + 4;
+[; ;pic18f1330.h: 5275: extern volatile __bit NOT_BOR @ (((unsigned) &RCON)*8) + 0;
+[; ;pic18f1330.h: 5277: extern volatile __bit NOT_DONE @ (((unsigned) &ADCON0)*8) + 1;
+[; ;pic18f1330.h: 5279: extern volatile __bit NOT_MCLR @ (((unsigned) &PORTA)*8) + 5;
+[; ;pic18f1330.h: 5281: extern volatile __bit NOT_PD @ (((unsigned) &RCON)*8) + 2;
+[; ;pic18f1330.h: 5283: extern volatile __bit NOT_POR @ (((unsigned) &RCON)*8) + 1;
+[; ;pic18f1330.h: 5285: extern volatile __bit NOT_RBPU @ (((unsigned) &INTCON2)*8) + 7;
+[; ;pic18f1330.h: 5287: extern volatile __bit NOT_RI @ (((unsigned) &RCON)*8) + 4;
+[; ;pic18f1330.h: 5289: extern volatile __bit NOT_T1SYNC @ (((unsigned) &T1CON)*8) + 2;
+[; ;pic18f1330.h: 5291: extern volatile __bit NOT_TO @ (((unsigned) &RCON)*8) + 3;
+[; ;pic18f1330.h: 5293: extern volatile __bit OERR @ (((unsigned) &RCSTA)*8) + 1;
+[; ;pic18f1330.h: 5295: extern volatile __bit OSC1 @ (((unsigned) &PORTA)*8) + 7;
+[; ;pic18f1330.h: 5297: extern volatile __bit OSC2 @ (((unsigned) &PORTA)*8) + 6;
+[; ;pic18f1330.h: 5299: extern volatile __bit OSCFIE @ (((unsigned) &PIE2)*8) + 7;
+[; ;pic18f1330.h: 5301: extern volatile __bit OSCFIF @ (((unsigned) &PIR2)*8) + 7;
+[; ;pic18f1330.h: 5303: extern volatile __bit OSCFIP @ (((unsigned) &IPR2)*8) + 7;
+[; ;pic18f1330.h: 5305: extern volatile __bit OSTS @ (((unsigned) &OSCCON)*8) + 3;
+[; ;pic18f1330.h: 5307: extern volatile __bit OSYNC @ (((unsigned) &PWMCON1)*8) + 0;
+[; ;pic18f1330.h: 5309: extern volatile __bit OV @ (((unsigned) &STATUS)*8) + 3;
+[; ;pic18f1330.h: 5311: extern volatile __bit OVERFLOW @ (((unsigned) &STATUS)*8) + 3;
+[; ;pic18f1330.h: 5313: extern volatile __bit PCFG0 @ (((unsigned) &ADCON1)*8) + 0;
+[; ;pic18f1330.h: 5315: extern volatile __bit PCFG1 @ (((unsigned) &ADCON1)*8) + 1;
+[; ;pic18f1330.h: 5317: extern volatile __bit PCFG2 @ (((unsigned) &ADCON1)*8) + 2;
+[; ;pic18f1330.h: 5319: extern volatile __bit PCFG3 @ (((unsigned) &ADCON1)*8) + 3;
+[; ;pic18f1330.h: 5321: extern volatile __bit PD @ (((unsigned) &RCON)*8) + 2;
+[; ;pic18f1330.h: 5323: extern volatile __bit PEIE @ (((unsigned) &INTCON)*8) + 6;
+[; ;pic18f1330.h: 5325: extern volatile __bit PEIE_GIEL @ (((unsigned) &INTCON)*8) + 6;
+[; ;pic18f1330.h: 5327: extern volatile __bit PGC @ (((unsigned) &PORTB)*8) + 6;
+[; ;pic18f1330.h: 5329: extern volatile __bit PGD @ (((unsigned) &PORTB)*8) + 7;
+[; ;pic18f1330.h: 5331: extern volatile __bit PLLEN @ (((unsigned) &OSCTUNE)*8) + 6;
+[; ;pic18f1330.h: 5333: extern volatile __bit PMOD0 @ (((unsigned) &PWMCON0)*8) + 0;
+[; ;pic18f1330.h: 5335: extern volatile __bit PMOD1 @ (((unsigned) &PWMCON0)*8) + 1;
+[; ;pic18f1330.h: 5337: extern volatile __bit PMOD2 @ (((unsigned) &PWMCON0)*8) + 2;
+[; ;pic18f1330.h: 5339: extern volatile __bit POR @ (((unsigned) &RCON)*8) + 1;
+[; ;pic18f1330.h: 5341: extern volatile __bit POUT0 @ (((unsigned) &OVDCONS)*8) + 0;
+[; ;pic18f1330.h: 5343: extern volatile __bit POUT1 @ (((unsigned) &OVDCONS)*8) + 1;
+[; ;pic18f1330.h: 5345: extern volatile __bit POUT2 @ (((unsigned) &OVDCONS)*8) + 2;
+[; ;pic18f1330.h: 5347: extern volatile __bit POUT3 @ (((unsigned) &OVDCONS)*8) + 3;
+[; ;pic18f1330.h: 5349: extern volatile __bit POUT4 @ (((unsigned) &OVDCONS)*8) + 4;
+[; ;pic18f1330.h: 5351: extern volatile __bit POUT5 @ (((unsigned) &OVDCONS)*8) + 5;
+[; ;pic18f1330.h: 5353: extern volatile __bit POVD0 @ (((unsigned) &OVDCOND)*8) + 0;
+[; ;pic18f1330.h: 5355: extern volatile __bit POVD1 @ (((unsigned) &OVDCOND)*8) + 1;
+[; ;pic18f1330.h: 5357: extern volatile __bit POVD2 @ (((unsigned) &OVDCOND)*8) + 2;
+[; ;pic18f1330.h: 5359: extern volatile __bit POVD3 @ (((unsigned) &OVDCOND)*8) + 3;
+[; ;pic18f1330.h: 5361: extern volatile __bit POVD4 @ (((unsigned) &OVDCOND)*8) + 4;
+[; ;pic18f1330.h: 5363: extern volatile __bit POVD5 @ (((unsigned) &OVDCOND)*8) + 5;
+[; ;pic18f1330.h: 5365: extern volatile __bit PSA @ (((unsigned) &T0CON)*8) + 3;
+[; ;pic18f1330.h: 5367: extern volatile __bit PTCKPS0 @ (((unsigned) &PTCON0)*8) + 2;
+[; ;pic18f1330.h: 5369: extern volatile __bit PTCKPS1 @ (((unsigned) &PTCON0)*8) + 3;
+[; ;pic18f1330.h: 5371: extern volatile __bit PTDIR @ (((unsigned) &PTCON1)*8) + 6;
+[; ;pic18f1330.h: 5373: extern volatile __bit PTEN @ (((unsigned) &PTCON1)*8) + 7;
+[; ;pic18f1330.h: 5375: extern volatile __bit PTIE @ (((unsigned) &PIE3)*8) + 4;
+[; ;pic18f1330.h: 5377: extern volatile __bit PTIF @ (((unsigned) &PIR3)*8) + 4;
+[; ;pic18f1330.h: 5379: extern volatile __bit PTIP @ (((unsigned) &IPR3)*8) + 4;
+[; ;pic18f1330.h: 5381: extern volatile __bit PTMOD0 @ (((unsigned) &PTCON0)*8) + 0;
+[; ;pic18f1330.h: 5383: extern volatile __bit PTMOD1 @ (((unsigned) &PTCON0)*8) + 1;
+[; ;pic18f1330.h: 5385: extern volatile __bit PTOPS0 @ (((unsigned) &PTCON0)*8) + 4;
+[; ;pic18f1330.h: 5387: extern volatile __bit PTOPS1 @ (((unsigned) &PTCON0)*8) + 5;
+[; ;pic18f1330.h: 5389: extern volatile __bit PTOPS2 @ (((unsigned) &PTCON0)*8) + 6;
+[; ;pic18f1330.h: 5391: extern volatile __bit PTOPS3 @ (((unsigned) &PTCON0)*8) + 7;
+[; ;pic18f1330.h: 5393: extern volatile __bit PWM0 @ (((unsigned) &PORTB)*8) + 0;
+[; ;pic18f1330.h: 5395: extern volatile __bit PWM1 @ (((unsigned) &PORTB)*8) + 1;
+[; ;pic18f1330.h: 5397: extern volatile __bit PWM2 @ (((unsigned) &PORTB)*8) + 4;
+[; ;pic18f1330.h: 5399: extern volatile __bit PWM3 @ (((unsigned) &PORTB)*8) + 5;
+[; ;pic18f1330.h: 5401: extern volatile __bit PWM4 @ (((unsigned) &PORTB)*8) + 6;
+[; ;pic18f1330.h: 5403: extern volatile __bit PWM5 @ (((unsigned) &PORTB)*8) + 7;
+[; ;pic18f1330.h: 5405: extern volatile __bit PWMEN0 @ (((unsigned) &PWMCON0)*8) + 4;
+[; ;pic18f1330.h: 5407: extern volatile __bit PWMEN1 @ (((unsigned) &PWMCON0)*8) + 5;
+[; ;pic18f1330.h: 5409: extern volatile __bit PWMEN2 @ (((unsigned) &PWMCON0)*8) + 6;
+[; ;pic18f1330.h: 5411: extern volatile __bit __attribute__((__deprecated__)) RA0 @ (((unsigned) &PORTA)*8) + 0;
+[; ;pic18f1330.h: 5413: extern volatile __bit __attribute__((__deprecated__)) RA1 @ (((unsigned) &PORTA)*8) + 1;
+[; ;pic18f1330.h: 5415: extern volatile __bit __attribute__((__deprecated__)) RA2 @ (((unsigned) &PORTA)*8) + 2;
+[; ;pic18f1330.h: 5417: extern volatile __bit __attribute__((__deprecated__)) RA3 @ (((unsigned) &PORTA)*8) + 3;
+[; ;pic18f1330.h: 5419: extern volatile __bit __attribute__((__deprecated__)) RA4 @ (((unsigned) &PORTA)*8) + 4;
+[; ;pic18f1330.h: 5421: extern volatile __bit __attribute__((__deprecated__)) RA5 @ (((unsigned) &PORTA)*8) + 5;
+[; ;pic18f1330.h: 5423: extern volatile __bit __attribute__((__deprecated__)) RA6 @ (((unsigned) &PORTA)*8) + 6;
+[; ;pic18f1330.h: 5425: extern volatile __bit __attribute__((__deprecated__)) RA7 @ (((unsigned) &PORTA)*8) + 7;
+[; ;pic18f1330.h: 5427: extern volatile __bit __attribute__((__deprecated__)) RB0 @ (((unsigned) &PORTB)*8) + 0;
+[; ;pic18f1330.h: 5429: extern volatile __bit __attribute__((__deprecated__)) RB1 @ (((unsigned) &PORTB)*8) + 1;
+[; ;pic18f1330.h: 5431: extern volatile __bit __attribute__((__deprecated__)) RB2 @ (((unsigned) &PORTB)*8) + 2;
+[; ;pic18f1330.h: 5433: extern volatile __bit __attribute__((__deprecated__)) RB3 @ (((unsigned) &PORTB)*8) + 3;
+[; ;pic18f1330.h: 5435: extern volatile __bit __attribute__((__deprecated__)) RB4 @ (((unsigned) &PORTB)*8) + 4;
+[; ;pic18f1330.h: 5437: extern volatile __bit __attribute__((__deprecated__)) RB5 @ (((unsigned) &PORTB)*8) + 5;
+[; ;pic18f1330.h: 5439: extern volatile __bit __attribute__((__deprecated__)) RB6 @ (((unsigned) &PORTB)*8) + 6;
+[; ;pic18f1330.h: 5441: extern volatile __bit __attribute__((__deprecated__)) RB7 @ (((unsigned) &PORTB)*8) + 7;
+[; ;pic18f1330.h: 5443: extern volatile __bit RBIE @ (((unsigned) &INTCON)*8) + 3;
+[; ;pic18f1330.h: 5445: extern volatile __bit RBIF @ (((unsigned) &INTCON)*8) + 0;
+[; ;pic18f1330.h: 5447: extern volatile __bit RBIP @ (((unsigned) &INTCON2)*8) + 0;
+[; ;pic18f1330.h: 5449: extern volatile __bit RBPU @ (((unsigned) &INTCON2)*8) + 7;
+[; ;pic18f1330.h: 5451: extern volatile __bit RC1IE @ (((unsigned) &PIE1)*8) + 5;
+[; ;pic18f1330.h: 5453: extern volatile __bit RC1IF @ (((unsigned) &PIR1)*8) + 5;
+[; ;pic18f1330.h: 5455: extern volatile __bit RC1IP @ (((unsigned) &IPR1)*8) + 5;
+[; ;pic18f1330.h: 5457: extern volatile __bit RC8_9 @ (((unsigned) &RCSTA)*8) + 6;
+[; ;pic18f1330.h: 5459: extern volatile __bit RC9 @ (((unsigned) &RCSTA)*8) + 6;
+[; ;pic18f1330.h: 5461: extern volatile __bit RCD8 @ (((unsigned) &RCSTA)*8) + 0;
+[; ;pic18f1330.h: 5463: extern volatile __bit RCIDL @ (((unsigned) &BAUDCON)*8) + 6;
+[; ;pic18f1330.h: 5465: extern volatile __bit RCIE @ (((unsigned) &PIE1)*8) + 5;
+[; ;pic18f1330.h: 5467: extern volatile __bit RCIF @ (((unsigned) &PIR1)*8) + 5;
+[; ;pic18f1330.h: 5469: extern volatile __bit RCIP @ (((unsigned) &IPR1)*8) + 5;
+[; ;pic18f1330.h: 5471: extern volatile __bit RCMT @ (((unsigned) &BAUDCON)*8) + 6;
+[; ;pic18f1330.h: 5473: extern volatile __bit RD @ (((unsigned) &EECON1)*8) + 0;
+[; ;pic18f1330.h: 5475: extern volatile __bit RD16 @ (((unsigned) &T1CON)*8) + 7;
+[; ;pic18f1330.h: 5477: extern volatile __bit RI @ (((unsigned) &RCON)*8) + 4;
+[; ;pic18f1330.h: 5479: extern volatile __bit RJPU @ (((unsigned) &PORTA)*8) + 7;
+[; ;pic18f1330.h: 5481: extern volatile __bit RX @ (((unsigned) &PORTA)*8) + 3;
+[; ;pic18f1330.h: 5483: extern volatile __bit RX9 @ (((unsigned) &RCSTA)*8) + 6;
+[; ;pic18f1330.h: 5485: extern volatile __bit RX9D @ (((unsigned) &RCSTA)*8) + 0;
+[; ;pic18f1330.h: 5487: extern volatile __bit RXCKP @ (((unsigned) &BAUDCON)*8) + 5;
+[; ;pic18f1330.h: 5489: extern volatile __bit RXDTP @ (((unsigned) &BAUDCON)*8) + 5;
+[; ;pic18f1330.h: 5491: extern volatile __bit SBOREN @ (((unsigned) &RCON)*8) + 6;
+[; ;pic18f1330.h: 5493: extern volatile __bit SCKP @ (((unsigned) &BAUDCON)*8) + 4;
+[; ;pic18f1330.h: 5495: extern volatile __bit SCS0 @ (((unsigned) &OSCCON)*8) + 0;
+[; ;pic18f1330.h: 5497: extern volatile __bit SCS1 @ (((unsigned) &OSCCON)*8) + 1;
+[; ;pic18f1330.h: 5499: extern volatile __bit SENDB @ (((unsigned) &TXSTA)*8) + 3;
+[; ;pic18f1330.h: 5501: extern volatile __bit SENDB1 @ (((unsigned) &TXSTA)*8) + 3;
+[; ;pic18f1330.h: 5503: extern volatile __bit SEVOPS0 @ (((unsigned) &PWMCON1)*8) + 4;
+[; ;pic18f1330.h: 5505: extern volatile __bit SEVOPS1 @ (((unsigned) &PWMCON1)*8) + 5;
+[; ;pic18f1330.h: 5507: extern volatile __bit SEVOPS2 @ (((unsigned) &PWMCON1)*8) + 6;
+[; ;pic18f1330.h: 5509: extern volatile __bit SEVOPS3 @ (((unsigned) &PWMCON1)*8) + 7;
+[; ;pic18f1330.h: 5511: extern volatile __bit SEVTDIR @ (((unsigned) &PWMCON1)*8) + 3;
+[; ;pic18f1330.h: 5513: extern volatile __bit SEVTEN @ (((unsigned) &ADCON0)*8) + 7;
+[; ;pic18f1330.h: 5515: extern volatile __bit SOSCEN @ (((unsigned) &T1CON)*8) + 3;
+[; ;pic18f1330.h: 5517: extern volatile __bit SP0 @ (((unsigned) &STKPTR)*8) + 0;
+[; ;pic18f1330.h: 5519: extern volatile __bit SP1 @ (((unsigned) &STKPTR)*8) + 1;
+[; ;pic18f1330.h: 5521: extern volatile __bit SP2 @ (((unsigned) &STKPTR)*8) + 2;
+[; ;pic18f1330.h: 5523: extern volatile __bit SP3 @ (((unsigned) &STKPTR)*8) + 3;
+[; ;pic18f1330.h: 5525: extern volatile __bit SP4 @ (((unsigned) &STKPTR)*8) + 4;
+[; ;pic18f1330.h: 5527: extern volatile __bit SPEN @ (((unsigned) &RCSTA)*8) + 7;
+[; ;pic18f1330.h: 5529: extern volatile __bit SREN @ (((unsigned) &RCSTA)*8) + 5;
+[; ;pic18f1330.h: 5531: extern volatile __bit SRENA @ (((unsigned) &RCSTA)*8) + 5;
+[; ;pic18f1330.h: 5533: extern volatile __bit STKFUL @ (((unsigned) &STKPTR)*8) + 7;
+[; ;pic18f1330.h: 5535: extern volatile __bit STKOVF @ (((unsigned) &STKPTR)*8) + 7;
+[; ;pic18f1330.h: 5537: extern volatile __bit STKUNF @ (((unsigned) &STKPTR)*8) + 6;
+[; ;pic18f1330.h: 5539: extern volatile __bit SWDTE @ (((unsigned) &WDTCON)*8) + 0;
+[; ;pic18f1330.h: 5541: extern volatile __bit SWDTEN @ (((unsigned) &WDTCON)*8) + 0;
+[; ;pic18f1330.h: 5543: extern volatile __bit SYNC @ (((unsigned) &TXSTA)*8) + 4;
+[; ;pic18f1330.h: 5545: extern volatile __bit SYNC1 @ (((unsigned) &TXSTA)*8) + 4;
+[; ;pic18f1330.h: 5547: extern volatile __bit T016BIT @ (((unsigned) &T0CON)*8) + 6;
+[; ;pic18f1330.h: 5549: extern volatile __bit T08BIT @ (((unsigned) &T0CON)*8) + 6;
+[; ;pic18f1330.h: 5551: extern volatile __bit T0CKI @ (((unsigned) &PORTA)*8) + 4;
+[; ;pic18f1330.h: 5553: extern volatile __bit T0CS @ (((unsigned) &T0CON)*8) + 5;
+[; ;pic18f1330.h: 5555: extern volatile __bit T0IE @ (((unsigned) &INTCON)*8) + 5;
+[; ;pic18f1330.h: 5557: extern volatile __bit T0IF @ (((unsigned) &INTCON)*8) + 2;
+[; ;pic18f1330.h: 5559: extern volatile __bit T0PS0 @ (((unsigned) &T0CON)*8) + 0;
+[; ;pic18f1330.h: 5561: extern volatile __bit T0PS1 @ (((unsigned) &T0CON)*8) + 1;
+[; ;pic18f1330.h: 5563: extern volatile __bit T0PS2 @ (((unsigned) &T0CON)*8) + 2;
+[; ;pic18f1330.h: 5565: extern volatile __bit T0SE @ (((unsigned) &T0CON)*8) + 4;
+[; ;pic18f1330.h: 5567: extern volatile __bit T1CKPS0 @ (((unsigned) &T1CON)*8) + 4;
+[; ;pic18f1330.h: 5569: extern volatile __bit T1CKPS1 @ (((unsigned) &T1CON)*8) + 5;
+[; ;pic18f1330.h: 5571: extern volatile __bit T1OSCEN @ (((unsigned) &T1CON)*8) + 3;
+[; ;pic18f1330.h: 5573: extern volatile __bit T1RD16 @ (((unsigned) &T1CON)*8) + 7;
+[; ;pic18f1330.h: 5575: extern volatile __bit T1RUN @ (((unsigned) &T1CON)*8) + 6;
+[; ;pic18f1330.h: 5577: extern volatile __bit T1SYNC @ (((unsigned) &T1CON)*8) + 2;
+[; ;pic18f1330.h: 5579: extern volatile __bit TMR0IE @ (((unsigned) &INTCON)*8) + 5;
+[; ;pic18f1330.h: 5581: extern volatile __bit TMR0IF @ (((unsigned) &INTCON)*8) + 2;
+[; ;pic18f1330.h: 5583: extern volatile __bit TMR0IP @ (((unsigned) &INTCON2)*8) + 2;
+[; ;pic18f1330.h: 5585: extern volatile __bit TMR0ON @ (((unsigned) &T0CON)*8) + 7;
+[; ;pic18f1330.h: 5587: extern volatile __bit TMR1CS @ (((unsigned) &T1CON)*8) + 1;
+[; ;pic18f1330.h: 5589: extern volatile __bit TMR1IE @ (((unsigned) &PIE1)*8) + 0;
+[; ;pic18f1330.h: 5591: extern volatile __bit TMR1IF @ (((unsigned) &PIR1)*8) + 0;
+[; ;pic18f1330.h: 5593: extern volatile __bit TMR1IP @ (((unsigned) &IPR1)*8) + 0;
+[; ;pic18f1330.h: 5595: extern volatile __bit TMR1ON @ (((unsigned) &T1CON)*8) + 0;
+[; ;pic18f1330.h: 5597: extern volatile __bit TO @ (((unsigned) &RCON)*8) + 3;
+[; ;pic18f1330.h: 5599: extern volatile __bit TRISA0 @ (((unsigned) &TRISA)*8) + 0;
+[; ;pic18f1330.h: 5601: extern volatile __bit TRISA1 @ (((unsigned) &TRISA)*8) + 1;
+[; ;pic18f1330.h: 5603: extern volatile __bit TRISA2 @ (((unsigned) &TRISA)*8) + 2;
+[; ;pic18f1330.h: 5605: extern volatile __bit TRISA3 @ (((unsigned) &TRISA)*8) + 3;
+[; ;pic18f1330.h: 5607: extern volatile __bit TRISA4 @ (((unsigned) &TRISA)*8) + 4;
+[; ;pic18f1330.h: 5609: extern volatile __bit TRISA5 @ (((unsigned) &TRISA)*8) + 5;
+[; ;pic18f1330.h: 5611: extern volatile __bit TRISA6 @ (((unsigned) &TRISA)*8) + 6;
+[; ;pic18f1330.h: 5613: extern volatile __bit TRISA7 @ (((unsigned) &TRISA)*8) + 7;
+[; ;pic18f1330.h: 5615: extern volatile __bit TRISB0 @ (((unsigned) &TRISB)*8) + 0;
+[; ;pic18f1330.h: 5617: extern volatile __bit TRISB1 @ (((unsigned) &TRISB)*8) + 1;
+[; ;pic18f1330.h: 5619: extern volatile __bit TRISB2 @ (((unsigned) &TRISB)*8) + 2;
+[; ;pic18f1330.h: 5621: extern volatile __bit TRISB3 @ (((unsigned) &TRISB)*8) + 3;
+[; ;pic18f1330.h: 5623: extern volatile __bit TRISB4 @ (((unsigned) &TRISB)*8) + 4;
+[; ;pic18f1330.h: 5625: extern volatile __bit TRISB5 @ (((unsigned) &TRISB)*8) + 5;
+[; ;pic18f1330.h: 5627: extern volatile __bit TRISB6 @ (((unsigned) &TRISB)*8) + 6;
+[; ;pic18f1330.h: 5629: extern volatile __bit TRISB7 @ (((unsigned) &TRISB)*8) + 7;
+[; ;pic18f1330.h: 5631: extern volatile __bit TRMT @ (((unsigned) &TXSTA)*8) + 1;
+[; ;pic18f1330.h: 5633: extern volatile __bit TRMT1 @ (((unsigned) &TXSTA)*8) + 1;
+[; ;pic18f1330.h: 5635: extern volatile __bit TUN0 @ (((unsigned) &OSCTUNE)*8) + 0;
+[; ;pic18f1330.h: 5637: extern volatile __bit TUN1 @ (((unsigned) &OSCTUNE)*8) + 1;
+[; ;pic18f1330.h: 5639: extern volatile __bit TUN2 @ (((unsigned) &OSCTUNE)*8) + 2;
+[; ;pic18f1330.h: 5641: extern volatile __bit TUN3 @ (((unsigned) &OSCTUNE)*8) + 3;
+[; ;pic18f1330.h: 5643: extern volatile __bit TUN4 @ (((unsigned) &OSCTUNE)*8) + 4;
+[; ;pic18f1330.h: 5645: extern volatile __bit TX @ (((unsigned) &PORTA)*8) + 2;
+[; ;pic18f1330.h: 5647: extern volatile __bit TX1IE @ (((unsigned) &PIE1)*8) + 4;
+[; ;pic18f1330.h: 5649: extern volatile __bit TX1IF @ (((unsigned) &PIR1)*8) + 4;
+[; ;pic18f1330.h: 5651: extern volatile __bit TX1IP @ (((unsigned) &IPR1)*8) + 4;
+[; ;pic18f1330.h: 5653: extern volatile __bit TX8_9 @ (((unsigned) &TXSTA)*8) + 6;
+[; ;pic18f1330.h: 5655: extern volatile __bit TX9 @ (((unsigned) &TXSTA)*8) + 6;
+[; ;pic18f1330.h: 5657: extern volatile __bit TX91 @ (((unsigned) &TXSTA)*8) + 6;
+[; ;pic18f1330.h: 5659: extern volatile __bit TX9D @ (((unsigned) &TXSTA)*8) + 0;
+[; ;pic18f1330.h: 5661: extern volatile __bit TX9D1 @ (((unsigned) &TXSTA)*8) + 0;
+[; ;pic18f1330.h: 5663: extern volatile __bit TXB2IE @ (((unsigned) &PIE3)*8) + 4;
+[; ;pic18f1330.h: 5665: extern volatile __bit TXBNIE @ (((unsigned) &PIE3)*8) + 4;
+[; ;pic18f1330.h: 5667: extern volatile __bit TXBNIF @ (((unsigned) &PIR3)*8) + 4;
+[; ;pic18f1330.h: 5669: extern volatile __bit TXBNIP @ (((unsigned) &IPR3)*8) + 4;
+[; ;pic18f1330.h: 5671: extern volatile __bit TXCKP @ (((unsigned) &BAUDCON)*8) + 4;
+[; ;pic18f1330.h: 5673: extern volatile __bit TXD8 @ (((unsigned) &TXSTA)*8) + 0;
+[; ;pic18f1330.h: 5675: extern volatile __bit TXEN @ (((unsigned) &TXSTA)*8) + 5;
+[; ;pic18f1330.h: 5677: extern volatile __bit TXEN1 @ (((unsigned) &TXSTA)*8) + 5;
+[; ;pic18f1330.h: 5679: extern volatile __bit TXIE @ (((unsigned) &PIE1)*8) + 4;
+[; ;pic18f1330.h: 5681: extern volatile __bit TXIF @ (((unsigned) &PIR1)*8) + 4;
+[; ;pic18f1330.h: 5683: extern volatile __bit TXIP @ (((unsigned) &IPR1)*8) + 4;
+[; ;pic18f1330.h: 5685: extern volatile __bit UDIS @ (((unsigned) &PWMCON1)*8) + 1;
+[; ;pic18f1330.h: 5687: extern volatile __bit ULPWUIN @ (((unsigned) &PORTA)*8) + 0;
+[; ;pic18f1330.h: 5689: extern volatile __bit VCFG @ (((unsigned) &ADCON1)*8) + 4;
+[; ;pic18f1330.h: 5691: extern volatile __bit VCFG0 @ (((unsigned) &ADCON1)*8) + 4;
+[; ;pic18f1330.h: 5693: extern volatile __bit VCFG01 @ (((unsigned) &ADCON1)*8) + 4;
+[; ;pic18f1330.h: 5695: extern volatile __bit VREFP @ (((unsigned) &PORTA)*8) + 4;
+[; ;pic18f1330.h: 5697: extern volatile __bit W4E @ (((unsigned) &BAUDCON)*8) + 1;
+[; ;pic18f1330.h: 5699: extern volatile __bit WR @ (((unsigned) &EECON1)*8) + 1;
+[; ;pic18f1330.h: 5701: extern volatile __bit WREN @ (((unsigned) &EECON1)*8) + 2;
+[; ;pic18f1330.h: 5703: extern volatile __bit WRERR @ (((unsigned) &EECON1)*8) + 3;
+[; ;pic18f1330.h: 5705: extern volatile __bit WUE @ (((unsigned) &BAUDCON)*8) + 1;
+[; ;pic18f1330.h: 5707: extern volatile __bit ZERO @ (((unsigned) &STATUS)*8) + 2;
+[; ;pic18f1330.h: 5709: extern volatile __bit nBOR @ (((unsigned) &RCON)*8) + 0;
+[; ;pic18f1330.h: 5711: extern volatile __bit nDONE @ (((unsigned) &ADCON0)*8) + 1;
+[; ;pic18f1330.h: 5713: extern volatile __bit nMCLR @ (((unsigned) &PORTA)*8) + 5;
+[; ;pic18f1330.h: 5715: extern volatile __bit nPD @ (((unsigned) &RCON)*8) + 2;
+[; ;pic18f1330.h: 5717: extern volatile __bit nPOR @ (((unsigned) &RCON)*8) + 1;
+[; ;pic18f1330.h: 5719: extern volatile __bit nRBPU @ (((unsigned) &INTCON2)*8) + 7;
+[; ;pic18f1330.h: 5721: extern volatile __bit nRI @ (((unsigned) &RCON)*8) + 4;
+[; ;pic18f1330.h: 5723: extern volatile __bit nT1SYNC @ (((unsigned) &T1CON)*8) + 2;
+[; ;pic18f1330.h: 5725: extern volatile __bit nTO @ (((unsigned) &RCON)*8) + 3;
+[; ;pic18.h: 18: __attribute__((__unsupported__("The flash_write routine is no longer supported. Please use the peripheral library functions: WriteBytesFlash, WriteBlockFlash or WriteWordFlash"))) void flash_write(const unsigned char *, unsigned int, __far unsigned c
+[; ;pic18.h: 42: extern void __nop(void);
+[; ;pic18.h: 147: extern __nonreentrant void _delay(unsigned long);
+[; ;pic18.h: 149: extern __nonreentrant void _delaywdt(unsigned long);
+[; ;pic18.h: 151: extern __nonreentrant void _delay3(unsigned char);
+[; ;adc.h: 2008: union ADCResult
+[; ;adc.h: 2009: {
+[; ;adc.h: 2010: int lr;
+[; ;adc.h: 2011: char br[2];
+[; ;adc.h: 2012: };
+[; ;adc.h: 2014: char BusyADC (void);
+[; ;adc.h: 2016: void ConvertADC (void);
+[; ;adc.h: 2018: void CloseADC(void);
+[; ;adc.h: 2026: int ReadADC(void);
+[; ;adc.h: 2040: void OpenADC ( unsigned char ,
+[; ;adc.h: 2041: unsigned char ,
+[; ;adc.h: 2042: unsigned char );
+[; ;adc.h: 2084: void SetChanADC(unsigned char );
+[; ;adc.h: 2100: void SelChanConvADC( unsigned char );
+[; ;can2510.h: 414: void CAN2510Initialize(  unsigned int configuration,
+[; ;can2510.h: 415: unsigned char brp,
+[; ;can2510.h: 416: unsigned char interruptFlags,
+[; ;can2510.h: 417: unsigned char SPI_syncMode,
+[; ;can2510.h: 418: unsigned char SPI_busMode,
+[; ;can2510.h: 419: unsigned char SPI_smpPhase );
+[; ;can2510.h: 421: signed char CAN2510Init(  unsigned long BufferConfig,
+[; ;can2510.h: 422: unsigned long BitTimeConfig,
+[; ;can2510.h: 423: unsigned char interruptEnables,
+[; ;can2510.h: 424: unsigned char SPI_syncMode,
+[; ;can2510.h: 425: unsigned char SPI_busMode,
+[; ;can2510.h: 426: unsigned char SPI_smpPhase );
+[; ;can2510.h: 428: void CAN2510Enable( void );
+[; ;can2510.h: 430: void CAN2510Disable( void );
+[; ;can2510.h: 432: void CAN2510Reset( void );
+[; ;can2510.h: 434: void CAN2510SetMode(  unsigned char mode );
+[; ;can2510.h: 436: unsigned char CAN2510ReadMode( void );
+[; ;can2510.h: 438: unsigned char CAN2510ReadStatus( void );
+[; ;can2510.h: 440: unsigned char CAN2510ErrorState( void );
+[; ;can2510.h: 442: unsigned char CAN2510InterruptStatus( void );
+[; ;can2510.h: 444: void CAN2510InterruptEnable( unsigned char interruptFlags );
+[; ;can2510.h: 446: unsigned char CAN2510ByteRead(  unsigned char addr );
+[; ;can2510.h: 448: void CAN2510ByteWrite(  unsigned char addr,  unsigned char value );
+[; ;can2510.h: 450: void CAN2510SequentialRead(  unsigned char *DataArray,
+[; ;can2510.h: 451: unsigned char CAN2510addr,
+[; ;can2510.h: 452: unsigned char numbytes );
+[; ;can2510.h: 454: void CAN2510SequentialWrite(  unsigned char *DataArray,
+[; ;can2510.h: 455: unsigned char CAN2510addr,
+[; ;can2510.h: 456: unsigned char numbytes );
+[; ;can2510.h: 458: void CAN2510BitModify(  unsigned char address,
+[; ;can2510.h: 459: unsigned char mask,
+[; ;can2510.h: 460: unsigned char data );
+[; ;can2510.h: 462: void CAN2510SetSingleMaskStd(  unsigned char maskNum,  unsigned int mask );
+[; ;can2510.h: 464: void CAN2510SetSingleMaskXtd(  unsigned char maskNum,  unsigned long mask );
+[; ;can2510.h: 466: void CAN2510SetSingleFilterStd(  unsigned char filterNum,  unsigned int filter );
+[; ;can2510.h: 468: void CAN2510SetSingleFilterXtd(  unsigned char filterNum,  unsigned long filter );
+[; ;can2510.h: 470: signed char CAN2510SetMsgFilterStd(  unsigned char bufferNum,
+[; ;can2510.h: 471: unsigned int mask,
+[; ;can2510.h: 472: unsigned int *filters );
+[; ;can2510.h: 474: signed char CAN2510SetMsgFilterXtd(  unsigned char bufferNum,
+[; ;can2510.h: 475: unsigned long mask,
+[; ;can2510.h: 476: unsigned long *filters );
+[; ;can2510.h: 478: signed char CAN2510WriteStd(  unsigned int msgId,
+[; ;can2510.h: 479: unsigned char msgPriority,
+[; ;can2510.h: 480: unsigned char numBytes,
+[; ;can2510.h: 481: unsigned char *data );
+[; ;can2510.h: 483: signed char CAN2510WriteXtd(  unsigned long msgId,
+[; ;can2510.h: 484: unsigned char msgPriority,
+[; ;can2510.h: 485: unsigned char numBytes,
+[; ;can2510.h: 486: unsigned char *data );
+[; ;can2510.h: 488: void CAN2510LoadBufferStd(  unsigned char bufferNum,
+[; ;can2510.h: 489: unsigned int msgId,
+[; ;can2510.h: 490: unsigned char numBytes,
+[; ;can2510.h: 491: unsigned char *data );
+[; ;can2510.h: 493: void CAN2510LoadBufferXtd(  unsigned char bufferNum,
+[; ;can2510.h: 494: unsigned long msgId,
+[; ;can2510.h: 495: unsigned char numBytes,
+[; ;can2510.h: 496: unsigned char *data );
+[; ;can2510.h: 498: void CAN2510LoadRTRStd(  unsigned char bufferNum,
+[; ;can2510.h: 499: unsigned int msgId,
+[; ;can2510.h: 500: unsigned char numBytes );
+[; ;can2510.h: 502: void CAN2510LoadRTRXtd(  unsigned char bufferNum,
+[; ;can2510.h: 503: unsigned long msgId,
+[; ;can2510.h: 504: unsigned char numBytes );
+[; ;can2510.h: 506: void CAN2510SetBufferPriority(  unsigned char bufferNum,
+[; ;can2510.h: 507: unsigned char bufferPriority );
+[; ;can2510.h: 509: void CAN2510SendBuffer(  unsigned char bufferNumber );
+[; ;can2510.h: 511: signed char CAN2510WriteBuffer(  unsigned char bufferNum );
+[; ;can2510.h: 513: unsigned char CAN2510DataReady(  unsigned char bufferNum );
+[; ;can2510.h: 515: unsigned char CAN2510DataRead(  unsigned char bufferNum,
+[; ;can2510.h: 516: unsigned long *msgId,
+[; ;can2510.h: 517: unsigned char *numBytes,
+[; ;can2510.h: 518: unsigned char *data );
+[; ;capture.h: 64: union capstatus
+[; ;capture.h: 65: {
+[; ;capture.h: 117: unsigned :8;
+[; ;capture.h: 119: };
+[; ;capture.h: 121: extern union capstatus CapStatus;
+[; ;capture.h: 123: union CapResult
+[; ;capture.h: 124: {
+[; ;capture.h: 125: unsigned int lc;
+[; ;capture.h: 126: char bc[2];
+[; ;capture.h: 127: };
+[; ;EEP.h: 36: void Busy_eep ( void );
+[; ;EEP.h: 37: unsigned char Read_b_eep( unsigned int badd );
+[; ;EEP.h: 38: void Write_b_eep( unsigned int badd, unsigned char bdat );
+[; ;stddef.h: 2: typedef int ptrdiff_t;
+[; ;stddef.h: 3: typedef unsigned size_t;
+[; ;stddef.h: 4: typedef unsigned short wchar_t;
+[; ;stddef.h: 13: extern int errno;
+[; ;GenericTypeDefs.h: 70: typedef enum _BIT { CLEAR = 0, SET } BIT;
+[; ;GenericTypeDefs.h: 77: typedef signed int INT;
+[; ;GenericTypeDefs.h: 78: typedef signed char INT8;
+[; ;GenericTypeDefs.h: 79: typedef signed short int INT16;
+[; ;GenericTypeDefs.h: 80: typedef signed long int INT32;
+[; ;GenericTypeDefs.h: 84: typedef signed long long INT64;
+[; ;GenericTypeDefs.h: 88: typedef unsigned int UINT;
+[; ;GenericTypeDefs.h: 89: typedef unsigned char UINT8;
+[; ;GenericTypeDefs.h: 90: typedef unsigned short int UINT16;
+[; ;GenericTypeDefs.h: 95: typedef unsigned long int UINT32;
+[; ;GenericTypeDefs.h: 98: typedef unsigned long long UINT64;
+[; ;GenericTypeDefs.h: 101: typedef union
+[; ;GenericTypeDefs.h: 102: {
+[; ;GenericTypeDefs.h: 103: UINT8 Val;
+[; ;GenericTypeDefs.h: 104: struct
+[; ;GenericTypeDefs.h: 105: {
+[; ;GenericTypeDefs.h: 106: UINT8 b0:1;
+[; ;GenericTypeDefs.h: 107: UINT8 b1:1;
+[; ;GenericTypeDefs.h: 108: UINT8 b2:1;
+[; ;GenericTypeDefs.h: 109: UINT8 b3:1;
+[; ;GenericTypeDefs.h: 110: UINT8 b4:1;
+[; ;GenericTypeDefs.h: 111: UINT8 b5:1;
+[; ;GenericTypeDefs.h: 112: UINT8 b6:1;
+[; ;GenericTypeDefs.h: 113: UINT8 b7:1;
+[; ;GenericTypeDefs.h: 114: } bits;
+[; ;GenericTypeDefs.h: 115: } UINT8_VAL, UINT8_BITS;
+[; ;GenericTypeDefs.h: 117: typedef union
+[; ;GenericTypeDefs.h: 118: {
+[; ;GenericTypeDefs.h: 119: UINT16 Val;
+[; ;GenericTypeDefs.h: 120: UINT8 v[2] ;
+[; ;GenericTypeDefs.h: 121: struct 
+[; ;GenericTypeDefs.h: 122: {
+[; ;GenericTypeDefs.h: 123: UINT8 LB;
+[; ;GenericTypeDefs.h: 124: UINT8 HB;
+[; ;GenericTypeDefs.h: 125: } byte;
+[; ;GenericTypeDefs.h: 126: struct 
+[; ;GenericTypeDefs.h: 127: {
+[; ;GenericTypeDefs.h: 128: UINT8 b0:1;
+[; ;GenericTypeDefs.h: 129: UINT8 b1:1;
+[; ;GenericTypeDefs.h: 130: UINT8 b2:1;
+[; ;GenericTypeDefs.h: 131: UINT8 b3:1;
+[; ;GenericTypeDefs.h: 132: UINT8 b4:1;
+[; ;GenericTypeDefs.h: 133: UINT8 b5:1;
+[; ;GenericTypeDefs.h: 134: UINT8 b6:1;
+[; ;GenericTypeDefs.h: 135: UINT8 b7:1;
+[; ;GenericTypeDefs.h: 136: UINT8 b8:1;
+[; ;GenericTypeDefs.h: 137: UINT8 b9:1;
+[; ;GenericTypeDefs.h: 138: UINT8 b10:1;
+[; ;GenericTypeDefs.h: 139: UINT8 b11:1;
+[; ;GenericTypeDefs.h: 140: UINT8 b12:1;
+[; ;GenericTypeDefs.h: 141: UINT8 b13:1;
+[; ;GenericTypeDefs.h: 142: UINT8 b14:1;
+[; ;GenericTypeDefs.h: 143: UINT8 b15:1;
+[; ;GenericTypeDefs.h: 144: } bits;
+[; ;GenericTypeDefs.h: 145: } UINT16_VAL, UINT16_BITS;
+[; ;GenericTypeDefs.h: 189: typedef union
+[; ;GenericTypeDefs.h: 190: {
+[; ;GenericTypeDefs.h: 191: UINT32 Val;
+[; ;GenericTypeDefs.h: 192: UINT16 w[2] ;
+[; ;GenericTypeDefs.h: 193: UINT8 v[4] ;
+[; ;GenericTypeDefs.h: 194: struct 
+[; ;GenericTypeDefs.h: 195: {
+[; ;GenericTypeDefs.h: 196: UINT16 LW;
+[; ;GenericTypeDefs.h: 197: UINT16 HW;
+[; ;GenericTypeDefs.h: 198: } word;
+[; ;GenericTypeDefs.h: 199: struct 
+[; ;GenericTypeDefs.h: 200: {
+[; ;GenericTypeDefs.h: 201: UINT8 LB;
+[; ;GenericTypeDefs.h: 202: UINT8 HB;
+[; ;GenericTypeDefs.h: 203: UINT8 UB;
+[; ;GenericTypeDefs.h: 204: UINT8 MB;
+[; ;GenericTypeDefs.h: 205: } byte;
+[; ;GenericTypeDefs.h: 206: struct 
+[; ;GenericTypeDefs.h: 207: {
+[; ;GenericTypeDefs.h: 208: UINT16_VAL low;
+[; ;GenericTypeDefs.h: 209: UINT16_VAL high;
+[; ;GenericTypeDefs.h: 210: }wordUnion;
+[; ;GenericTypeDefs.h: 211: struct 
+[; ;GenericTypeDefs.h: 212: {
+[; ;GenericTypeDefs.h: 213: UINT8 b0:1;
+[; ;GenericTypeDefs.h: 214: UINT8 b1:1;
+[; ;GenericTypeDefs.h: 215: UINT8 b2:1;
+[; ;GenericTypeDefs.h: 216: UINT8 b3:1;
+[; ;GenericTypeDefs.h: 217: UINT8 b4:1;
+[; ;GenericTypeDefs.h: 218: UINT8 b5:1;
+[; ;GenericTypeDefs.h: 219: UINT8 b6:1;
+[; ;GenericTypeDefs.h: 220: UINT8 b7:1;
+[; ;GenericTypeDefs.h: 221: UINT8 b8:1;
+[; ;GenericTypeDefs.h: 222: UINT8 b9:1;
+[; ;GenericTypeDefs.h: 223: UINT8 b10:1;
+[; ;GenericTypeDefs.h: 224: UINT8 b11:1;
+[; ;GenericTypeDefs.h: 225: UINT8 b12:1;
+[; ;GenericTypeDefs.h: 226: UINT8 b13:1;
+[; ;GenericTypeDefs.h: 227: UINT8 b14:1;
+[; ;GenericTypeDefs.h: 228: UINT8 b15:1;
+[; ;GenericTypeDefs.h: 229: UINT8 b16:1;
+[; ;GenericTypeDefs.h: 230: UINT8 b17:1;
+[; ;GenericTypeDefs.h: 231: UINT8 b18:1;
+[; ;GenericTypeDefs.h: 232: UINT8 b19:1;
+[; ;GenericTypeDefs.h: 233: UINT8 b20:1;
+[; ;GenericTypeDefs.h: 234: UINT8 b21:1;
+[; ;GenericTypeDefs.h: 235: UINT8 b22:1;
+[; ;GenericTypeDefs.h: 236: UINT8 b23:1;
+[; ;GenericTypeDefs.h: 237: UINT8 b24:1;
+[; ;GenericTypeDefs.h: 238: UINT8 b25:1;
+[; ;GenericTypeDefs.h: 239: UINT8 b26:1;
+[; ;GenericTypeDefs.h: 240: UINT8 b27:1;
+[; ;GenericTypeDefs.h: 241: UINT8 b28:1;
+[; ;GenericTypeDefs.h: 242: UINT8 b29:1;
+[; ;GenericTypeDefs.h: 243: UINT8 b30:1;
+[; ;GenericTypeDefs.h: 244: UINT8 b31:1;
+[; ;GenericTypeDefs.h: 245: } bits;
+[; ;GenericTypeDefs.h: 246: } UINT32_VAL;
+[; ;GenericTypeDefs.h: 250: typedef union
+[; ;GenericTypeDefs.h: 251: {
+[; ;GenericTypeDefs.h: 252: UINT64 Val;
+[; ;GenericTypeDefs.h: 253: UINT32 d[2] ;
+[; ;GenericTypeDefs.h: 254: UINT16 w[4] ;
+[; ;GenericTypeDefs.h: 255: UINT8 v[8] ;
+[; ;GenericTypeDefs.h: 256: struct 
+[; ;GenericTypeDefs.h: 257: {
+[; ;GenericTypeDefs.h: 258: UINT32 LD;
+[; ;GenericTypeDefs.h: 259: UINT32 HD;
+[; ;GenericTypeDefs.h: 260: } dword;
+[; ;GenericTypeDefs.h: 261: struct 
+[; ;GenericTypeDefs.h: 262: {
+[; ;GenericTypeDefs.h: 263: UINT16 LW;
+[; ;GenericTypeDefs.h: 264: UINT16 HW;
+[; ;GenericTypeDefs.h: 265: UINT16 UW;
+[; ;GenericTypeDefs.h: 266: UINT16 MW;
+[; ;GenericTypeDefs.h: 267: } word;
+[; ;GenericTypeDefs.h: 268: struct 
+[; ;GenericTypeDefs.h: 269: {
+[; ;GenericTypeDefs.h: 270: UINT8 b0:1;
+[; ;GenericTypeDefs.h: 271: UINT8 b1:1;
+[; ;GenericTypeDefs.h: 272: UINT8 b2:1;
+[; ;GenericTypeDefs.h: 273: UINT8 b3:1;
+[; ;GenericTypeDefs.h: 274: UINT8 b4:1;
+[; ;GenericTypeDefs.h: 275: UINT8 b5:1;
+[; ;GenericTypeDefs.h: 276: UINT8 b6:1;
+[; ;GenericTypeDefs.h: 277: UINT8 b7:1;
+[; ;GenericTypeDefs.h: 278: UINT8 b8:1;
+[; ;GenericTypeDefs.h: 279: UINT8 b9:1;
+[; ;GenericTypeDefs.h: 280: UINT8 b10:1;
+[; ;GenericTypeDefs.h: 281: UINT8 b11:1;
+[; ;GenericTypeDefs.h: 282: UINT8 b12:1;
+[; ;GenericTypeDefs.h: 283: UINT8 b13:1;
+[; ;GenericTypeDefs.h: 284: UINT8 b14:1;
+[; ;GenericTypeDefs.h: 285: UINT8 b15:1;
+[; ;GenericTypeDefs.h: 286: UINT8 b16:1;
+[; ;GenericTypeDefs.h: 287: UINT8 b17:1;
+[; ;GenericTypeDefs.h: 288: UINT8 b18:1;
+[; ;GenericTypeDefs.h: 289: UINT8 b19:1;
+[; ;GenericTypeDefs.h: 290: UINT8 b20:1;
+[; ;GenericTypeDefs.h: 291: UINT8 b21:1;
+[; ;GenericTypeDefs.h: 292: UINT8 b22:1;
+[; ;GenericTypeDefs.h: 293: UINT8 b23:1;
+[; ;GenericTypeDefs.h: 294: UINT8 b24:1;
+[; ;GenericTypeDefs.h: 295: UINT8 b25:1;
+[; ;GenericTypeDefs.h: 296: UINT8 b26:1;
+[; ;GenericTypeDefs.h: 297: UINT8 b27:1;
+[; ;GenericTypeDefs.h: 298: UINT8 b28:1;
+[; ;GenericTypeDefs.h: 299: UINT8 b29:1;
+[; ;GenericTypeDefs.h: 300: UINT8 b30:1;
+[; ;GenericTypeDefs.h: 301: UINT8 b31:1;
+[; ;GenericTypeDefs.h: 302: UINT8 b32:1;
+[; ;GenericTypeDefs.h: 303: UINT8 b33:1;
+[; ;GenericTypeDefs.h: 304: UINT8 b34:1;
+[; ;GenericTypeDefs.h: 305: UINT8 b35:1;
+[; ;GenericTypeDefs.h: 306: UINT8 b36:1;
+[; ;GenericTypeDefs.h: 307: UINT8 b37:1;
+[; ;GenericTypeDefs.h: 308: UINT8 b38:1;
+[; ;GenericTypeDefs.h: 309: UINT8 b39:1;
+[; ;GenericTypeDefs.h: 310: UINT8 b40:1;
+[; ;GenericTypeDefs.h: 311: UINT8 b41:1;
+[; ;GenericTypeDefs.h: 312: UINT8 b42:1;
+[; ;GenericTypeDefs.h: 313: UINT8 b43:1;
+[; ;GenericTypeDefs.h: 314: UINT8 b44:1;
+[; ;GenericTypeDefs.h: 315: UINT8 b45:1;
+[; ;GenericTypeDefs.h: 316: UINT8 b46:1;
+[; ;GenericTypeDefs.h: 317: UINT8 b47:1;
+[; ;GenericTypeDefs.h: 318: UINT8 b48:1;
+[; ;GenericTypeDefs.h: 319: UINT8 b49:1;
+[; ;GenericTypeDefs.h: 320: UINT8 b50:1;
+[; ;GenericTypeDefs.h: 321: UINT8 b51:1;
+[; ;GenericTypeDefs.h: 322: UINT8 b52:1;
+[; ;GenericTypeDefs.h: 323: UINT8 b53:1;
+[; ;GenericTypeDefs.h: 324: UINT8 b54:1;
+[; ;GenericTypeDefs.h: 325: UINT8 b55:1;
+[; ;GenericTypeDefs.h: 326: UINT8 b56:1;
+[; ;GenericTypeDefs.h: 327: UINT8 b57:1;
+[; ;GenericTypeDefs.h: 328: UINT8 b58:1;
+[; ;GenericTypeDefs.h: 329: UINT8 b59:1;
+[; ;GenericTypeDefs.h: 330: UINT8 b60:1;
+[; ;GenericTypeDefs.h: 331: UINT8 b61:1;
+[; ;GenericTypeDefs.h: 332: UINT8 b62:1;
+[; ;GenericTypeDefs.h: 333: UINT8 b63:1;
+[; ;GenericTypeDefs.h: 334: } bits;
+[; ;GenericTypeDefs.h: 335: } UINT64_VAL;
+[; ;GenericTypeDefs.h: 341: typedef void VOID;
+[; ;GenericTypeDefs.h: 343: typedef char CHAR8;
+[; ;GenericTypeDefs.h: 344: typedef unsigned char UCHAR8;
+[; ;GenericTypeDefs.h: 346: typedef unsigned char BYTE;
+[; ;GenericTypeDefs.h: 347: typedef unsigned short int WORD;
+[; ;GenericTypeDefs.h: 348: typedef unsigned long DWORD;
+[; ;GenericTypeDefs.h: 351: typedef unsigned long long QWORD;
+[; ;GenericTypeDefs.h: 352: typedef signed char CHAR;
+[; ;GenericTypeDefs.h: 353: typedef signed short int SHORT;
+[; ;GenericTypeDefs.h: 354: typedef signed long LONG;
+[; ;GenericTypeDefs.h: 357: typedef signed long long LONGLONG;
+[; ;GenericTypeDefs.h: 358: typedef union
+[; ;GenericTypeDefs.h: 359: {
+[; ;GenericTypeDefs.h: 360: BYTE Val;
+[; ;GenericTypeDefs.h: 361: struct 
+[; ;GenericTypeDefs.h: 362: {
+[; ;GenericTypeDefs.h: 363: BYTE b0:1;
+[; ;GenericTypeDefs.h: 364: BYTE b1:1;
+[; ;GenericTypeDefs.h: 365: BYTE b2:1;
+[; ;GenericTypeDefs.h: 366: BYTE b3:1;
+[; ;GenericTypeDefs.h: 367: BYTE b4:1;
+[; ;GenericTypeDefs.h: 368: BYTE b5:1;
+[; ;GenericTypeDefs.h: 369: BYTE b6:1;
+[; ;GenericTypeDefs.h: 370: BYTE b7:1;
+[; ;GenericTypeDefs.h: 371: } bits;
+[; ;GenericTypeDefs.h: 372: } BYTE_VAL, BYTE_BITS;
+[; ;GenericTypeDefs.h: 374: typedef union
+[; ;GenericTypeDefs.h: 375: {
+[; ;GenericTypeDefs.h: 376: WORD Val;
+[; ;GenericTypeDefs.h: 377: BYTE v[2] ;
+[; ;GenericTypeDefs.h: 378: struct 
+[; ;GenericTypeDefs.h: 379: {
+[; ;GenericTypeDefs.h: 380: BYTE LB;
+[; ;GenericTypeDefs.h: 381: BYTE HB;
+[; ;GenericTypeDefs.h: 382: } byte;
+[; ;GenericTypeDefs.h: 383: struct 
+[; ;GenericTypeDefs.h: 384: {
+[; ;GenericTypeDefs.h: 385: BYTE b0:1;
+[; ;GenericTypeDefs.h: 386: BYTE b1:1;
+[; ;GenericTypeDefs.h: 387: BYTE b2:1;
+[; ;GenericTypeDefs.h: 388: BYTE b3:1;
+[; ;GenericTypeDefs.h: 389: BYTE b4:1;
+[; ;GenericTypeDefs.h: 390: BYTE b5:1;
+[; ;GenericTypeDefs.h: 391: BYTE b6:1;
+[; ;GenericTypeDefs.h: 392: BYTE b7:1;
+[; ;GenericTypeDefs.h: 393: BYTE b8:1;
+[; ;GenericTypeDefs.h: 394: BYTE b9:1;
+[; ;GenericTypeDefs.h: 395: BYTE b10:1;
+[; ;GenericTypeDefs.h: 396: BYTE b11:1;
+[; ;GenericTypeDefs.h: 397: BYTE b12:1;
+[; ;GenericTypeDefs.h: 398: BYTE b13:1;
+[; ;GenericTypeDefs.h: 399: BYTE b14:1;
+[; ;GenericTypeDefs.h: 400: BYTE b15:1;
+[; ;GenericTypeDefs.h: 401: } bits;
+[; ;GenericTypeDefs.h: 402: } WORD_VAL, WORD_BITS;
+[; ;GenericTypeDefs.h: 404: typedef union
+[; ;GenericTypeDefs.h: 405: {
+[; ;GenericTypeDefs.h: 406: DWORD Val;
+[; ;GenericTypeDefs.h: 407: WORD w[2] ;
+[; ;GenericTypeDefs.h: 408: BYTE v[4] ;
+[; ;GenericTypeDefs.h: 409: struct 
+[; ;GenericTypeDefs.h: 410: {
+[; ;GenericTypeDefs.h: 411: WORD LW;
+[; ;GenericTypeDefs.h: 412: WORD HW;
+[; ;GenericTypeDefs.h: 413: } word;
+[; ;GenericTypeDefs.h: 414: struct 
+[; ;GenericTypeDefs.h: 415: {
+[; ;GenericTypeDefs.h: 416: BYTE LB;
+[; ;GenericTypeDefs.h: 417: BYTE HB;
+[; ;GenericTypeDefs.h: 418: BYTE UB;
+[; ;GenericTypeDefs.h: 419: BYTE MB;
+[; ;GenericTypeDefs.h: 420: } byte;
+[; ;GenericTypeDefs.h: 421: struct 
+[; ;GenericTypeDefs.h: 422: {
+[; ;GenericTypeDefs.h: 423: WORD_VAL low;
+[; ;GenericTypeDefs.h: 424: WORD_VAL high;
+[; ;GenericTypeDefs.h: 425: }wordUnion;
+[; ;GenericTypeDefs.h: 426: struct 
+[; ;GenericTypeDefs.h: 427: {
+[; ;GenericTypeDefs.h: 428: BYTE b0:1;
+[; ;GenericTypeDefs.h: 429: BYTE b1:1;
+[; ;GenericTypeDefs.h: 430: BYTE b2:1;
+[; ;GenericTypeDefs.h: 431: BYTE b3:1;
+[; ;GenericTypeDefs.h: 432: BYTE b4:1;
+[; ;GenericTypeDefs.h: 433: BYTE b5:1;
+[; ;GenericTypeDefs.h: 434: BYTE b6:1;
+[; ;GenericTypeDefs.h: 435: BYTE b7:1;
+[; ;GenericTypeDefs.h: 436: BYTE b8:1;
+[; ;GenericTypeDefs.h: 437: BYTE b9:1;
+[; ;GenericTypeDefs.h: 438: BYTE b10:1;
+[; ;GenericTypeDefs.h: 439: BYTE b11:1;
+[; ;GenericTypeDefs.h: 440: BYTE b12:1;
+[; ;GenericTypeDefs.h: 441: BYTE b13:1;
+[; ;GenericTypeDefs.h: 442: BYTE b14:1;
+[; ;GenericTypeDefs.h: 443: BYTE b15:1;
+[; ;GenericTypeDefs.h: 444: BYTE b16:1;
+[; ;GenericTypeDefs.h: 445: BYTE b17:1;
+[; ;GenericTypeDefs.h: 446: BYTE b18:1;
+[; ;GenericTypeDefs.h: 447: BYTE b19:1;
+[; ;GenericTypeDefs.h: 448: BYTE b20:1;
+[; ;GenericTypeDefs.h: 449: BYTE b21:1;
+[; ;GenericTypeDefs.h: 450: BYTE b22:1;
+[; ;GenericTypeDefs.h: 451: BYTE b23:1;
+[; ;GenericTypeDefs.h: 452: BYTE b24:1;
+[; ;GenericTypeDefs.h: 453: BYTE b25:1;
+[; ;GenericTypeDefs.h: 454: BYTE b26:1;
+[; ;GenericTypeDefs.h: 455: BYTE b27:1;
+[; ;GenericTypeDefs.h: 456: BYTE b28:1;
+[; ;GenericTypeDefs.h: 457: BYTE b29:1;
+[; ;GenericTypeDefs.h: 458: BYTE b30:1;
+[; ;GenericTypeDefs.h: 459: BYTE b31:1;
+[; ;GenericTypeDefs.h: 460: } bits;
+[; ;GenericTypeDefs.h: 461: } DWORD_VAL;
+[; ;GenericTypeDefs.h: 464: typedef union
+[; ;GenericTypeDefs.h: 465: {
+[; ;GenericTypeDefs.h: 466: QWORD Val;
+[; ;GenericTypeDefs.h: 467: DWORD d[2] ;
+[; ;GenericTypeDefs.h: 468: WORD w[4] ;
+[; ;GenericTypeDefs.h: 469: BYTE v[8] ;
+[; ;GenericTypeDefs.h: 470: struct 
+[; ;GenericTypeDefs.h: 471: {
+[; ;GenericTypeDefs.h: 472: DWORD LD;
+[; ;GenericTypeDefs.h: 473: DWORD HD;
+[; ;GenericTypeDefs.h: 474: } dword;
+[; ;GenericTypeDefs.h: 475: struct 
+[; ;GenericTypeDefs.h: 476: {
+[; ;GenericTypeDefs.h: 477: WORD LW;
+[; ;GenericTypeDefs.h: 478: WORD HW;
+[; ;GenericTypeDefs.h: 479: WORD UW;
+[; ;GenericTypeDefs.h: 480: WORD MW;
+[; ;GenericTypeDefs.h: 481: } word;
+[; ;GenericTypeDefs.h: 482: struct 
+[; ;GenericTypeDefs.h: 483: {
+[; ;GenericTypeDefs.h: 484: BYTE b0:1;
+[; ;GenericTypeDefs.h: 485: BYTE b1:1;
+[; ;GenericTypeDefs.h: 486: BYTE b2:1;
+[; ;GenericTypeDefs.h: 487: BYTE b3:1;
+[; ;GenericTypeDefs.h: 488: BYTE b4:1;
+[; ;GenericTypeDefs.h: 489: BYTE b5:1;
+[; ;GenericTypeDefs.h: 490: BYTE b6:1;
+[; ;GenericTypeDefs.h: 491: BYTE b7:1;
+[; ;GenericTypeDefs.h: 492: BYTE b8:1;
+[; ;GenericTypeDefs.h: 493: BYTE b9:1;
+[; ;GenericTypeDefs.h: 494: BYTE b10:1;
+[; ;GenericTypeDefs.h: 495: BYTE b11:1;
+[; ;GenericTypeDefs.h: 496: BYTE b12:1;
+[; ;GenericTypeDefs.h: 497: BYTE b13:1;
+[; ;GenericTypeDefs.h: 498: BYTE b14:1;
+[; ;GenericTypeDefs.h: 499: BYTE b15:1;
+[; ;GenericTypeDefs.h: 500: BYTE b16:1;
+[; ;GenericTypeDefs.h: 501: BYTE b17:1;
+[; ;GenericTypeDefs.h: 502: BYTE b18:1;
+[; ;GenericTypeDefs.h: 503: BYTE b19:1;
+[; ;GenericTypeDefs.h: 504: BYTE b20:1;
+[; ;GenericTypeDefs.h: 505: BYTE b21:1;
+[; ;GenericTypeDefs.h: 506: BYTE b22:1;
+[; ;GenericTypeDefs.h: 507: BYTE b23:1;
+[; ;GenericTypeDefs.h: 508: BYTE b24:1;
+[; ;GenericTypeDefs.h: 509: BYTE b25:1;
+[; ;GenericTypeDefs.h: 510: BYTE b26:1;
+[; ;GenericTypeDefs.h: 511: BYTE b27:1;
+[; ;GenericTypeDefs.h: 512: BYTE b28:1;
+[; ;GenericTypeDefs.h: 513: BYTE b29:1;
+[; ;GenericTypeDefs.h: 514: BYTE b30:1;
+[; ;GenericTypeDefs.h: 515: BYTE b31:1;
+[; ;GenericTypeDefs.h: 516: BYTE b32:1;
+[; ;GenericTypeDefs.h: 517: BYTE b33:1;
+[; ;GenericTypeDefs.h: 518: BYTE b34:1;
+[; ;GenericTypeDefs.h: 519: BYTE b35:1;
+[; ;GenericTypeDefs.h: 520: BYTE b36:1;
+[; ;GenericTypeDefs.h: 521: BYTE b37:1;
+[; ;GenericTypeDefs.h: 522: BYTE b38:1;
+[; ;GenericTypeDefs.h: 523: BYTE b39:1;
+[; ;GenericTypeDefs.h: 524: BYTE b40:1;
+[; ;GenericTypeDefs.h: 525: BYTE b41:1;
+[; ;GenericTypeDefs.h: 526: BYTE b42:1;
+[; ;GenericTypeDefs.h: 527: BYTE b43:1;
+[; ;GenericTypeDefs.h: 528: BYTE b44:1;
+[; ;GenericTypeDefs.h: 529: BYTE b45:1;
+[; ;GenericTypeDefs.h: 530: BYTE b46:1;
+[; ;GenericTypeDefs.h: 531: BYTE b47:1;
+[; ;GenericTypeDefs.h: 532: BYTE b48:1;
+[; ;GenericTypeDefs.h: 533: BYTE b49:1;
+[; ;GenericTypeDefs.h: 534: BYTE b50:1;
+[; ;GenericTypeDefs.h: 535: BYTE b51:1;
+[; ;GenericTypeDefs.h: 536: BYTE b52:1;
+[; ;GenericTypeDefs.h: 537: BYTE b53:1;
+[; ;GenericTypeDefs.h: 538: BYTE b54:1;
+[; ;GenericTypeDefs.h: 539: BYTE b55:1;
+[; ;GenericTypeDefs.h: 540: BYTE b56:1;
+[; ;GenericTypeDefs.h: 541: BYTE b57:1;
+[; ;GenericTypeDefs.h: 542: BYTE b58:1;
+[; ;GenericTypeDefs.h: 543: BYTE b59:1;
+[; ;GenericTypeDefs.h: 544: BYTE b60:1;
+[; ;GenericTypeDefs.h: 545: BYTE b61:1;
+[; ;GenericTypeDefs.h: 546: BYTE b62:1;
+[; ;GenericTypeDefs.h: 547: BYTE b63:1;
+[; ;GenericTypeDefs.h: 548: } bits;
+[; ;GenericTypeDefs.h: 549: } QWORD_VAL;
+[; ;flash.h: 113: extern void ReadFlash(unsigned long startaddr, unsigned int num_bytes, unsigned char *flash_array);
+[; ;flash.h: 120: extern void EraseFlash(unsigned long startaddr, unsigned long endaddr);
+[; ;flash.h: 122: extern void WriteBlockFlash(unsigned long startaddr, unsigned char num_blocks, unsigned char *flash_array);
+[; ;flash.h: 124: extern void WriteBytesFlash(unsigned long startaddr, unsigned int num_bytes, unsigned char *flash_array);
+[; ;pcpwm.h: 528: void Openpcpwm(unsigned char ,unsigned char ,unsigned char ,unsigned char,unsigned int ,unsigned int );
+[; ;pcpwm.h: 530: void Setdc0pcpwm(unsigned int );
+[; ;pcpwm.h: 532: void Setdc1pcpwm(unsigned int );
+[; ;pcpwm.h: 534: void Setdc2pcpwm(unsigned int );
+[; ;pcpwm.h: 536: void Closepcpwm(void);
+[; ;pcpwm.h: 538: void pcpwm_dt_clk_source(unsigned char );
+[; ;pcpwm.h: 540: void pcpwm_dt_assignment(unsigned char );
+[; ;pcpwm.h: 542: void pcpwm_OVD_CTRL(unsigned char );
+[; ;pcpwm.h: 544: void pcpwm_OVD_IO_STA(unsigned char );
+[; ;portb.h: 126: void OpenPORTB( unsigned char config);
+[; ;portb.h: 176: void OpenRB0INT( unsigned char config);
+[; ;portb.h: 194: void OpenRB1INT( unsigned char config);
+[; ;portb.h: 211: void OpenRB2INT( unsigned char config);
+[; ;portb.h: 230: void OpenRB3INT( unsigned char config);
+[; ;pwm.h: 85: union PWMDC
+[; ;pwm.h: 86: {
+[; ;pwm.h: 87: unsigned int lpwm;
+[; ;pwm.h: 88: char bpwm[2];
+[; ;pwm.h: 89: };
+[; ;pwm.h: 467: void OpenPWM1 ( char period);
+[; ;pwm.h: 468: void SetDCPWM1 ( unsigned int duty_cycle);
+[; ;pwm.h: 477: void ClosePWM1 (void);
+[; ;reset.h: 16: char isMCLR(void);
+[; ;reset.h: 17: void StatusReset(void);
+[; ;reset.h: 18: char isPOR(void);
+[; ;reset.h: 19: char isWU(void);
+[; ;reset.h: 22: char isBOR(void);
+[; ;reset.h: 26: char isWDTTO(void);
+[; ;reset.h: 27: char isWDTWU(void);
+[; ;reset.h: 31: char isLVD(void);
+[; ;rtcc.h: 687: void Open_RTCC(void);
+[; ;rtcc.h: 688: void Close_RTCC(void);
+[; ;rtcc.h: 689: unsigned char update_RTCC(void);
+[; ;sw_i2c.h: 97: void SWStopI2C ( void );
+[; ;sw_i2c.h: 98: void SWStartI2C ( void );
+[; ;sw_i2c.h: 99: void SWRestartI2C ( void );
+[; ;sw_i2c.h: 100: void SWStopI2C ( void );
+[; ;sw_i2c.h: 102: signed char SWAckI2C( void );
+[; ;sw_i2c.h: 103: signed char Clock_test( void );
+[; ;sw_i2c.h: 104: signed int SWReadI2C( void );
+[; ;sw_i2c.h: 105: signed char SWWriteI2C(  unsigned char data_out );
+[; ;sw_i2c.h: 106: signed char SWGetsI2C(  unsigned char *rdptr,  unsigned char length );
+[; ;sw_i2c.h: 107: signed char SWPutsI2C(  unsigned char *wrptr );
+[; ;sw_spi.h: 84: void OpenSWSPI(void);
+[; ;sw_spi.h: 87: char WriteSWSPI( char output);
+[; ;sw_spi.h: 90: void SetCSSWSPI(void);
+[; ;sw_spi.h: 93: void ClearCSSWSPI(void);
+[; ;sw_uart.h: 47: void OpenUART(void);
+[; ;sw_uart.h: 49: unsigned char ReadUART(void);
+[; ;sw_uart.h: 51: void WriteUART( unsigned char);
+[; ;sw_uart.h: 53: void getsUART( char *, unsigned char);
+[; ;sw_uart.h: 55: void putsUART( char *);
+[; ;sw_uart.h: 79: extern void DelayRXBitUART (void);
+[; ;sw_uart.h: 80: extern void DelayRXHalfBitUART(void);
+[; ;sw_uart.h: 81: extern void DelayTXBitUART (void);
+[; ;timers.h: 36: union Timers
+[; ;timers.h: 37: {
+[; ;timers.h: 38: unsigned int lt;
+[; ;timers.h: 39: char bt[2];
+[; ;timers.h: 40: };
+[; ;timers.h: 118: void OpenTimer0 ( unsigned char config);
+[; ;timers.h: 119: void CloseTimer0 (void);
+[; ;timers.h: 120: unsigned int ReadTimer0 (void);
+[; ;timers.h: 121: void WriteTimer0 ( unsigned int timer0);
+[; ;timers.h: 236: void OpenTimer1 ( unsigned char config);
+[; ;timers.h: 237: void CloseTimer1 (void);
+[; ;timers.h: 238: unsigned int ReadTimer1 (void);
+[; ;timers.h: 239: void WriteTimer1 ( unsigned int timer1);
+[; ;timers.h: 391: void OpenTimer3 ( unsigned char config);
+[; ;timers.h: 392: void CloseTimer3 (void);
+[; ;timers.h: 393: unsigned int ReadTimer3 (void);
+[; ;timers.h: 394: void WriteTimer3 ( unsigned int timer3);
+[; ;usart.h: 568: union USART
+[; ;usart.h: 569: {
+[; ;usart.h: 570: unsigned char val;
+[; ;usart.h: 571: struct
+[; ;usart.h: 572: {
+[; ;usart.h: 573: unsigned RX_NINE:1;
+[; ;usart.h: 574: unsigned TX_NINE:1;
+[; ;usart.h: 575: unsigned FRAME_ERROR:1;
+[; ;usart.h: 576: unsigned OVERRUN_ERROR:1;
+[; ;usart.h: 577: unsigned fill:4;
+[; ;usart.h: 578: };
+[; ;usart.h: 579: };
+[; ;usart.h: 580: extern union USART USART_Status;
+[; ;usart.h: 581: void OpenUSART ( unsigned char config, unsigned spbrg);
+[; ;usart.h: 596: char ReadUSART (void);
+[; ;usart.h: 597: void WriteUSART ( char data);
+[; ;usart.h: 598: void getsUSART ( char *buffer, unsigned char len);
+[; ;usart.h: 599: void putsUSART ( char *data);
+[; ;usart.h: 600: void putrsUSART ( const  char *data);
+[; ;usart.h: 654: void baudUSART ( unsigned char baudconfig);
+[; ;xlcd.h: 87: void OpenXLCD( unsigned char);
+[; ;xlcd.h: 92: void SetCGRamAddr( unsigned char);
+[; ;xlcd.h: 97: void SetDDRamAddr( unsigned char);
+[; ;xlcd.h: 102: unsigned char BusyXLCD(void);
+[; ;xlcd.h: 107: unsigned char ReadAddrXLCD(void);
+[; ;xlcd.h: 112: char ReadDataXLCD(void);
+[; ;xlcd.h: 117: void WriteCmdXLCD( unsigned char);
+[; ;xlcd.h: 122: void WriteDataXLCD( char);
+[; ;xlcd.h: 132: void putsXLCD( char *);
+[; ;xlcd.h: 137: void putrsXLCD(const char *);
+[; ;xlcd.h: 140: extern void DelayFor18TCY(void);
+[; ;xlcd.h: 141: extern void DelayPORXLCD(void);
+[; ;xlcd.h: 142: extern void DelayXLCD(void);
+[; ;delays.h: 13: void Delay1TCYx(unsigned char);
+[; ;delays.h: 19: void Delay10TCYx(unsigned char);
+[; ;delays.h: 25: void Delay100TCYx(unsigned char);
+[; ;delays.h: 31: void Delay1KTCYx(unsigned char);
+[; ;delays.h: 37: void Delay10KTCYx(unsigned char);
+[; ;DELAY16.H: 13: extern void DelayUs(unsigned char);
+[; ;DELAY16.H: 14: extern void DelayMs(unsigned int);
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 23: extern int errno;
+[; ;stdio.h: 54: struct __prbuf
+[; ;stdio.h: 55: {
+[; ;stdio.h: 56: char * ptr;
+[; ;stdio.h: 57: void (* func)(char);
+[; ;stdio.h: 58: };
+[; ;conio.h: 17: extern int errno;
+[; ;conio.h: 20: extern void init_uart(void);
+[; ;conio.h: 22: extern char getch(void);
+[; ;conio.h: 23: extern char getche(void);
+[; ;conio.h: 24: extern void putch(char);
+[; ;conio.h: 25: extern void ungetch(char);
+[; ;conio.h: 27: extern __bit kbhit(void);
+[; ;conio.h: 31: extern char * cgets(char *);
+[; ;conio.h: 32: extern void cputs(const char *);
+[; ;stdio.h: 99: extern int cprintf(char *, ...);
+[; ;stdio.h: 104: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 194: extern char * gets(char *);
+[; ;stdio.h: 195: extern int puts(const char *);
+[; ;stdio.h: 196: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+[; ;stdio.h: 197: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+[; ;stdio.h: 198: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+[; ;stdio.h: 199: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 200: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+[; ;stdio.h: 201: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+[; ;stdio.h: 205: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 206: extern int printf(const char *, ...);
+[; ;stdlib.h: 27: typedef struct {
+[; ;stdlib.h: 28: int rem;
+[; ;stdlib.h: 29: int quot;
+[; ;stdlib.h: 30: } div_t;
+[; ;stdlib.h: 31: typedef struct {
+[; ;stdlib.h: 32: unsigned rem;
+[; ;stdlib.h: 33: unsigned quot;
+[; ;stdlib.h: 34: } udiv_t;
+[; ;stdlib.h: 35: typedef struct {
+[; ;stdlib.h: 36: long quot;
+[; ;stdlib.h: 37: long rem;
+[; ;stdlib.h: 38: } ldiv_t;
+[; ;stdlib.h: 39: typedef struct {
+[; ;stdlib.h: 40: unsigned long quot;
+[; ;stdlib.h: 41: unsigned long rem;
+[; ;stdlib.h: 42: } uldiv_t;
+[; ;stdlib.h: 65: extern double atof(const char *);
+[; ;stdlib.h: 66: extern double strtod(const char *, const char **);
+[; ;stdlib.h: 67: extern int atoi(const char *);
+[; ;stdlib.h: 68: extern unsigned xtoi(const char *);
+[; ;stdlib.h: 69: extern long atol(const char *);
+[; ;stdlib.h: 70: extern long strtol(const char *, char **, int);
+[; ;stdlib.h: 72: extern int rand(void);
+[; ;stdlib.h: 73: extern void srand(unsigned int);
+[; ;stdlib.h: 74: extern void * calloc(size_t, size_t);
+[; ;stdlib.h: 75: extern div_t div(int numer, int denom);
+[; ;stdlib.h: 76: extern udiv_t udiv(unsigned numer, unsigned denom);
+[; ;stdlib.h: 77: extern ldiv_t ldiv(long numer, long denom);
+[; ;stdlib.h: 78: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+[; ;stdlib.h: 79: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 80: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 81: extern unsigned int _rotl(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 82: extern unsigned int _rotr(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 87: extern void * malloc(size_t);
+[; ;stdlib.h: 88: extern void free(void *);
+[; ;stdlib.h: 89: extern void * realloc(void *, size_t);
+[; ;stdlib.h: 91: extern void abort(void);
+[; ;stdlib.h: 92: extern void exit(int);
+[; ;stdlib.h: 93: extern int atexit(void (*)(void));
+[; ;stdlib.h: 94: extern char * getenv(const char *);
+[; ;stdlib.h: 95: extern char ** environ;
+[; ;stdlib.h: 96: extern int system(char *);
+[; ;stdlib.h: 97: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+[; ;stdlib.h: 98: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+[; ;stdlib.h: 99: extern int abs(int);
+[; ;stdlib.h: 100: extern long labs(long);
+[; ;stdlib.h: 103: extern char * itoa(char * buf, int val, int base);
+[; ;stdlib.h: 104: extern char * utoa(char * buf, unsigned val, int base);
+[; ;stdlib.h: 109: extern char * ltoa(char * buf, long val, int base);
+[; ;stdlib.h: 110: extern char * ultoa(char * buf, unsigned long val, int base);
+[; ;stdlib.h: 112: extern char * ftoa(float f, int * status);
+[; ;string.h: 22: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 23: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 24: extern void * memset(void *, int, size_t);
+[; ;string.h: 42: extern char * strcat(char *, const char *);
+[; ;string.h: 43: extern char * strcpy(char *, const char *);
+[; ;string.h: 44: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 45: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 46: extern char * strdup(const char *);
+[; ;string.h: 47: extern char * strtok(char *, const char *);
+[; ;string.h: 50: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 51: extern int strcmp(const char *, const char *);
+[; ;string.h: 52: extern int stricmp(const char *, const char *);
+[; ;string.h: 53: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 54: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 55: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 56: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 57: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 58: extern size_t strspn(const char *, const char *);
+[; ;string.h: 59: extern char * strstr(const char *, const char *);
+[; ;string.h: 60: extern char * stristr(const char *, const char *);
+[; ;string.h: 61: extern char * strerror(int);
+[; ;string.h: 62: extern size_t strlen(const char *);
+[; ;string.h: 63: extern char * strchr(const char *, int);
+[; ;string.h: 64: extern char * strichr(const char *, int);
+[; ;string.h: 65: extern char * strrchr(const char *, int);
+[; ;string.h: 66: extern char * strrichr(const char *, int);
+[; ;ctype.h: 4: extern __bit isalpha(char);
+[; ;ctype.h: 5: extern __bit isupper(char);
+[; ;ctype.h: 6: extern __bit islower(char);
+[; ;ctype.h: 7: extern __bit isdigit(char);
+[; ;ctype.h: 8: extern __bit isxdigit(char);
+[; ;ctype.h: 9: extern __bit isspace(char);
+[; ;ctype.h: 10: extern __bit ispunct(char);
+[; ;ctype.h: 11: extern __bit isalnum(char);
+[; ;ctype.h: 12: extern __bit isprint(char);
+[; ;ctype.h: 13: extern __bit isgraph(char);
+[; ;ctype.h: 14: extern __bit iscntrl(char);
+[; ;ctype.h: 17: extern char toupper(char);
+[; ;ctype.h: 18: extern char tolower(char);
+[; ;math.h: 3: extern double fabs(double);
+[; ;math.h: 4: extern double floor(double);
+[; ;math.h: 5: extern double ceil(double);
+[; ;math.h: 6: extern double modf(double, double *);
+[; ;math.h: 7: extern double sqrt(double);
+[; ;math.h: 8: extern double atof(const char *);
+[; ;math.h: 9: extern double sin(double);
+[; ;math.h: 10: extern double cos(double);
+[; ;math.h: 11: extern double tan(double);
+[; ;math.h: 12: extern double asin(double);
+[; ;math.h: 13: extern double acos(double);
+[; ;math.h: 14: extern double atan(double);
+[; ;math.h: 15: extern double atan2(double, double);
+[; ;math.h: 16: extern double log(double);
+[; ;math.h: 17: extern double log10(double);
+[; ;math.h: 18: extern double pow(double, double);
+[; ;math.h: 19: extern double exp(double);
+[; ;math.h: 20: extern double sinh(double);
+[; ;math.h: 21: extern double cosh(double);
+[; ;math.h: 22: extern double tanh(double);
+[; ;math.h: 23: extern double eval_poly(double, const double *, int);
+[; ;math.h: 24: extern double frexp(double, int *);
+[; ;math.h: 25: extern double ldexp(double, int);
+[; ;math.h: 26: extern double fmod(double, double);
+[; ;math.h: 27: extern double trunc(double);
+[; ;math.h: 28: extern double round(double);
+[; ;DELAY16.H: 13: extern void DelayUs(unsigned char);
+[; ;DELAY16.H: 14: extern void DelayMs(unsigned int);
+"67 ../main.c
+[v _inLength `us ~T0 @X0 1 e ]
+[i _inLength
+-> -> 0 `i `us
+]
+[; ;main.c: 67: unsigned short inLength = 0;
+[; ;main.c: 68: extern unsigned short CRCcalculate(unsigned char *message, unsigned short nBytes);
+[; ;main.c: 69: unsigned int convertDutyCycle(unsigned char servoPosition);
+[; ;main.c: 70: void initializePorts(void);
+[; ;main.c: 71: void putch(unsigned char byte);
+[; ;main.c: 72: unsigned short readAD(void);
+[; ;main.c: 73: void ADsetChannel(unsigned char channel);
+[; ;main.c: 74: void initializePorts(void);
+[; ;main.c: 75: void putch(unsigned char ch);
+[; ;main.c: 76: unsigned char processInBuffer(unsigned short inLength);
+"78
+[v _dummy `uc ~T0 @X0 1 e ]
+[v _ch `uc ~T0 @X0 1 e ]
+[v _boardNumber `uc ~T0 @X0 1 e ]
+[i _boardNumber
+-> -> 0 `i `uc
+]
+[; ;main.c: 78: unsigned char dummy, ch, boardNumber = 0;
+"79
+[v _j `ui ~T0 @X0 1 s ]
+[i _j
+-> -> 0 `i `ui
+]
+[; ;main.c: 79: static unsigned int j = 0;
+"80
+[v _startFlag `uc ~T0 @X0 1 s ]
+[i _startFlag
+-> -> 0 `i `uc
+]
+[v _endFlag `uc ~T0 @X0 1 s ]
+[i _endFlag
+-> -> 0 `i `uc
+]
+[v _escapeFlag `uc ~T0 @X0 1 s ]
+[i _escapeFlag
+-> -> 0 `i `uc
+]
+[v _LEDflag `uc ~T0 @X0 1 s ]
+[i _LEDflag
+-> -> 0 `i `uc
+]
+[; ;main.c: 80: static unsigned char startFlag = 0, endFlag = 0, escapeFlag = 0, LEDflag = 0;
+"81
+[v _LEDcounter `uc ~T0 @X0 1 s ]
+[i _LEDcounter
+-> -> 10 `i `uc
+]
+[; ;main.c: 81: static unsigned char LEDcounter = 10;
+"83
+[v _dutyCycle `ui ~T0 @X0 -> 6 `i e ]
+[i _dutyCycle
+:U ..
+-> -> 288 `i `ui
+-> -> 288 `i `ui
+-> -> 288 `i `ui
+-> -> 288 `i `ui
+-> -> 288 `i `ui
+-> -> 288 `i `ui
+..
+]
+[; ;main.c: 83: unsigned int dutyCycle[6] = {288, 288, 288, 288, 288, 288};
+"88
+[v _integer `S299 ~T0 @X0 1 e ]
+[; ;main.c: 85: union {
+[; ;main.c: 86: unsigned char byte[2];
+[; ;main.c: 87: unsigned int val;
+[; ;main.c: 88: } integer;
+"92
+[v _servoBuffer `uc ~T0 @X0 -> 64 `i e ]
+[; ;main.c: 92: unsigned char servoBuffer[64];
+"94
+[v _DUTYbuffer `uc ~T0 @X0 -> 6 `i e ]
+[; ;main.c: 94: unsigned char DUTYbuffer[6];
+"95
+[v _numServosUpdated `uc ~T0 @X0 1 e ]
+[i _numServosUpdated
+-> -> 0 `i `uc
+]
+[; ;main.c: 95: unsigned char numServosUpdated = 0;
+"96
+[v _XBEERxBuffer `uc ~T0 @X0 -> 64 `i e ]
+[; ;main.c: 96: unsigned char XBEERxBuffer[64];
+"103
+[p x OSC=HS ]
+[p x FCMEN=OFF ]
+[p x IESO=OFF ]
+[p x PWRT=OFF ]
+[p x BOR=OFF ]
+[p x BORV=3 ]
+[p x WDT=OFF ]
+[p x WDTPS=32768 ]
+[p x PWMPIN=ON ]
+[p x LPOL=HIGH ]
+[p x HPOL=HIGH ]
+[p x FLTAMX=RA5 ]
+[p x T1OSCMX=HIGH ]
+[p x MCLRE=ON ]
+[p x STVREN=ON ]
+[p x BBSIZ=BB256 ]
+[p x CP0=OFF ]
+[p x CP1=OFF ]
+[p x CPB=OFF ]
+[p x CPD=OFF ]
+[p x WRT0=OFF ]
+[p x WRT1=OFF ]
+[p x WRTC=OFF ]
+[p x WRTB=OFF ]
+[p x WRTD=OFF ]
+[p x EBTR0=OFF ]
+[p x EBTR1=OFF ]
+[p x EBTRB=OFF ]
+"115
+[v _convert `S300 ~T0 @X0 1 e ]
+[; ;main.c: 112: union tag {
+[; ;main.c: 113: unsigned char byte[2];
+[; ;main.c: 114: unsigned short integer;
+[; ;main.c: 115: } convert;
+"117
+[v _processInBuffer `(uc ~T0 @X0 1 ef1`us ]
+{
+[; ;main.c: 117: unsigned char processInBuffer(unsigned short inLength) {
+[e :U _processInBuffer ]
+[v _inLength `us ~T0 @X0 1 r1 ]
+[f ]
+"118
+[v _i `uc ~T0 @X0 1 a ]
+[v _j `uc ~T0 @X0 1 a ]
+[v _k `uc ~T0 @X0 1 a ]
+[v _firstServo `uc ~T0 @X0 1 a ]
+[v _numServosUpdated `uc ~T0 @X0 1 a ]
+[; ;main.c: 118: unsigned char i, j, k, firstServo, numServosUpdated = 0;
+[e = _numServosUpdated -> -> 0 `i `uc ]
+[; ;main.c: 120: numServosUpdated = XBEERxBuffer[2];
+"120
+[e = _numServosUpdated *U + &U _XBEERxBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _XBEERxBuffer `ui `ux ]
+[; ;main.c: 121: firstServo = XBEERxBuffer[1];
+"121
+[e = _firstServo *U + &U _XBEERxBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _XBEERxBuffer `ui `ux ]
+[; ;main.c: 122: for (i = 0; i < numServosUpdated; i++) {
+"122
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 305  ]
+[e :U 302 ]
+{
+[; ;main.c: 123: j = i + 3;
+"123
+[e = _j -> + -> _i `i -> 3 `i `uc ]
+[; ;main.c: 124: k = i + firstServo;
+"124
+[e = _k -> + -> _i `i -> _firstServo `i `uc ]
+[; ;main.c: 125: if (j < 64 && k < 64)
+"125
+[e $ ! && < -> _j `i -> 64 `i < -> _k `i -> 64 `i 306  ]
+[; ;main.c: 126: servoBuffer[k] = XBEERxBuffer[j];
+"126
+[e = *U + &U _servoBuffer * -> _k `ux -> -> # *U &U _servoBuffer `ui `ux *U + &U _XBEERxBuffer * -> _j `ux -> -> # *U &U _XBEERxBuffer `ui `ux ]
+[e $U 307  ]
+"127
+[e :U 306 ]
+[; ;main.c: 127: else {
+{
+[; ;main.c: 128: numServosUpdated = 0;
+"128
+[e = _numServosUpdated -> -> 0 `i `uc ]
+[; ;main.c: 129: break;
+"129
+[e $U 303  ]
+"130
+}
+[e :U 307 ]
+"131
+}
+"122
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 305 ]
+[e $ < -> _i `i -> _numServosUpdated `i 302  ]
+[e :U 303 ]
+"131
+}
+[; ;main.c: 130: }
+[; ;main.c: 131: }
+[; ;main.c: 133: if (numServosUpdated) {
+"133
+[e $ ! != -> _numServosUpdated `i -> -> -> 0 `i `uc `i 308  ]
+{
+[; ;main.c: 134: printf("\rUpdated: %d servos", numServosUpdated);
+"134
+[e ( _printf , (. :s 1C -> _numServosUpdated `i ]
+[; ;main.c: 135: for (i = 0; i < 6; i++) {
+"135
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 6 `i 309  ]
+[e $U 310  ]
+[e :U 309 ]
+{
+[; ;main.c: 136: DUTYbuffer[i] = servoBuffer[i];
+"136
+[e = *U + &U _DUTYbuffer * -> _i `ux -> -> # *U &U _DUTYbuffer `ui `ux *U + &U _servoBuffer * -> _i `ux -> -> # *U &U _servoBuffer `ui `ux ]
+"137
+}
+"135
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 6 `i 309  ]
+[e :U 310 ]
+"137
+}
+"138
+}
+[e :U 308 ]
+[; ;main.c: 137: }
+[; ;main.c: 138: }
+[; ;main.c: 152: return (numServosUpdated);
+"152
+[e ) _numServosUpdated ]
+[e $UE 301  ]
+[; ;main.c: 153: }
+"153
+[e :UE 301 ]
+}
+"158
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 158: void main(void) {
+[e :U _main ]
+[f ]
+[; ;main.c: 159: LEDflag = !0;
+"159
+[e = _LEDflag -> -> ! != -> 0 `i -> 0 `i `i `uc ]
+"160
+[v _potValue `us ~T0 @X0 1 a ]
+[; ;main.c: 160: unsigned short potValue = 255;
+[e = _potValue -> -> 255 `i `us ]
+"161
+[v _stroke `uc ~T0 @X0 1 a ]
+[; ;main.c: 161: unsigned char stroke = 0;
+[e = _stroke -> -> 0 `i `uc ]
+"162
+[v _Timer0Counter `us ~T0 @X0 1 a ]
+[; ;main.c: 162: unsigned short Timer0Counter = 0;
+[e = _Timer0Counter -> -> 0 `i `us ]
+"163
+[v _angle `uc ~T0 @X0 1 a ]
+[; ;main.c: 163: unsigned char angle = 127;
+[e = _angle -> -> 127 `i `uc ]
+[; ;main.c: 165: initializePorts();
+"165
+[e ( _initializePorts ..  ]
+[; ;main.c: 166: DelayMs(100);
+"166
+[e ( _DelayMs (1 -> -> 100 `i `ui ]
+[; ;main.c: 167: printf("Testing servo commands\r");
+"167
+[e ( _printf :s 2C ]
+[; ;main.c: 168: ADsetChannel(0);
+"168
+[e ( _ADsetChannel (1 -> -> 0 `i `uc ]
+[; ;main.c: 169: PORTAbits.RA4 = 0;
+"169
+[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 171: while (1) {
+"171
+[e :U 314 ]
+{
+[; ;main.c: 208: if (TMR0IF) {
+"208
+[e $ ! _TMR0IF 316  ]
+{
+[; ;main.c: 209: TMR0IF = 0;
+"209
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;main.c: 215: Timer0Counter++;
+"215
+[e ++ _Timer0Counter -> -> 1 `i `us ]
+[; ;main.c: 216: if (Timer0Counter >= 4) {
+"216
+[e $ ! >= -> _Timer0Counter `ui -> -> 4 `i `ui 317  ]
+{
+[; ;main.c: 217: Timer0Counter = 0;
+"217
+[e = _Timer0Counter -> -> 0 `i `us ]
+[; ;main.c: 218: if (stroke == 0) {
+"218
+[e $ ! == -> _stroke `i -> 0 `i 318  ]
+{
+[; ;main.c: 219: if (angle < 127) angle++;
+"219
+[e $ ! < -> _angle `i -> 127 `i 319  ]
+[e ++ _angle -> -> 1 `i `uc ]
+[e $U 320  ]
+"220
+[e :U 319 ]
+[; ;main.c: 220: else stroke = 1;
+[e = _stroke -> -> 1 `i `uc ]
+[e :U 320 ]
+"221
+}
+[; ;main.c: 221: } else {
+[e $U 321  ]
+[e :U 318 ]
+{
+[; ;main.c: 222: if (angle > 0) angle--;
+"222
+[e $ ! > -> _angle `i -> 0 `i 322  ]
+[e -- _angle -> -> 1 `i `uc ]
+[e $U 323  ]
+"223
+[e :U 322 ]
+[; ;main.c: 223: else stroke = 0;
+[e = _stroke -> -> 0 `i `uc ]
+[e :U 323 ]
+"224
+}
+[e :U 321 ]
+"225
+}
+[e :U 317 ]
+[; ;main.c: 224: }
+[; ;main.c: 225: }
+[; ;main.c: 227: DUTYbuffer[0] = DUTYbuffer[1] = DUTYbuffer[2] = DUTYbuffer[3] = DUTYbuffer[4] = DUTYbuffer[5] = angle;
+"227
+[e = *U + &U _DUTYbuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux = *U + &U _DUTYbuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux = *U + &U _DUTYbuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux = *U + &U _DUTYbuffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux = *U + &U _DUTYbuffer * -> -> -> 4 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux = *U + &U _DUTYbuffer * -> -> -> 5 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux _angle ]
+[; ;main.c: 229: dutyCycle[0] = convertDutyCycle(DUTYbuffer[0]);
+"229
+[e = *U + &U _dutyCycle * -> -> -> 0 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ( _convertDutyCycle (1 *U + &U _DUTYbuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux ]
+[; ;main.c: 230: dutyCycle[1] = convertDutyCycle(DUTYbuffer[1]);
+"230
+[e = *U + &U _dutyCycle * -> -> -> 1 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ( _convertDutyCycle (1 *U + &U _DUTYbuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux ]
+[; ;main.c: 231: dutyCycle[2] = convertDutyCycle(DUTYbuffer[2]);
+"231
+[e = *U + &U _dutyCycle * -> -> -> 2 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ( _convertDutyCycle (1 *U + &U _DUTYbuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux ]
+[; ;main.c: 232: dutyCycle[3] = convertDutyCycle(DUTYbuffer[3]);
+"232
+[e = *U + &U _dutyCycle * -> -> -> 3 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ( _convertDutyCycle (1 *U + &U _DUTYbuffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux ]
+[; ;main.c: 233: dutyCycle[4] = convertDutyCycle(DUTYbuffer[4]);
+"233
+[e = *U + &U _dutyCycle * -> -> -> 4 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ( _convertDutyCycle (1 *U + &U _DUTYbuffer * -> -> -> 4 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux ]
+[; ;main.c: 234: dutyCycle[5] = convertDutyCycle(DUTYbuffer[5]);
+"234
+[e = *U + &U _dutyCycle * -> -> -> 5 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ( _convertDutyCycle (1 *U + &U _DUTYbuffer * -> -> -> 5 `i `ui `ux -> -> # *U &U _DUTYbuffer `ui `ux ]
+[; ;main.c: 238: if (OVDCOND == 0b00010101) {
+"238
+[e $ ! == -> _OVDCOND `i -> 21 `i 324  ]
+{
+[; ;main.c: 239: OVDCOND = 0b00101010;
+"239
+[e = _OVDCOND -> -> 42 `i `uc ]
+[; ;main.c: 240: integer.val = dutyCycle[1];
+"240
+[e = . _integer 1 *U + &U _dutyCycle * -> -> -> 1 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ]
+[; ;main.c: 241: PDC0L = integer.byte[0];
+"241
+[e = _PDC0L *U + &U . _integer 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+[; ;main.c: 242: PDC0H = integer.byte[1];
+"242
+[e = _PDC0H *U + &U . _integer 0 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+[; ;main.c: 244: integer.val = dutyCycle[3];
+"244
+[e = . _integer 1 *U + &U _dutyCycle * -> -> -> 3 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ]
+[; ;main.c: 245: PDC1L = integer.byte[0];
+"245
+[e = _PDC1L *U + &U . _integer 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+[; ;main.c: 246: PDC1H = integer.byte[1];
+"246
+[e = _PDC1H *U + &U . _integer 0 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+[; ;main.c: 248: integer.val = dutyCycle[5];
+"248
+[e = . _integer 1 *U + &U _dutyCycle * -> -> -> 5 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ]
+[; ;main.c: 249: PDC2L = integer.byte[0];
+"249
+[e = _PDC2L *U + &U . _integer 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+[; ;main.c: 250: PDC2H = integer.byte[1];
+"250
+[e = _PDC2H *U + &U . _integer 0 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+"251
+}
+[; ;main.c: 251: } else {
+[e $U 325  ]
+[e :U 324 ]
+{
+[; ;main.c: 252: OVDCOND = 0b00010101;
+"252
+[e = _OVDCOND -> -> 21 `i `uc ]
+[; ;main.c: 253: integer.val = dutyCycle[0];
+"253
+[e = . _integer 1 *U + &U _dutyCycle * -> -> -> 0 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ]
+[; ;main.c: 254: PDC0L = integer.byte[0];
+"254
+[e = _PDC0L *U + &U . _integer 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+[; ;main.c: 255: PDC0H = integer.byte[1];
+"255
+[e = _PDC0H *U + &U . _integer 0 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+[; ;main.c: 257: integer.val = dutyCycle[2];
+"257
+[e = . _integer 1 *U + &U _dutyCycle * -> -> -> 2 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ]
+[; ;main.c: 258: PDC1L = integer.byte[0];
+"258
+[e = _PDC1L *U + &U . _integer 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+[; ;main.c: 259: PDC1H = integer.byte[1];
+"259
+[e = _PDC1H *U + &U . _integer 0 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+[; ;main.c: 261: integer.val = dutyCycle[4];
+"261
+[e = . _integer 1 *U + &U _dutyCycle * -> -> -> 4 `i `ui `ux -> -> # *U &U _dutyCycle `ui `ux ]
+[; ;main.c: 262: PDC2L = integer.byte[0];
+"262
+[e = _PDC2L *U + &U . _integer 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+[; ;main.c: 263: PDC2H = integer.byte[1];
+"263
+[e = _PDC2H *U + &U . _integer 0 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _integer 0 `ui `ux ]
+"264
+}
+[e :U 325 ]
+[; ;main.c: 264: }
+[; ;main.c: 265: PTEN = 1;
+"265
+[e = _PTEN -> -> 1 `i `b ]
+"267
+}
+[e :U 316 ]
+"268
+}
+[e :U 313 ]
+"171
+[e $U 314  ]
+[e :U 315 ]
+[; ;main.c: 267: }
+[; ;main.c: 268: }
+[; ;main.c: 269: }
+"269
+[e :UE 312 ]
+}
+"271
+[v _convertDutyCycle `(ui ~T0 @X0 1 ef1`uc ]
+{
+[; ;main.c: 271: unsigned int convertDutyCycle(unsigned char servoPosition) {
+[e :U _convertDutyCycle ]
+[v _servoPosition `uc ~T0 @X0 1 r1 ]
+[f ]
+"272
+[v _temp `ui ~T0 @X0 1 a ]
+[; ;main.c: 272: unsigned int temp;
+[; ;main.c: 274: temp = servoPosition;
+"274
+[e = _temp -> _servoPosition `ui ]
+[; ;main.c: 275: temp = temp * 2;
+"275
+[e = _temp * _temp -> -> 2 `i `ui ]
+[; ;main.c: 276: temp = temp + 178;
+"276
+[e = _temp + _temp -> -> 178 `i `ui ]
+[; ;main.c: 277: return (temp);
+"277
+[e ) _temp ]
+[e $UE 326  ]
+[; ;main.c: 278: }
+"278
+[e :UE 326 ]
+}
+"280
+[v _initializePorts `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 280: void initializePorts(void) {
+[e :U _initializePorts ]
+[f ]
+[; ;main.c: 281: INTCON = 0x00;
+"281
+[e = _INTCON -> -> 0 `i `uc ]
+[; ;main.c: 282: PIE1 = 0;
+"282
+[e = _PIE1 -> -> 0 `i `uc ]
+[; ;main.c: 285: ADCON0 = 0b00000000;
+"285
+[e = _ADCON0 -> -> 0 `i `uc ]
+[; ;main.c: 286: ADCON1 = 0b000001110;
+"286
+[e = _ADCON1 -> -> 14 `i `uc ]
+[; ;main.c: 287: ADCON2 = 0;
+"287
+[e = _ADCON2 -> -> 0 `i `uc ]
+[; ;main.c: 288: ADCON2bits.ADFM = 0;
+"288
+[e = . . _ADCON2bits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 289: ADCON2bits.ACQT2 = 1;
+"289
+[e = . . _ADCON2bits 1 5 -> -> 1 `i `uc ]
+[; ;main.c: 290: ADCON2bits.ACQT1 = 1;
+"290
+[e = . . _ADCON2bits 1 4 -> -> 1 `i `uc ]
+[; ;main.c: 291: ADCON2bits.ACQT0 = 1;
+"291
+[e = . . _ADCON2bits 1 3 -> -> 1 `i `uc ]
+[; ;main.c: 292: ADCON2bits.ADCS2 = 1;
+"292
+[e = . . _ADCON2bits 1 2 -> -> 1 `i `uc ]
+[; ;main.c: 293: ADCON2bits.ADCS1 = 0;
+"293
+[e = . . _ADCON2bits 1 1 -> -> 0 `i `uc ]
+[; ;main.c: 294: ADCON2bits.ADCS0 = 1;
+"294
+[e = . . _ADCON2bits 1 0 -> -> 1 `i `uc ]
+[; ;main.c: 296: TRISA = 0b00001111;
+"296
+[e = _TRISA -> -> 15 `i `uc ]
+[; ;main.c: 297: TRISB = 0b00000000;
+"297
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;main.c: 298: RBPU = 0;
+"298
+[e = _RBPU -> -> 0 `i `b ]
+[; ;main.c: 301: T0CON = 0x00;
+"301
+[e = _T0CON -> -> 0 `i `uc ]
+[; ;main.c: 302: T016BIT = 1;
+"302
+[e = _T016BIT -> -> 1 `i `b ]
+[; ;main.c: 303: PSA = 0;
+"303
+[e = _PSA -> -> 0 `i `b ]
+[; ;main.c: 304: T0PS0 = 0;
+"304
+[e = _T0PS0 -> -> 0 `i `b ]
+[; ;main.c: 305: T0PS1 = 1;
+"305
+[e = _T0PS1 -> -> 1 `i `b ]
+[; ;main.c: 306: T0PS2 = 1;
+"306
+[e = _T0PS2 -> -> 1 `i `b ]
+[; ;main.c: 307: T0CS = 0;
+"307
+[e = _T0CS -> -> 0 `i `b ]
+[; ;main.c: 308: T0SE = 0;
+"308
+[e = _T0SE -> -> 0 `i `b ]
+[; ;main.c: 309: TMR0ON = 1;
+"309
+[e = _TMR0ON -> -> 1 `i `b ]
+[; ;main.c: 310: TMR0IF = 0;
+"310
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;main.c: 312: T1CON = 0;
+"312
+[e = _T1CON -> -> 0 `i `uc ]
+[; ;main.c: 313: T1RD16 = 1;
+"313
+[e = _T1RD16 -> -> 1 `i `b ]
+[; ;main.c: 314: TMR1CS = 0;
+"314
+[e = _TMR1CS -> -> 0 `i `b ]
+[; ;main.c: 315: T1CKPS0 = 0;
+"315
+[e = _T1CKPS0 -> -> 0 `i `b ]
+[; ;main.c: 316: T1CKPS1 = 0;
+"316
+[e = _T1CKPS1 -> -> 0 `i `b ]
+[; ;main.c: 317: TMR1ON = 0;
+"317
+[e = _TMR1ON -> -> 0 `i `b ]
+[; ;main.c: 320: PIE3 = 0;
+"320
+[e = _PIE3 -> -> 0 `i `uc ]
+[; ;main.c: 321: FLTCONFIG = 0;
+"321
+[e = _FLTCONFIG -> -> 0 `i `uc ]
+[; ;main.c: 322: PTCON0 = 0;
+"322
+[e = _PTCON0 -> -> 0 `i `uc ]
+[; ;main.c: 323: PTCKPS0 = 1;
+"323
+[e = _PTCKPS0 -> -> 1 `i `b ]
+[; ;main.c: 324: PTCKPS1 = 1;
+"324
+[e = _PTCKPS1 -> -> 1 `i `b ]
+[; ;main.c: 325: PTMOD1 = 0;
+"325
+[e = _PTMOD1 -> -> 0 `i `b ]
+[; ;main.c: 326: PTMOD0 = 1;
+"326
+[e = _PTMOD0 -> -> 1 `i `b ]
+[; ;main.c: 328: PTCON1 = 0;
+"328
+[e = _PTCON1 -> -> 0 `i `uc ]
+[; ;main.c: 329: PTEN = 0;
+"329
+[e = _PTEN -> -> 0 `i `b ]
+[; ;main.c: 332: PWMCON0 = 0;
+"332
+[e = _PWMCON0 -> -> 0 `i `uc ]
+[; ;main.c: 333: PWMEN0 = 0;
+"333
+[e = _PWMEN0 -> -> 0 `i `b ]
+[; ;main.c: 334: PWMEN1 = 0;
+"334
+[e = _PWMEN1 -> -> 0 `i `b ]
+[; ;main.c: 335: PWMEN2 = 1;
+"335
+[e = _PWMEN2 -> -> 1 `i `b ]
+[; ;main.c: 336: PMOD0 = 1;
+"336
+[e = _PMOD0 -> -> 1 `i `b ]
+[; ;main.c: 337: PMOD1 = 1;
+"337
+[e = _PMOD1 -> -> 1 `i `b ]
+[; ;main.c: 338: PMOD2 = 1;
+"338
+[e = _PMOD2 -> -> 1 `i `b ]
+[; ;main.c: 340: PWMCON1 = 0;
+"340
+[e = _PWMCON1 -> -> 0 `i `uc ]
+[; ;main.c: 342: PTPERH = 0;
+"342
+[e = _PTPERH -> -> 0 `i `uc ]
+[; ;main.c: 343: PTPERL = 170;
+"343
+[e = _PTPERL -> -> 170 `i `uc ]
+[; ;main.c: 347: OVDCOND = 0b00101010;
+"347
+[e = _OVDCOND -> -> 42 `i `uc ]
+[; ;main.c: 348: OVDCONS = 0b00000000;
+"348
+[e = _OVDCONS -> -> 0 `i `uc ]
+[; ;main.c: 350: BRGH = 1;
+"350
+[e = _BRGH -> -> 1 `i `b ]
+[; ;main.c: 351: SPBRG = 19;
+"351
+[e = _SPBRG -> -> 19 `i `uc ]
+[; ;main.c: 353: SYNC = 0;
+"353
+[e = _SYNC -> -> 0 `i `b ]
+[; ;main.c: 354: SPEN = 1;
+"354
+[e = _SPEN -> -> 1 `i `b ]
+[; ;main.c: 355: CREN = 1;
+"355
+[e = _CREN -> -> 1 `i `b ]
+[; ;main.c: 356: SREN = 0;
+"356
+[e = _SREN -> -> 0 `i `b ]
+[; ;main.c: 357: TXIE = 0;
+"357
+[e = _TXIE -> -> 0 `i `b ]
+[; ;main.c: 358: RCIE = 1;
+"358
+[e = _RCIE -> -> 1 `i `b ]
+[; ;main.c: 359: TX9 = 0;
+"359
+[e = _TX9 -> -> 0 `i `b ]
+[; ;main.c: 360: RX9 = 0;
+"360
+[e = _RX9 -> -> 0 `i `b ]
+[; ;main.c: 361: TXEN = 1;
+"361
+[e = _TXEN -> -> 1 `i `b ]
+[; ;main.c: 362: TXIE = 0;
+"362
+[e = _TXIE -> -> 0 `i `b ]
+[; ;main.c: 363: RCIE = 0;
+"363
+[e = _RCIE -> -> 0 `i `b ]
+[; ;main.c: 364: PEIE = 1;
+"364
+[e = _PEIE -> -> 1 `i `b ]
+[; ;main.c: 365: TMR1IE = 0;
+"365
+[e = _TMR1IE -> -> 0 `i `b ]
+[; ;main.c: 366: TMR0IE = 0;
+"366
+[e = _TMR0IE -> -> 0 `i `b ]
+[; ;main.c: 367: GIE = 1;
+"367
+[e = _GIE -> -> 1 `i `b ]
+[; ;main.c: 368: }
+"368
+[e :UE 327 ]
+}
+"375
+[v _putch `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;main.c: 375: void putch(unsigned char ch) {
+[e :U _putch ]
+[v _ch `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;main.c: 376: while (!TXIF)
+"376
+[e $U 329  ]
+[e :U 330 ]
+[; ;main.c: 377: continue;
+"377
+[e $U 329  ]
+[e :U 329 ]
+"376
+[e $ ! _TXIF 330  ]
+[e :U 331 ]
+[; ;main.c: 378: TXREG = ch;
+"378
+[e = _TXREG _ch ]
+[; ;main.c: 379: }
+"379
+[e :UE 328 ]
+}
+"381
+[v _ADsetChannel `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;main.c: 381: void ADsetChannel(unsigned char channel) {
+[e :U _ADsetChannel ]
+[v _channel `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;main.c: 382: ADCON0 = (channel << 2) + 0x01;
+"382
+[e = _ADCON0 -> + << -> _channel `i -> 2 `i -> 1 `i `uc ]
+[; ;main.c: 383: }
+"383
+[e :UE 332 ]
+}
+"385
+[v _readAD `(us ~T0 @X0 1 ef ]
+{
+[; ;main.c: 385: unsigned short readAD(void) {
+[e :U _readAD ]
+[f ]
+"386
+[v _ADresult `i ~T0 @X0 1 a ]
+[; ;main.c: 386: int ADresult;
+[; ;main.c: 387: GODONE = 1;
+"387
+[e = _GODONE -> -> 1 `i `b ]
+[; ;main.c: 388: while (GODONE)
+"388
+[e $U 334  ]
+[e :U 335 ]
+[; ;main.c: 389: continue;
+"389
+[e $U 334  ]
+[e :U 334 ]
+"388
+[e $ _GODONE 335  ]
+[e :U 336 ]
+[; ;main.c: 390: ADresult = (int) ADRESH;
+"390
+[e = _ADresult -> _ADRESH `i ]
+[; ;main.c: 392: return (ADresult);
+"392
+[e ) -> _ADresult `us ]
+[e $UE 333  ]
+[; ;main.c: 393: }
+"393
+[e :UE 333 ]
+}
+[v F3390 `(v ~T0 @X0 1 tf ]
+"395
+[v _isr `IF3390 ~T0 @X0 1 s ]
+{
+[; ;main.c: 395: static void interrupt isr(void) {
+[e :U _isr ]
+[f ]
+"396
+[v _BoardID `uc ~T0 @X0 1 a ]
+[v _ch `uc ~T0 @X0 1 a ]
+"397
+[v F3393 `uc ~T0 @X0 1 s buffIndex ]
+[i F3393
+-> -> 0 `i `uc
+]
+[v F3394 `uc ~T0 @X0 1 s escapeFlag ]
+[i F3394
+"398
+-> -> 0 `i `uc
+]
+"399
+[v _i `uc ~T0 @X0 1 a ]
+[v _j `uc ~T0 @X0 1 a ]
+[v _k `uc ~T0 @X0 1 a ]
+[v _firstServo `uc ~T0 @X0 1 a ]
+[; ;main.c: 396: unsigned char BoardID, ch;
+[; ;main.c: 397: static unsigned char buffIndex = 0;
+[; ;main.c: 398: static unsigned char escapeFlag = 0;
+[; ;main.c: 399: unsigned char i, j, k, firstServo;
+[; ;main.c: 401: if (RCIF == 1) {
+"401
+[e $ ! == -> _RCIF `i -> 1 `i 338  ]
+{
+[; ;main.c: 402: RCIF = 0;
+"402
+[e = _RCIF -> -> 0 `i `b ]
+[; ;main.c: 404: if (RCSTAbits.OERR) {
+"404
+[e $ ! != -> . . _RCSTAbits 0 1 `i -> -> -> 0 `i `Vuc `i 339  ]
+{
+[; ;main.c: 405: RCSTAbits.CREN = 0;
+"405
+[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 406: RCSTAbits.CREN = 1;
+"406
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"407
+}
+[e :U 339 ]
+[; ;main.c: 407: }
+[; ;main.c: 409: if (RCSTAbits.FERR)
+"409
+[e $ ! != -> . . _RCSTAbits 0 2 `i -> -> -> 0 `i `Vuc `i 340  ]
+[; ;main.c: 410: ch = RCREG;
+"410
+[e = _ch _RCREG ]
+[e :U 340 ]
+[; ;main.c: 411: ch = RCREG;
+"411
+[e = _ch _RCREG ]
+[; ;main.c: 413: if (ch == '/' && !escapeFlag)
+"413
+[e $ ! && == -> _ch `ui -> 47 `ui ! != -> F3394 `i -> -> -> 0 `i `uc `i 341  ]
+[; ;main.c: 414: escapeFlag = !0;
+"414
+[e = F3394 -> -> ! != -> 0 `i -> 0 `i `i `uc ]
+[e $U 342  ]
+"415
+[e :U 341 ]
+[; ;main.c: 415: else if (ch == '>' && !escapeFlag)
+[e $ ! && == -> _ch `ui -> 62 `ui ! != -> F3394 `i -> -> -> 0 `i `uc `i 343  ]
+[; ;main.c: 416: buffIndex = 0;
+"416
+[e = F3393 -> -> 0 `i `uc ]
+[e $U 344  ]
+"417
+[e :U 343 ]
+[; ;main.c: 417: else if (ch == '\r' && !escapeFlag) {
+[e $ ! && == -> _ch `ui -> 13 `ui ! != -> F3394 `i -> -> -> 0 `i `uc `i 345  ]
+{
+[; ;main.c: 418: BoardID = XBEERxBuffer[0];
+"418
+[e = _BoardID *U + &U _XBEERxBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _XBEERxBuffer `ui `ux ]
+[; ;main.c: 419: if (BoardID == 1)
+"419
+[e $ ! == -> _BoardID `i -> 1 `i 346  ]
+[; ;main.c: 420: inLength = buffIndex;
+"420
+[e = _inLength -> F3393 `us ]
+[e :U 346 ]
+[; ;main.c: 421: buffIndex = 0;
+"421
+[e = F3393 -> -> 0 `i `uc ]
+"422
+}
+[; ;main.c: 422: } else {
+[e $U 347  ]
+[e :U 345 ]
+{
+[; ;main.c: 423: escapeFlag = 0;
+"423
+[e = F3394 -> -> 0 `i `uc ]
+[; ;main.c: 424: if (buffIndex < 64) XBEERxBuffer[buffIndex++] = ch;
+"424
+[e $ ! < -> F3393 `i -> 64 `i 348  ]
+[e = *U + &U _XBEERxBuffer * -> ++ F3393 -> -> 1 `i `uc `ux -> -> # *U &U _XBEERxBuffer `ui `ux _ch ]
+[e :U 348 ]
+"425
+}
+[e :U 347 ]
+[e :U 344 ]
+[e :U 342 ]
+"426
+}
+[e :U 338 ]
+[; ;main.c: 425: }
+[; ;main.c: 426: }
+[; ;main.c: 427: }
+"427
+[e :UE 337 ]
+}
+[p f _printf 8388736 ]
+[a 1C 13 85 112 100 97 116 101 100 58 32 37 100 32 115 101 114 118 111 115 0 ]
+[a 2C 84 101 115 116 105 110 103 32 115 101 114 118 111 32 99 111 109 109 97 110 100 115 13 0 ]

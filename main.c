@@ -32,9 +32,16 @@
  *          and each servo refreshed every 14 milliseconds
  * 8-10-16  Modified AD initialization so FRC isn't used for AD clock.
  * 8-15-16  Continuous back and forth motion, delay at beginning.
- * 9-12-16  Created GitHub project. Modified on Laptop.
+ * 9-12-16  Created GitHub project.
+ * 9-19-16  Eyeball open/close.
  * 
  */
+
+
+#define EYELID_OPEN 302
+#define EYELID_CLOSED 210
+
+#define CENTER_UPDOWN 0
 
 #include <plib.h>
 #include "DELAY16.H"
@@ -44,6 +51,10 @@
 #include <ctype.h> 
 #include <math.h>
 #include "DELAY16.H"
+
+#define EYELID_SERVO 0
+#define RIGHTLEFT_SERVO 1
+#define UPDOWN_SERVO 2
 
 #define TESTout PORTBbits.RB2
 
@@ -155,6 +166,8 @@ unsigned char processInBuffer(unsigned short inLength) {
 
 #define FORWARD 0
 #define REVERSE 1
+#define ONE_SECOND 71
+#define TENTH_SECOND 7
 
 void main(void) {
     LEDflag = true;
@@ -162,56 +175,32 @@ void main(void) {
     unsigned char stroke = FORWARD;
     unsigned short Timer0Counter = 0;
     unsigned char angle = 127;
+    unsigned char EyeballState = 0;
+    unsigned char delayCounter = 0;
+    unsigned short secondCounter = 0;
 
     initializePorts();
     DelayMs(100);
     printf("Testing servo commands\r");
     ADsetChannel(0);
     LED = 0;
+    
+    dutyCycle[EYELID_SERVO] = EYELID_CLOSED;
+    delayCounter = ONE_SECOND;
+
+
 
     while (1) {
-        /*
-        if (inLength) {
-            if (processInBuffer(inLength)) {
-                timeout = 10;
-                if (LEDflag) {
-                    LEDflag = false;
-                    LED = 1;
-                } else {
-                    LEDflag = true;
-                    LED = 0;
-                }
-            }
-            inLength = 0;
-        }
-         */
-
-        /*
-        if (numServosUpdated) {
-            if (processservoBuffer(numServosUpdated)) {
-                DUTYbuffer[0] = servoBuffer[0];
-                DUTYbuffer[1] = servoBuffer[1];
-                DUTYbuffer[2] = servoBuffer[2];
-                DUTYbuffer[3] = servoBuffer[3];
-                DUTYbuffer[4] = servoBuffer[4];
-                DUTYbuffer[5] = servoBuffer[5];
-                if (LEDflag) {
-                    LEDflag = false;
-                    LED = 1;
-                } else {
-                    LEDflag = true;
-                    LED = 0;
-                }
-            }
-            numServosUpdated = 0;
-        }*/
 
         if (TMR0IF) {
             TMR0IF = 0;
             
-            //potValue = readAD();
-            //if (potValue < 16) potValue = 16   ;            
+            potValue = readAD();
+            //if (potValue < 16) potValue = 16;         
+            //DUTYbuffer[0] = DUTYbuffer[1] = DUTYbuffer[2] = DUTYbuffer[3] = DUTYbuffer[4] = DUTYbuffer[5] = potValue;
             
+            
+            /*
             #define STROKE_ANGLE 127
             Timer0Counter++;
             if (Timer0Counter >= 4) {
@@ -223,19 +212,54 @@ void main(void) {
                     if (angle > 0) angle--;
                     else stroke = FORWARD;
                 }
+            }                                        
+            */
+            
+            if (Timer0Counter) Timer0Counter--;
+            if (!Timer0Counter) {
+              Timer0Counter = TENTH_SECOND;
+                //DUTYbuffer[EYELID_SERVO] = potValue;
+                //dutyCycle[0] = convertDutyCycle(DUTYbuffer[0]);
+                // printf("\rSTATE: %d, POT: %d, DUTY: %d", EyeballState, potValue, dutyCycle[EYELID_SERVO]);     
+                printf("\rSTATE: %d, DUTY: %d", EyeballState, dutyCycle[EYELID_SERVO]);
             }
-                                        
-            DUTYbuffer[0] = DUTYbuffer[1] = DUTYbuffer[2] = DUTYbuffer[3] = DUTYbuffer[4] = DUTYbuffer[5] = angle;
 
-            dutyCycle[0] = convertDutyCycle(DUTYbuffer[0]);
-            dutyCycle[1] = convertDutyCycle(DUTYbuffer[1]);
-            dutyCycle[2] = convertDutyCycle(DUTYbuffer[2]);
-            dutyCycle[3] = convertDutyCycle(DUTYbuffer[3]);
-            dutyCycle[4] = convertDutyCycle(DUTYbuffer[4]);
-            dutyCycle[5] = convertDutyCycle(DUTYbuffer[5]);
-
-            // printf("\rP: %d, D: %d", potValue, dutyCycle[0]);
-
+            #define LAST_STATE 3
+            if (delayCounter) delayCounter--;
+            
+            switch (EyeballState){
+                case 0: 
+                    dutyCycle[EYELID_SERVO] = EYELID_CLOSED;
+                    if (!delayCounter) EyeballState++;
+                    break;
+                case 1:
+                    if (dutyCycle[EYELID_SERVO] < EYELID_OPEN){
+                        dutyCycle[EYELID_SERVO] = dutyCycle[EYELID_SERVO] + 1;                        
+                    }
+                    else {
+                        EyeballState++;
+                        delayCounter = ONE_SECOND * 2;
+                    }
+                    break;
+                case 2:
+                    if (!delayCounter){
+                        EyeballState++;
+                    }
+                    break;
+                case 3:
+                    if (dutyCycle[EYELID_SERVO] > EYELID_CLOSED)
+                        dutyCycle[EYELID_SERVO]--;
+                    else {
+                        EyeballState = 0;
+                        delayCounter = ONE_SECOND * 2;
+                    }                    
+                    break;
+                default:
+                    EyeballState = 0;
+                    break;
+                    
+            }
+            
             if (OVDCOND == 0b00010101) {
                 OVDCOND = 0b00101010;
                 integer.val = dutyCycle[1];

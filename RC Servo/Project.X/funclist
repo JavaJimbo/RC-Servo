@@ -1,0 +1,14 @@
+__stringdata: SMALLCONST, 267 0 65
+_putch: CODE, 1556 0 12
+_dpowers: SMALLCONST, 257 0 10
+_main: CODE, 334 0 396
+_DelayMs: CODE, 1300 0 68
+_initializePorts: CODE, 1038 0 180
+_ADsetChannel: CODE, 1522 0 20
+__initialization: CODE, 1368 0 56
+___lwdiv: CODE, 1218 0 82
+_isr: CODE, 8 0 242
+_printf: CODE, 730 0 308
+___lwmod: CODE, 1434 0 66
+_readAD: CODE, 1500 0 22
+Total: 1527
